@@ -21,7 +21,7 @@
 .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
 .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
 .kp { color: #008000 } /* Keyword.Pseudo */
-.kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.kr { color: #008000; font-weight: bold } /* Keyonly word.Reserved */
 .kt { color: #B00040 } /* Keyword.Type */
 .m { color: #666666 } /* Literal.Number */
 .s { color: #BA2121 } /* Literal.String */

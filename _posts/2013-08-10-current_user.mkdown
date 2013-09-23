@@ -1,6 +1,7 @@
 ---
 permalink: /docs/v1/current_user
 title: Current User
+layout: resource
 ---
 
 ### Get information about the current user
