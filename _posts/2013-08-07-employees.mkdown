@@ -15,7 +15,7 @@ layout: resource
 
 #### Sample Response Body:
 
-{% highlight javascript %}
+```javascript
     [
       {
         "id" : 1123581321345589,
@@ -60,7 +60,7 @@ layout: resource
         ]
       }
     ]
-{% endhighlight %}
+```
 
 + `id` - the unique identifier of this employee in the ZenPayroll system.
 + `first_name` - employee's first name.
