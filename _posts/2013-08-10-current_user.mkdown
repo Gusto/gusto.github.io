@@ -31,6 +31,8 @@ layout: resource
     }
 {% endhighlight %}
 
-+ `email` - email address for the authenticated user.
-+ `roles` - information for each of the current user's permissions.
-  - `company_ids` - array of company ids for which the current user has admin privileges. Users (most notably accountants) can have priviliges with multiple companies.
+| Field                     | Description
+| :----------               |:-------------
+| `email`                   | email address for the authenticated user.
+| `roles`                   | information for each of the current user's permissions.
+| `company_ids`             | array of company ids for which the current user has admin privileges. Users (most notably accountants) can have priviliges with multiple companies.

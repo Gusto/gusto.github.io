@@ -23,6 +23,10 @@ body {
 	background: $white url("https://zenpayroll.com/assets/corporate/plaid-texture.png") repeat top center;
 }
 
+code {
+	color: #32823f;
+}
+
 #secondarynav h3 {
 	color: #32823f;
 	font-size: 22px;
@@ -44,17 +48,58 @@ body {
 	margin-top: 20px;
 }
 
-code {
-	color: #32823f;
+.secondary .secondary-main blockquote p {
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
-ul {
+.secondary .secondary-main ul {
 	margin: 10px 0 10px 40px;
 }
-ul li {
+.secondary .secondary-main ul li {
 	margin-bottom: 10px;
 }
 
-ul ul {
+.secondary .secondary-main ul ul {
 	margin-bottom: 20px;
+}
+
+table {
+	width: 100%;
+	border-collapse:collapse;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	font-weight: 200;
+}
+th,
+td {
+	border: 1px solid #c4c4c4;
+	padding: 10px;
+}
+
+table th {
+	font-weight: 400;
+}
+table tbody tr:nth-child(2n+1) td,
+table tbody tr:nth-child(2n+1) th {
+	background-color: #F0F0F0;
+}
+
+@media only screen and (max-width: 980px) {
+	table,
+	tbody,
+	td,
+	tr {
+		display: block;
+	}
+	thead {
+		display: none;
+	}
+
+	table td {
+		border: none;
+	}
+	table tr {
+		border: 1px solid #c4c4c4;
+	}
 }

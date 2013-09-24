@@ -78,26 +78,26 @@ layout: resource
     ]
 {% endhighlight %}
 
-#### Details
-
-+ `version` - version of the object in the ZenPayroll system
-+ `pay_period` - the start and end date for the pay period corresponding with this payroll.
-+ `payroll_deadline` - deadline for the payroll to be run in order for employees to be paid on-time.
-+ `processed` - whether or not this payroll has been successfully run. If it has, you should consider it 'frozen', as any attempts to update its data will be rejected. Note that passing the `payroll_deadline` does not guarantee that the payroll has been processed; running late payrolls is not uncommon.  Similarly, ZenPayroll users may choose to run payroll before the `payroll_deadline`.
-+ `employee_compensations` - array of every employee eligible for this pay period. For a given employee, we return the current state of information related to this employee for this payroll.
-  - `employee_id` - the unique identifier for this employee in the ZenPayroll system.
-  - `fixed_compensations` - array of all fixed compensations. Examples of fixed compensations include tips, bonus, or one time reimbursements.
-    * `name` - name of the compensation. This also serves as the unique, immutable identifier for this compensation.
-    * `amount` - amount of compensation for this pay period.
-    * `job_id` - unique identifier of the job worked for this compensation.
-  - `hourly_compensations` - array of all hourly compensations. Examples of hourly compensations include regular, overtime, and double overtime hours.
-    * `name` - name of the compensation. This also serves as the unique, immutable identifier for this compensation.
-    * `hours` - hours to be compensated for during this pay period.
-    * `job_id` - unique identifier of the job worked for given number of `hours` this pay period.
-    * `compensation_multiplier` - amount multiplied by the base rate to calculate total compensation per hour worked. So the total gross compensation for a single hourly compensation could be calculated by multiplying the the `hours` worked by the `rate` of the job worked, times the `compensation_multiplier`.
-  - `paid_time_off` - array of all paid time off (PTO) for which this employee is eligible
-    * `name` - name of the PTO. This also serves as the unique, immutable identifier for this PTO.
-    * `hours` - hours taken of this PTO during this pay period.
+| Field                     | Description
+| :----------               |:-------------
+| `version`                 | version of the object in the ZenPayroll system
+| `pay_period`              | the start and end date for the pay period corresponding with this payroll.
+| `payroll_deadline`        | deadline for the payroll to be run in order for employees to be paid on-time.
+| `processed`               | whether or not this payroll has been successfully run. If it has, you should consider it 'frozen', as any attempts to update its data will be rejected. Note that passing the `payroll_deadline` does not guarantee that the payroll has been processed; running late payrolls is not uncommon.  Similarly, ZenPayroll users may choose to run payroll before the `payroll_deadline`.
+| `employee_compensations`  | array of every employee eligible for this pay period. For a given employee, we return the current state of information related to this employee for this payroll.
+| `employee_id`             | the unique identifier for this employee in the ZenPayroll system.
+| `fixed_compensations`     | array of all fixed compensations. Examples of fixed compensations include tips, bonus, or one time reimbursements.
+| `name`                    | name of the compensation. This also serves as the unique, immutable identifier for this compensation.
+| `amount`                  | amount of compensation for this pay period.
+| `job_id`                  | unique identifier of the job worked for this compensation.
+| `hourly_compensations`    | array of all hourly compensations. Examples of hourly compensations include regular, overtime, and double overtime hours.
+| `name`                    | name of the compensation. This also serves as the unique, immutable identifier for this compensation.
+| `hours`                   | hours to be compensated for during this pay period.
+| `job_id`                  | unique identifier of the job worked for given number of `hours` this pay period.
+| `compensation_multiplier` | amount multiplied by the base rate to calculate total compensation per hour worked. So the total gross compensation for a single hourly compensation could be calculated by multiplying the the `hours` worked by the `rate` of the job worked, times the `compensation_multiplier`.
+| `paid_time_off`           | array of all paid time off (PTO) for which this employee is eligible
+| `name`                    | name of the PTO. This also serves as the unique, immutable identifier for this PTO.
+| `hours`                   | hours taken of this PTO during this pay period.
 
 Notes:
 

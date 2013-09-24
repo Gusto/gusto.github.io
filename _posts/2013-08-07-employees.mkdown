@@ -62,17 +62,19 @@ layout: resource
     ]
 ```
 
-+ `id` - the unique identifier of this employee in the ZenPayroll system.
-+ `first_name` - employee's first name.
-+ `middle_initial` - employee's middle initial. Not guaranteed to exist.
-+ `last_name` - employee's last name.
-+ `email` - employee's email address. This is provided specifically to sync users between our system and yours. You may not use this address for any other purpose (e.g. Marketing.) Not guaranteed to exist.
-+ `date_of_birth` - employee's birthday!
-+ `jobs` - array of job information.
-  - `id` - the unique identifier of this employee in the ZenPayroll system.
-  - `title` - job title for this position.
-  - `rate` - dollar amount paid per `payment_unit`.
-  - `payment_unit` - timescale accompanying the rate. Gross pay for this compensation would therefore be `rate * (time_worked/time_per_payment_unit)`.
-  - `location_id` - the unique identifier of this job's location in the ZenPayroll system.
-+ `eligible_paid_time_off` - array of paid time off (PTO) information for which this employee is eligible. This is a subset of the possible paid time off types returned for the employee's company.
-  - `name` - name of this PTO type
+| Field                     | Description
+| :----------               |:-------------
+| `id`                      | the unique identifier of this employee in the ZenPayroll system.
+| `first_name`              | employee's first name.
+| `middle_initial`          | employee's middle initial. Not guaranteed to exist.
+| `last_name`               | employee's last name.
+| `email`                   | employee's email address. This is provided specifically to sync users between our system and yours. You may not use this address for any other purpose (e.g. Marketing.) Not guaranteed to exist.
+| `date_of_birth`           | employee's birthday!
+| `jobs`                    | array of job information.
+| `id`                      | the unique identifier of this employee in the ZenPayroll system.
+| `title`                   | job title for this position.
+| `rate`                    | dollar amount paid per `payment_unit`.
+| `payment_unit`            | timescale accompanying the rate. Gross pay for this compensation would therefore be `rate * (time_worked/time_per_payment_unit)`.
+| `location_id`             | the unique identifier of this job's location in the ZenPayroll system.
+| `eligible_paid_time_off`  | array of paid time off (PTO) information for which this employee is eligible. This is a subset of the possible paid time off types returned for the employee's company.
+| `name`                    | name of this PTO type

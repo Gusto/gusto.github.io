@@ -72,21 +72,23 @@ layout: resource
     }
 {% endhighlight %}
 
-+ `id` - the unique identifier of this company in the ZenPayroll system.
-+ `name` - name of this company.
-+ `trade_name` - trade name of this company. This is an optional field.
-+ `locations` - array of addresses for all known locations of this company.
-  - `id` - the unique identifier of this location in the ZenPayroll system.
-  - `street_1` - first line of this address' street.
-  - `street_2` - second line of this address' street.
-  - `city` - name of address' city.
-  - `state` - two letter state abbreviation.
-  - `zip` - five digit zipcode. Returned as a string to maintain leading zeros.
-+ `compensations` - all available company-wide compensations. The above compensations are the default, built-in compensations.
-  - `hourly` - available hourly compensations
-    + `name` - name of the compensation
-    + `multiple` - amount multiplied by the base rate of a given job to calculate total compensation per hour worked. For example, if an employee at this company makes $17.00/hour as Kindergarten Cop and works 10 hours of Overtime (which has a multiple of 1.5), he would expect receive $150.
-  - `fixed` - available fixed compensations
-    + `name` - name of the compensation
-+ `paid_time_off` - available types of paid time off
-  - `name` - name of the time of
+| Field                     | Description
+| :----------               |:-------------
+| `id`                      | the unique identifier of this company in the ZenPayroll system.
+| `name`                    | name of this company.
+| `trade_name`              | trade name of this company. This is an optional field.
+| `locations`               | array of addresses for all known locations of this company.
+| `id`                      | the unique identifier of this location in the ZenPayroll system.
+| `street_1`                | first line of this address' street.
+| `street_2`                | second line of this address' street.
+| `city`                    | name of address' city.
+| `state`                   | two letter state abbreviation.
+| `zip`                     | five digit zipcode. Returned as a string to maintain leading zeros.
+| `compensations`           | all available company-wide compensations. The above compensations are the default, built-in compensations.
+| `hourly`                  | available hourly compensations
+| `name`                    | name of the compensation
+| `multiple`                | amount multiplied by the base rate of a given job to calculate total compensation per hour worked. For example, if an employee at this company makes $17.00/hour as Kindergarten Cop and works 10 hours of Overtime (which has a multiple of 1.5), he would expect receive $150.
+| `fixed`                   | available fixed compensations
+| `name`                    | name of the compensation
+| `paid_time_off`           | available types of paid time off
+| `name`                    | name of the time off
