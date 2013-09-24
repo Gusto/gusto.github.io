@@ -3,9 +3,9 @@ permalink: docs/v1/payrolls
 layout: resource
 ---
 
-## Payrolls
+# Payrolls
 
-This is where the _magic_ happens.
+## This is where the _magic_ happens.
 
 ### Get Payrolls for a Company
 
@@ -15,7 +15,7 @@ This is where the _magic_ happens.
 
 **Returns**: Array of all payrolls, current and past, for a company.
 
-#### Sample Response Body:
+#### Sample Response Body
 
 {% highlight javascript %}
     [
@@ -78,6 +78,8 @@ This is where the _magic_ happens.
     ]
 {% endhighlight %}
 
+#### Details
+
 + `version` - version of the object in the ZenPayroll system
 + `pay_period` - the start and end date for the pay period corresponding with this payroll.
 + `payroll_deadline` - deadline for the payroll to be run in order for employees to be paid on-time.
@@ -97,13 +99,13 @@ This is where the _magic_ happens.
     * `name` - name of the PTO. This also serves as the unique, immutable identifier for this PTO.
     * `hours` - hours taken of this PTO during this pay period.
 
-Note:
+Notes:
 
 + Hour and dollar amounts are returned as string representations of numeric decimals.
 + Hours are represented to the thousands place; dollar amounts are represented to the cent.
 + Every eligible compensation is returned for each employee. If no data has yet be inserted for a given field, it defaults to "0.00" (for fixed amounts) or "0.000" (for hours ).
 
-#### Optional Parameters
+### Optional Parameters
 
 As with pay periods, there are likely to be a very large amount of payrolls available - one for each pay period, but with far more associated data. You can pare down the results by passing in additional parameters:
 
@@ -168,4 +170,5 @@ The payrolls are identified by their pay periods' `start_date` and `end_date`. B
 {% endhighlight %}
 
 Notes:
+
 - Hours are to the thousands place; dollar amounts are to the cents.

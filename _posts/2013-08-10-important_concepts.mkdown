@@ -3,7 +3,9 @@ permalink: docs/v1/important_concepts
 layout: resource
 ---
 
-## Important Concepts
+# Important Concepts
+
+## Some Things For Your Consideration
 
 > Those who understand it are wise, those who do not, wander in darkness.
 >

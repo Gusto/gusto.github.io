@@ -3,9 +3,9 @@ permalink: docs/v1/employees
 layout: resource
 ---
 
-## Employees
+# Employees
 
-### Get employees for a company
+## Get employees for a company
 
 **HTTP Method**: `GET`
 

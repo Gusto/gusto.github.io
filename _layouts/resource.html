@@ -18,8 +18,31 @@
   <link rel="stylesheet" type="text/css" href="/css/resource.css">
 
 </head>
+
 <body>
-{% include navigation.html %}
-{{ content }}
+
+{% include header.html %}
+
+<section id="staticimage" class="container-fluid company"></section>
+
+<section class="container-fluid secondary">
+  <div class="container">
+    <div class="row">
+
+      <div class="span3 hidden-phone">
+        {% include navigation.html %}
+      </div>
+
+      <div class="span9">
+        <div class="secondary-main">
+          {{ content }}
+        </div>
+
+      </div>
+    </div>
+</section>
+
+{% include footer.html %}
+
 </body>
 </html>

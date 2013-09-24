@@ -1,9 +1,60 @@
+/* Colors
+	====================
+	$green: #32823f;
+	$text: #4A4A4A;
+	$greyline: #DDDDDD;
+	$lightgrey: #C4C4C4;
+	$faintgrey: #EFEFEF;
+	$white: #FFFFFF;
+	$darktext: #232323;
+	$greybg: #f0f0ed;
+	$greenbg: #43974c;
+	====================
+*/
+
 blockquote {
   border-radius: 5px;
   padding: 10px;
-  background-color: #bdc3c7;
+  background-color: #EFEFEF;
+	border-left-color: #C4C4C4;
 }
 
 body {
-	background-color: #0F0;
+	background: $white url("https://zenpayroll.com/assets/corporate/plaid-texture.png") repeat top center;
+}
+
+#secondarynav h3 {
+	color: #32823f;
+	font-size: 22px;
+	font-weight: 200;
+
+	margin-top: 20px;
+	margin-bottom: 0;
+}
+
+.secondary .secondary-main h2 {
+	padding-bottom: 30px;
+	border-bottom: 1px solid #C4C4C4;
+}
+.secondary .secondary-main h3 {
+	margin-top: 60px;
+}
+.secondary .secondary-main h4 {
+	font-weight: 200;
+	margin-top: 20px;
+}
+
+code {
+	color: #32823f;
+}
+
+ul {
+	margin: 10px 0 10px 40px;
+}
+ul li {
+	margin-bottom: 10px;
+}
+
+ul ul {
+	margin-bottom: 20px;
 }

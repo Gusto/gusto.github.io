@@ -1,11 +1,12 @@
 ---
 permalink: docs/v1/companies
+title: Companies
 layout: resource
 ---
 
-## Companies
+# Companies
 
-### Get Company Information
+## Get Company Information
 
 **HTTP Method**: `GET`
 

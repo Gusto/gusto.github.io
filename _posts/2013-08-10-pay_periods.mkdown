@@ -3,7 +3,9 @@ permalink: docs/v1/pay_periods
 layout: resource
 ---
 
-## Pay Periods
+# Pay Periods
+
+## Frequency of Payment
 
 Pay periods are the foundation of payroll. Compensation, time & attendance, taxes, and expense reports all rely on when they happened. To begin submitting information for a given payroll, we need to agree on the time period.
 
