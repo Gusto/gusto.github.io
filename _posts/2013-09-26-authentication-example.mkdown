@@ -15,7 +15,7 @@ To register an application, send an email to api@zenpayroll.com with a descripti
 
 Authentication is done using [OAuth2](http://oauth.net/2/). Numerous libraries implementing the protocol can be found on the [OAuth2 homepage](http://oauth.net/2/).
 
-Should you choose to implement your own flow, or if you just want to know more about what goes on behind the scenes, we'll walk through the basics of authenticating with ZenPayroll via OAuth.
+Should you choose to implement your own flow, or if you just want to know more about what goes on behind the scenes, we'll walk through the basics of authenticating with ZenPayroll via OAuth. It can be a bit tricky - even with a library - so if you have questions at any point, please send us an email.
 
 Outline:
 
