@@ -17,7 +17,7 @@ layout: resource
 
 #### Sample Response Body
 
-{% highlight javascript %}
+```javascript
     [
       {
         "version" : "19289df18e6e20f797de4a585ea5a91535c7ddf7",
@@ -76,7 +76,7 @@ layout: resource
         ]
       }
     ]
-{% endhighlight %}
+```
 
 | Field                     | Description
 | :----------               |:-------------
@@ -133,7 +133,7 @@ This endpoint allows you to update information for one or more employees for a s
 The payrolls are identified by their pay periods' `start_date` and `end_date`. Both are required and must correspond with an existing, unprocessed payroll. If the dates do not match, the entire request will be rejected. This was an explicit design decision to remove any assumptions around the timespan for data sent.
 
 #### Sample Request Body:
-{% highlight javascript %}
+```javascript
     {
       "version" : "19289df18e6e20f797de4a585ea5a91535c7ddf7",
       "employee_compensations" : [
@@ -167,7 +167,7 @@ The payrolls are identified by their pay periods' `start_date` and `end_date`. B
         }
       ]
     }
-{% endhighlight %}
+```
 
 Notes:
 
