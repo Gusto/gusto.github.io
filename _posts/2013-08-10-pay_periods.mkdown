@@ -1,6 +1,7 @@
 ---
 permalink: docs/v1/pay_periods
 layout: resource
+title: Pay Periods
 ---
 
 # Pay Periods

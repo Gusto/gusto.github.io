@@ -1,6 +1,7 @@
 ---
 permalink: docs/v1/examples/syncing-employees
 layout: resource
+title: Syncing Employees Example
 ---
 
 # Syncing Employees

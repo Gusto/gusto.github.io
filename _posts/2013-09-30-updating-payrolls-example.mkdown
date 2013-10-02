@@ -1,6 +1,7 @@
 ---
 permalink: docs/v1/examples/updating-payrolls
 layout: resource
+title: Updating Payrolls Example
 ---
 
 # Updating Payrolls
