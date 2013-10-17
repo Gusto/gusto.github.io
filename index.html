@@ -1,6 +1,36 @@
 ---
 layout: resource
-title: Derp!
 ---
+<h1>API Documentation</h1>
 
-Hello there.
+<p>Welcome to ZenPayroll's API documentation. This section is meant to serve as both a technical reference for the endpoints availible, as well as a general overview of payroll.</p>
+
+<h2>Getting Started</h2>
+
+<p>The first step towards integration is obtaining API credentials. These include the application id and secret necessary to intereact with any part of the ZenPayroll API. For more information, please reach out to <a href="mailto:api@zenpayroll.com">api@zenpayroll.com</a> describing the use case for your application.</p>
+
+<p>Next, you'll want to successfully authenticate a user using OAuth. The <a href="docs/v1/examples/authentication">Authentication Example</a> has everything you need to get started. Should you run into issues, don't hesitate to email us and we will be happy to help in any way possible.</p>
+
+<h2>(Zen)Payroll Basics</h2>
+
+<p>Payroll in its entirety is rather complex, but the API is designed to shield as much complexity as possible from the end user, without sacrificing functionality. This section gives a birds-eye view of the objects that make up the ZenPayroll system.</p>
+
+<p>Starting with an authenticated user, you will notice that they may be administrators for multiple companies. This is not uncommon, and your application should prepare for it. Accountants use ZenPayroll to manage payroll for many companies simultaneously.</p>
+
+<img src="/images/authenticated-user-company.jpg">
+
+<p>Companies themselves are, naturally, a collection of one to hundreds of employees. Employee data, on the payroll side, is relatively static. Compensation information, addresses, and tax information changes rather infrequently once set.</p>
+
+<p>Companies can have multiple work locations, across multiple states, but everyone gets paid at the same time.</p>
+
+<img src="/images/company-to-employees.jpg">
+
+<p>Pay periods are the combination of a company, a subset of its employees, and a time range. Not every employee at a company will be a part of every payroll. One-off (or'off-cycle') payrolls are run for special events such as hiringor termination, and employees can be excluded from payrolls.</p>
+
+<p>Regular payrolls are tied to a specific pay periods, and all associated information - vacation & sick time, hours worked, bonuses, etc. - should be applied to that time range.</p>
+
+<img src="/images/pay-periods.jpg">
+
+<p>And that's it! The fundamental payroll interactions, at the data level, are simple. The boundaries of payroll, both reducing redundancy in collecting the information necessary to run payroll and taking the results to power down-stream business tools, are the target of this API.</p>
+
+<p>If you have any feedback, feature requests, are in need of a helping hand, or just want to say hello, <a href="mailto:api@zenpayroll.com">shoot us an email.</a></p>

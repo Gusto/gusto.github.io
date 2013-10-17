@@ -23,7 +23,7 @@ layout: resource
 {% highlight javascript %}
     {
       "email" : "chris@zenpayroll.com",
-      "permissions" : {
+      "roles" : {
         "payroll_admin" : {
           "company_ids" : [2357111317192329]
         }
