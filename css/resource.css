@@ -22,7 +22,6 @@ blockquote {
 body {
 	background: $white url("https://zenpayroll.com/assets/corporate/plaid-texture.png") repeat top center;
 }
-
 code {
 	color: #32823f;
 }
@@ -38,6 +37,21 @@ code {
 .big-text {
 	font-size: 1.4em;
 }
+
+#secondarynav a i[class^="icon"] {
+	color: #C4C4C4;
+	padding-right: 10px;
+}
+#secondarynav a:hover {
+	color: #32823f !important;
+	font-weight: 400;
+}
+#secondarynav a:hover i[class^="icon"] {
+	color: #32823f !important;
+}
+
+
+
 #secondarynav h3 {
 	color: #32823f;
 	font-size: 22px;
