@@ -49,6 +49,9 @@ code {
 #secondarynav a:hover i[class^="icon"] {
 	color: #32823f !important;
 }
+a.show-link {
+	text-decoration: underline !important;
+}
 
 
 
