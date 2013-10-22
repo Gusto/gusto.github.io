@@ -26,7 +26,18 @@ body {
 code {
 	color: #32823f;
 }
-
+.margin-top {
+	margin-top: 20px;
+}
+.margin-top-10 {
+	margin-top: 10px;
+}
+.margin-bottom {
+	margin-top: 10px;
+}
+.big-text {
+	font-size: 1.4em;
+}
 #secondarynav h3 {
 	color: #32823f;
 	font-size: 22px;
