@@ -42,10 +42,11 @@ code {
 }
 .secondary .secondary-main h3 {
 	margin-top: 60px;
+	border-bottom: 1px solid #4A4A4A;
 }
 .secondary .secondary-main h4 {
-	font-weight: 200;
-	margin-top: 20px;
+	font-weight: 700;
+	margin-top: 30px;
 }
 
 .secondary .secondary-main blockquote p {

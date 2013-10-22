@@ -17,19 +17,25 @@ layout: resource
 
 <p>Starting with an authenticated user, you will notice that they may be administrators for multiple companies. This is not uncommon, and your application should prepare for it. Accountants use ZenPayroll to manage payroll for many companies simultaneously.</p>
 
-<img src="/images/authenticated-user-company.jpg">
+<p class="text-center">
+	<img src="/images/authenticated-user-company.png">
+</p>
 
 <p>Companies themselves are, naturally, a collection of one to hundreds of employees. Employee data, on the payroll side, is relatively static. Compensation information, addresses, and tax information changes rather infrequently once set.</p>
 
 <p>Companies can have multiple work locations, across multiple states, but everyone gets paid at the same time.</p>
 
-<img src="/images/company-to-employees.jpg">
+<p class="text-center">
+	<img src="/images/company-to-employees.png">
+</p>
 
 <p>Pay periods are the combination of a company, a subset of its employees, and a time range. Not every employee at a company will be a part of every payroll. One-off (or'off-cycle') payrolls are run for special events such as hiringor termination, and employees can be excluded from payrolls.</p>
 
 <p>Regular payrolls are tied to a specific pay periods, and all associated information - vacation & sick time, hours worked, bonuses, etc. - should be applied to that time range.</p>
 
-<img src="/images/pay-periods.jpg">
+<p class="text-center">
+	<img src="/images/pay-periods.png">
+</p>
 
 <p>And that's it! The fundamental payroll interactions, at the data level, are simple. The boundaries of payroll, both reducing redundancy in collecting the information necessary to run payroll and taking the results to power down-stream business tools, are the target of this API.</p>
 

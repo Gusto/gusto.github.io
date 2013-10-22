@@ -16,7 +16,7 @@ We'll be using Ruby, with inefficient code, but the purpose of this example is t
 
 These examples will assume an <a href="/docs/v1/examples/authentication">authenticated</a> application and will leave out the `access_token` parameter for clarity.
 
-## Get Unprocessed Payroll
+### Get Unprocessed Payroll
 
 Let's say we have information for the regular hours of Patricia Churchland from January 01, 2014 through January 20, 2014:
 
@@ -156,7 +156,7 @@ end
 
 ```
 
-## Building the Response
+### Building the Response
 
 Now we need to build up the information to send to the Update Payrolls endpoint. All that is required is the version and the compensation information.
 
@@ -227,7 +227,7 @@ Note that we had recorded 24 hours worked for the second pay period, but the abo
 
 Now, for each payroll, we can send a PUT request to `https://zenpayroll.com/api/v1/companies/94158/payrolls/:start_date/:end_date` (where start_date and end_date are for that payroll.) If everything goes well, we'll get response with a 200 OK status. But what if things have changed since we last pulled data from ZenPayroll?
 
-## Conflicts
+### Conflicts
 
 If information has changed since your last pull of information from ZenPayroll, you will receive a 409 Conflict response code.
 

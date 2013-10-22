@@ -5,14 +5,11 @@ title: Authentication Example
 ---
 
 # Authentication
-<br/>
-## Registering
+##  Safety First!
 
-Due to the sensitive nature of payroll, all potential integrations must be vetted and approved by ZenPayroll.
+Due to the sensitive nature of payroll, all potential integrations must be vetted and approved by ZenPayroll.  To register an application, send an email to api@zenpayroll.com with a description of your company and use case.
 
-To register an application, send an email to api@zenpayroll.com with a description of your company and use case.
-
-## Getting Started
+### Getting Started
 
 Authentication is done using [OAuth2](http://oauth.net/2/). Numerous libraries implementing the protocol can be found on the [OAuth2 homepage](http://oauth.net/2/).
 
@@ -35,7 +32,7 @@ Here is the sample application information we'll use throughout:
   redirect_url: http://example.com/callback
 ```
 
-## Authorization Code
+### Authorization Code
 
 > **Expiration Time:** 10 minutes
 >
@@ -68,7 +65,7 @@ http://example.com/callback?code=51d5d63ae28783aecd59e7834be2c637a9ee260f241b191
 
 This parameter contains the authorization code that you will then use to obtain your first access token.
 
-## Access Token
+### Access Token
 
 > **Expiration Time:** 2 hours.
 >
@@ -107,7 +104,7 @@ Upon successful authentication, the response will look like this:
 
 The `access_token` should be included with every call to the API. Failure to include the `access_token` or using an expired token will result in a 401 response.
 
-## Refresh Token
+### Refresh Token
 
 > **Expiration Time:** Never (invalid after one use)
 >
