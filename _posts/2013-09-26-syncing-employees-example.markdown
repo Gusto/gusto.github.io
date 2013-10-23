@@ -10,7 +10,7 @@ title: Syncing Employees Example
 
 You have successfully <a href="/v1/examples/authentication">integrated with OAuth</a>, gotten back the authenticated companies for the <a href="/v1/current_user">current user</a>, and fetched the <a href="/v1/companies">company information</a>.
 
-Now you have the JSON representation 20 employees and need to map them to the employees in your database.
+Now you have the JSON representation of 20 employees and need to map them to the employees in your database.
 
 Naturally, the approach you'll choose will depend on the information you have available. Here are some suggestions for matching up the employees in your database with the ones in ours. We recommend persisting the unique `id` attribute that is returned by the Api, rather than redoing the match at the beginning of a pay period.
 
