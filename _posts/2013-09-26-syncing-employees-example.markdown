@@ -24,7 +24,7 @@ This assumes that employees provide the same email address to both systems, but 
 
 Almost 98% of employees in the ZenPayroll system have birthdays associated with them. Of those that do, ~81% have a unique birthday (comprised of year, month, and day.)
 
-Be careful when only comparing month and day, as it takes [only 57 people](http://en.wikipedia.org/wiki/Birthday_problem) to acheive a 99% probability of collision.
+Be careful when only comparing month and day, as it takes [only 57 people](http://en.wikipedia.org/wiki/Birthday_problem) to achieve a 99% probability of collision.
 
 ### Full Name
 
