@@ -1,5 +1,5 @@
 ---
-permalink: /docs/v1/considerations/versioning
+permalink: /v1/considerations/versioning
 layout: resource
 title: Versioning Considerations
 ---

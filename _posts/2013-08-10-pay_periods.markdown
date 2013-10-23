@@ -1,5 +1,5 @@
 ---
-permalink: docs/v1/pay_periods
+permalink: v1/pay_periods
 layout: resource
 title: Pay Periods
 ---

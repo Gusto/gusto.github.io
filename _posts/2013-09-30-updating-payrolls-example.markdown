@@ -1,5 +1,5 @@
 ---
-permalink: docs/v1/examples/updating-payrolls
+permalink: v1/examples/updating-payrolls
 layout: resource
 title: Updating Payrolls Example
 ---
@@ -14,7 +14,7 @@ Here we'll walk through updating the payroll information for one employee and ho
 
 We'll be using Ruby, with inefficient code, but the purpose of this example is to outline the flow rather than provide a production-ready implementation.
 
-These examples will assume an <a href="/docs/v1/examples/authentication">authenticated</a> application and will leave out the `access_token` parameter for clarity.
+These examples will assume an <a href="/v1/examples/authentication">authenticated</a> application and will leave out the `access_token` parameter for clarity.
 
 ### Get Unprocessed Payroll
 
@@ -122,7 +122,7 @@ json_response = [
 
 ```
 
-This company seems to be on a semi-monthly pay schedule, paying their employees on the 15th and end of the month. We've already <a href="/docs/v1/examples/syncing-employees">sync'd employees</a> and know that we are looking for `employee_id` 1123581321345589.
+This company seems to be on a semi-monthly pay schedule, paying their employees on the 15th and end of the month. We've already <a href="/v1/examples/syncing-employees">sync'd employees</a> and know that we are looking for `employee_id` 1123581321345589.
 
 Looks like she is eligible for two types of fixed compensations, one type of hourly compensation, and no PTO.
 

@@ -1,5 +1,5 @@
 ---
-permalink: docs/v1/employees
+permalink: v1/employees
 layout: resource
 title: Employees
 ---

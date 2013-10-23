@@ -1,5 +1,5 @@
 ---
-permalink: docs/v1/examples/authentication
+permalink: v1/examples/authentication
 layout: resource
 title: Authentication Example
 ---

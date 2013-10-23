@@ -1,5 +1,5 @@
 ---
-permalink: docs/v1/examples/syncing-employees
+permalink: v1/examples/syncing-employees
 layout: resource
 title: Syncing Employees Example
 ---
@@ -8,7 +8,7 @@ title: Syncing Employees Example
 
 ## Are We Talking About The Same People?
 
-You have successfully <a href="/docs/v1/examples/authentication">integrated with OAuth</a>, gotten back the authenticated companies for the <a href="/docs/v1/current_user">current user</a>, and fetched the <a href="/docs/v1/companies">company information</a>.
+You have successfully <a href="/v1/examples/authentication">integrated with OAuth</a>, gotten back the authenticated companies for the <a href="/v1/current_user">current user</a>, and fetched the <a href="/v1/companies">company information</a>.
 
 Now you have the JSON representation 20 employees and need to map them to the employees in your database.
 

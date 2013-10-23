@@ -1,5 +1,5 @@
 ---
-permalink: docs/v1/companies
+permalink: v1/companies
 title: Companies
 layout: resource
 ---

@@ -1,5 +1,5 @@
 ---
-permalink: docs/v1/important_concepts
+permalink: v1/important_concepts
 layout: resource
 ---
 

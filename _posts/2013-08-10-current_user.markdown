@@ -1,5 +1,5 @@
 ---
-permalink: /docs/v1/current_user
+permalink: /v1/current_user
 title: Current User
 layout: resource
 ---

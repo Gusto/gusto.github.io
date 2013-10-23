@@ -1,5 +1,5 @@
 ---
-permalink: docs/v1/payrolls
+permalink: v1/payrolls
 layout: resource
 ---
 
