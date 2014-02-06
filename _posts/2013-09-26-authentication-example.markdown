@@ -102,7 +102,7 @@ Upon successful authentication, the response will look like this:
   }
 ```
 
-The `access_token` should be included with every call to the API. Failure to include the `access_token` or using an expired token will result in a 401 response.
+The `access_token` should be included as a query parameter with every call to the API. Failure to include the `access_token` or using an expired token will result in a 401 response.
 
 ### Refresh Token
 
