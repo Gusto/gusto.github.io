@@ -89,7 +89,6 @@ layout: resource
 | `fixed_compensations`     | array of all fixed compensations. Examples of fixed compensations include tips, bonus, or one time reimbursements.
 | `name`                    | name of the compensation. This also serves as the unique, immutable identifier for this compensation.
 | `amount`                  | amount of compensation for this pay period.
-| `job_id`                  | unique identifier of the job worked for this compensation.
 | `hourly_compensations`    | array of all hourly compensations. Examples of hourly compensations include regular, overtime, and double overtime hours.
 | `name`                    | name of the compensation. This also serves as the unique, immutable identifier for this compensation.
 | `hours`                   | hours to be compensated for during this pay period.
