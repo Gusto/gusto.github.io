@@ -71,7 +71,7 @@ title: Employees
 | `last_name`               | employee's last name.
 | `email`                   | employee's email address. This is provided specifically to sync users between our system and yours. You may not use this address for any other purpose (e.g. Marketing.) Not guaranteed to exist.
 | `date_of_birth`           | employee's birthday!
-| `jobs`                    | array of job information.
+| `jobs`                    | array of job information. Jobs are the intersection of a compensation rate (hourly rate or salary), an employee, and a location (one of the company's addresses.)
 | `id`                      | the unique identifier of this employee in the ZenPayroll system.
 | `title`                   | job title for this position.
 | `rate`                    | dollar amount paid per `payment_unit`.
