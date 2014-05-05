@@ -79,3 +79,12 @@ title: Employees
 | `location_id`             | the unique identifier of this job's location in the ZenPayroll system.
 | `eligible_paid_time_off`  | array of paid time off (PTO) information for which this employee is eligible. This is a subset of the possible paid time off types returned for the employee's company.
 | `name`                    | name of this PTO type
+
+### Optional Parameters
+
+You can pare down the results by passing in additional parameters:
+
+  Available options: terminated
+
+    GET /api/v1/companies/3337/employees?terminated=false
+      => returns all employees
