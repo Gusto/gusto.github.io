@@ -61,8 +61,14 @@ title: Employees
             "name" : "Sick Hours"
           }
         ],
-        "terminated" : false,
-        "terminations" : []
+        "terminated" : true,
+        "terminations" : [
+          {
+            "active" : true,
+            "effective_date" : "1804-02-12",
+            "run_termination_payroll" : false
+          }
+        ]
       }
     ]
 ```
