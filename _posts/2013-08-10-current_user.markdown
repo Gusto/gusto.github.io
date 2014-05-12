@@ -25,7 +25,31 @@ layout: resource
       "email" : "chris@zenpayroll.com",
       "roles" : {
         "payroll_admin" : {
-          "company_ids" : [2357111317192329]
+          "companies" : [
+            {
+              "id" : 2357111317192329,
+              "name" : "Ye Olde Wig Shoppe",
+              "trade_name" : "Fezziwig's",
+              "locations" : [
+                {
+                  "id" : 3141592653589793,
+                  "street_1" : "450 Serra Mall",
+                  "street_2" : "Department of Philosophy",
+                  "city" : "Stanford",
+                  "state" : "CA",
+                  "zip" : "94305"
+                },
+                {
+                  "id" : 2718281828459045,
+                  "street_1" : "314 Moses Hall #2390",
+                  "street_2" : "University of California",
+                  "city" : "Berkeley",
+                  "state" : "CA",
+                  "zip" : "94720"
+                }
+              ],
+            }
+          ]
         }
       }
     }
@@ -35,4 +59,4 @@ layout: resource
 | :----------               |:-------------
 | `email`                   | email address for the authenticated user.
 | `roles`                   | information for each of the current user's permissions.
-| `company_ids`             | array of company ids for which the current user has admin privileges. Users (most notably accountants) can have priviliges with multiple companies.
+| `companies`               | array of basic company information for which the current user has admin privileges. Users (most notably accountants) can have priviliges with multiple companies.
