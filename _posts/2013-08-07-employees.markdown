@@ -34,7 +34,9 @@ title: Employees
             "location_id" : 3141592653589793
           }
         ],
-        "eligible_paid_time_off" : []
+        "eligible_paid_time_off" : [],
+        "terminated" : false,
+        "terminations" : []
       },
       {
         "id" : 1442333776109871,
@@ -58,7 +60,9 @@ title: Employees
           {
             "name" : "Sick Hours"
           }
-        ]
+        ],
+        "terminated" : false,
+        "terminations" : []
       }
     ]
 ```
@@ -79,6 +83,11 @@ title: Employees
 | `location_id`             | the unique identifier of this job's location in the ZenPayroll system.
 | `eligible_paid_time_off`  | array of paid time off (PTO) information for which this employee is eligible. This is a subset of the possible paid time off types returned for the employee's company.
 | `name`                    | name of this PTO type
+| `terminated`              | whether the employee has been terminated from the company.
+| `terminations`            | array of terminations for this employee
+| `active`                  | Whether this termination is currently in effect
+| `effective_date`          | The employee's last day of work at the company
+| `run_termination_payroll` | If true, employee will recieve their last, prorated wages via an offcycle payroll. If false, they will recieve their final wages with the rest of the company
 
 ### Optional Parameters
 
@@ -87,4 +96,4 @@ You can pare down the results by passing in additional parameters:
   Available options: terminated
 
     GET /api/v1/companies/3337/employees?terminated=false
-      => returns all employees
+      => returns all employees that have not been terminated
