@@ -33,7 +33,7 @@ title: Jobs
         "country" : "USA"
       },
       "hire_date" : "2012-12-11",
-      "title" : "Middle Manager",
+      "title" : "Assistant to the Regional Manager",
       "rate" : "70.00",
       "payment_unit" : "Hour",
       "current_compensation_id" : 1363316536327003
@@ -79,7 +79,7 @@ title: Jobs
       "country" : "USA"
     },
     "hire_date" : "2012-12-11",
-    "title" : "Middle Manager",
+    "title" : "Assistant to the Regional Manager",
     "rate" : "70.00",
     "payment_unit" : "Hour",
     "current_compensation_id" : 1363316536327003
@@ -94,5 +94,39 @@ title: Jobs
         "effective_date": "2012-12-11"
       }
     ]
+  }
+```
+
+## Update an individual job
+
+**HTTP Method**: `PUT`
+
+**Endpoint**: `/api/v1/jobs/:job_id`
+
+**Returns**: An updated job representation or errors which prevented update
+
+### Sample Request Body
+
+```javascript
+  {
+    "version" : "gr78930htutrz444kuytr3s5hgxykuveb523fwl8sir",
+    "title" : "Assistant Regional Manager"
+  }
+```
+
+## Create a Job
+
+**HTTP Method**: `POST`
+
+**Endpoint**: `/api/v1/employees/:employee_id/jobs`
+
+**Returns**: The new job object or errors which prevented creation
+
+### Sample Request Body
+
+```javascript
+  {
+    "title" : "Assistant to the Regional Manager",
+    "hire_date" : "2012-12-21"
   }
 ```
