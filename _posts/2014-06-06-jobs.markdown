@@ -1,0 +1,98 @@
+---
+permalink: v1/jobs
+layout: resource
+title: Jobs
+---
+
+# Jobs
+
+## Get jobs for an employee
+
+**HTTP Method**: `GET`
+
+**Endpoint**: `/api/v1/employees/:employee_id/jobs`
+
+**Returns**: Array of all jobs this employee holds.
+
+#### Sample Response Body:
+
+```javascript
+  [
+    {
+      "id" : 1123581321345589,
+      "version" : "gr78930htutrz444kuytr3s5hgxykuveb523fwl8sir",
+      "employee_id" : 1363316536327001
+      "location_id" : 1363316536327002,
+      "location": {
+        "id": 1363316536327002,
+        "street_1": "425 2nd Street",
+        "street_2": "Suite 602",
+        "city" : "San Francisco",
+        "state" : "CA",
+        "zip" : "94107",
+        "country" : "USA"
+      },
+      "hire_date" : "2012-12-11",
+      "title" : "Middle Manager",
+      "rate" : "70.00",
+      "payment_unit" : "Hour",
+      "current_compensation_id" : 1363316536327003
+      "compensations" : [
+        {
+          "id" : 1363316536327004,
+          "version" : "98jr3289h3298hr9329gf9egskt3kagri32qqgiqe3872",
+          "job_id" : 1123581321345589,
+          "rate" : "70.00",
+          "payment_unit" : "Hour",
+          "flsa_status" : "Nonexempt",
+          "effective_date": "2012-12-11"
+        }
+      ]
+    }
+  ]
+```
+
+## Get an individual job
+
+**HTTP Method**: `GET`
+
+**Endpoint**: `/api/v1/jobs/:job_id`
+
+**Returns**: A single job representation
+
+#### Sample Response Body:
+
+
+```javascript
+  {
+    "id" : 1123581321345589,
+    "version" : "gr78930htutrz444kuytr3s5hgxykuveb523fwl8sir",
+    "employee_id" : 1363316536327001
+    "location_id" : 1363316536327002,
+    "location": {
+      "id": 1363316536327002,
+      "street_1": "425 2nd Street",
+      "street_2": "Suite 602",
+      "city" : "San Francisco",
+      "state" : "CA",
+      "zip" : "94107",
+      "country" : "USA"
+    },
+    "hire_date" : "2012-12-11",
+    "title" : "Middle Manager",
+    "rate" : "70.00",
+    "payment_unit" : "Hour",
+    "current_compensation_id" : 1363316536327003
+    "compensations" : [
+      {
+        "id" : 1363316536327004,
+        "version" : "98jr3289h3298hr9329gf9egskt3kagri32qqgiqe3872",
+        "job_id" : 1123581321345589,
+        "rate" : "70.00",
+        "payment_unit" : "Hour",
+        "flsa_status" : "Nonexempt",
+        "effective_date": "2012-12-11"
+      }
+    ]
+  }
+```
