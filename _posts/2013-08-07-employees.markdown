@@ -89,8 +89,7 @@ title: Employees
 | `ssn`                     | masked social security number
 | `date_of_birth`           | employee's birthday!
 | `jobs`                    | array of job information. See <a href="/v1/jobs">jobs documentation</a> for full documentation and endpoints.
-| `home_address`            | employee's home address. See <a href="/v1/employee_home_address
-">employee home address documentation</a> for full documentation and endpoints.
+| `home_address`            | employee's home address. See <a href="/v1/employee_home_address">employee home address documentation</a> for full documentation and endpoints.
 | `federal_tax_information`            | employee's federal tax information. See <a href="/v1/employee_federal_tax_information">employee federal tax information documentation</a> for full documentation and endpoints.
 | `garnishments`            | array of garnishments. See <a href="/v1/garnishments">garnishments documentation</a> for full documentation and endpoints.
 | `terminated`              | whether the employee has been terminated from the company.
