@@ -20,6 +20,7 @@ title: Employees
     [
       {
         "id" : 1123581321345589,
+        "version" : "db0edd04aaac4506f7edab03ac855d56",
         "first_name" : "Soren",
         "middle_initial" : "A",
         "last_name" : "Kierkegaard",
@@ -80,6 +81,7 @@ title: Employees
 | Field                     | Description
 | :----------               |:-------------
 | `id`                      | the unique identifier of this employee in the ZenPayroll system.
+| `version`                 | version of this object. See <a href="/v1/considerations/versioning/">the versioning documentation</a> for a more in depth explaination of versions.
 | `first_name`              | employee's first name.
 | `middle_initial`          | employee's middle initial. Not guaranteed to exist.
 | `last_name`               | employee's last name.
