@@ -6,6 +6,10 @@ title: Employee Home Address
 
 # Employee's Home Address
 
+## Attributes
+
+
+
 ## Get an employee's home address
 
 **HTTP Method**: `GET`
