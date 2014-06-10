@@ -6,9 +6,21 @@ title: Employee Home Address
 
 # Employee's Home Address
 
+The home address of an employee determines some tax information about them. Addresses are geocoded on create/update to ensure validity.
+
 ## Attributes
 
-
+| Attribute                     | Type              | Read-Only | Description
+| :----------                   |:-------------     |:---------:|:-------------
+| `id`                          | Integer           |     X     | unique identifier of this address
+| `version`                     | String            |     X     | version of this object. See <a href="/v1/considerations/versioning/">the versioning documentation</a> for a more in depth explaination of versions
+| `employee_id`                 | Integer           |     X     | id of the employee to which this address belongs
+| `street_1`                    | String            |           | first line of the address
+| `street_2`                    | String            |           | second line of the address
+| `city`                        | String            |           | city of the address
+| `state`                       | String            |           | state of this address
+| `zip`                         | String            |           | zipcode of this address
+| `country`                     | String            |           | country for this address. Defaults to "USA"
 
 ## Get an employee's home address
 
