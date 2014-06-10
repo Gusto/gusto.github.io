@@ -8,26 +8,26 @@ title: Employees
 
 ## Attributes
 
-| Attribute                     | Type              | Read-Only | Description
-| :----------                   |:-------------     |:---:      |:-------------
-| `id`                          | Integer           |     X     | the unique identifier of this employee in the ZenPayroll system.
-| `version`                     | String            |     X     | version of this object. See <a href="/v1/considerations/versioning/">the versioning documentation</a> for a more in depth explaination of versions.
-| `first_name`                  | String            |           | employee's first name.
-| `middle_initial`              | String            |           | employee's middle initial. Not guaranteed to exist.
-| `last_name`                   | String            |           | employee's last name.
-| `email`                       | String            |           | employee's email address. This is provided specifically to sync users between our system and yours. You may not use this address for any other purpose (e.g. marketing.) Not guaranteed to exist.
-| `ssn`                         | String            |           | masked social security number. When updating this attribute, format should be a string of nine numbers (no dashes.)
-| `date_of_birth`               | String            |           | employee's birthday!
-| `jobs`                        | Array             |     X     | array of job information. See <a href="/v1/jobs">jobs documentation</a> for full documentation and endpoints.
-| `home_address`                | Object            |     X     | employee's home address. See <a href="/v1/employee_home_address">employee home address documentation</a> for full documentation and endpoints.
-| `federal_tax_information`     | Object            |     X     | employee's federal tax information. See <a href="/v1/employee_federal_tax_information">employee federal tax information documentation</a> for full documentation and endpoints.
-| `garnishments`                | Array             |     X     | array of garnishments. See <a href="/v1/garnishments">garnishments documentation</a> for full documentation and endpoints.
-| `eligible_paid_time_off`      | Array             |     X     | array of paid time off information. See <a href="/v1/paid_time_off">paid time off documentation</a> for full documentation and endpoints.
-| `terminated`                  | Boolean           |     X     | whether the employee has been terminated from the company.
-| `terminations`                | Array             |     X     | array of terminations for this employee
-| `active`                      | Boolean           |     X     | whether this termination is currently in effect
-| `effective_date`              | String            |     X     | The employee's last day of work at the company
-| `run_termination_payroll`     | Boolean           |     X     | If true, employee will recieve their last, prorated wages via an offcycle payroll. If false, they will recieve their final wages with the rest of the company
+| Attribute                     | Type              | Read-Only | Optional | Default | Description
+| :----------                   |:-------------     |:---------:|:--------:|:--------|:-------------
+| `id`                          | Integer           |     X     |          |         | the unique identifier of this employee in the ZenPayroll system.
+| `version`                     | String            |     X     |          |         | version of this object. See <a href="/v1/considerations/versioning/">the versioning documentation</a> for a more in depth explaination of versions.
+| `first_name`                  | String            |           |          |         | employee's first name.
+| `middle_initial`              | String            |           |    X     | null    | employee's middle initial. Not guaranteed to exist.
+| `last_name`                   | String            |           |          |         | employee's last name.
+| `email`                       | String            |           |    X     | null    | employee's email address. This is provided specifically to sync users between our system and yours. You may not use this address for any other purpose (e.g. marketing.) Not guaranteed to exist.
+| `ssn`                         | String            |           |    X     | null    | masked social security number. When updating this attribute, format should be a string of nine numbers (no dashes.)
+| `date_of_birth`               | String            |           |    X     | null    | employee's birthday!
+| `jobs`                        | Array             |     X     |          |         | array of job information. See <a href="/v1/jobs">jobs documentation</a> for full documentation and endpoints.
+| `home_address`                | Object            |     X     |          |         | employee's home address. See <a href="/v1/employee_home_address">employee home address documentation</a> for full documentation and endpoints.
+| `federal_tax_information`     | Object            |     X     |          |         | employee's federal tax information. See <a href="/v1/employee_federal_tax_information">employee federal tax information documentation</a> for full documentation and endpoints.
+| `garnishments`                | Array             |     X     |          |         | array of garnishments. See <a href="/v1/garnishments">garnishments documentation</a> for full documentation and endpoints.
+| `eligible_paid_time_off`      | Array             |     X     |          |         | array of paid time off information. See <a href="/v1/paid_time_off">paid time off documentation</a> for full documentation and endpoints.
+| `terminated`                  | Boolean           |     X     |          |         | whether the employee has been terminated from the company.
+| `terminations`                | Array             |     X     |          |         | array of terminations for this employee
+| `active`                      | Boolean           |     X     |          |         | whether this termination is currently in effect
+| `effective_date`              | String            |     X     |          |         | The employee's last day of work at the company
+| `run_termination_payroll`     | Boolean           |     X     |          |         | If true, employee will recieve their last, prorated wages via an offcycle payroll. If false, they will recieve their final wages with the rest of the company
 
 
 ## Get an employee

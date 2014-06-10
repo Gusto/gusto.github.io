@@ -6,21 +6,27 @@ title: Jobs
 
 # Jobs
 
+Jobs are essentially the intersection of <a href="/v1/employees">an employee</a>, <a href="/v1/compensations">a compensation</a>, and a <a href="/v1/companies">company work location</a>.
+
+**_Note_**
+
+In the future, ZenPayroll will support an employee having multiple jobs. The API is designed as if this is the case, though will return an error if more than one job is created on an employee.
+
 ## Attributes
 
-| Attribute                     | Type              | Read-Only | Description
-| :----------                   |:-------------     |:---:      |:-------------
-| `id`                          | Integer           |     X     | the unique identifier of this job
-| `version`                     | String            |     X     | version of this object. See <a href="/v1/considerations/versioning/">the versioning documentation</a> for a more in depth explaination of versions
-| `employee_id`                 | Integer           |     X     | id for the employee to which this job belongs
-| `location_id`                 | Integer           |           | id for this job's work location. Corresponds to one of the company's locations returned via the <a href="/v1/companies">company endpoints</a>.
-| `location`                    | Object            |     X     | full representation of the location's address
-| `hire_date`                   | String            |           | when the employee was hired for this job
-| `title`                       | String            |           | the title for this position
-| `rate`                        | String            |     X     | rate for the current compensation
-| `payment_unit`                | String            |     X     | payment unit for the current compensation
-| `current_compensation_id`     | Integer           |     X     | id for the currently active compensation
-| `compensations`               | Array             |     X     | array of all associated compensations. See the complete <a href="/v1/compensations">compensation documentation</a> for more information.
+| Attribute                     | Type              | Read-Only | Optional | Default | Description
+| :----------                   |:-------------     |:---------:|:--------:|:--------|:-------------
+| `id`                          | Integer           |     X     |          |         | the unique identifier of this job
+| `version`                     | String            |     X     |          |         | version of this object. See <a href="/v1/considerations/versioning/">the versioning documentation</a> for a more in depth explaination of versions
+| `employee_id`                 | Integer           |     X     |          |         | id for the employee to which this job belongs
+| `location_id`                 | Integer           |           |          |         | id for this job's work location. Corresponds to one of the company's locations returned via the <a href="/v1/companies">company endpoints</a>.
+| `location`                    | Object            |     X     |          |         | full representation of the location's address
+| `hire_date`                   | String            |           |          |         | when the employee was hired for this job
+| `title`                       | String            |           |    X     | null    | the title for this position
+| `rate`                        | String            |     X     |          |         | rate for the current compensation
+| `payment_unit`                | String            |     X     |          |         | payment unit for the current compensation
+| `current_compensation_id`     | Integer           |     X     |          |         | id for the currently active compensation
+| `compensations`               | Array             |     X     |          |         | array of all associated compensations. See the complete <a href="/v1/compensations">compensation documentation</a> for more information.
 
 ## Get jobs for an employee
 

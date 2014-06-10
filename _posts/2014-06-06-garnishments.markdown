@@ -6,6 +6,26 @@ title: Garnishments
 
 # Garnishments
 
+Garnisments, or employee deductions, are fixed amounts or percentages deducted from an employee's pay. They can be deducted a specific number of times or on a recurring basis. Garnishments can also have maximum deductions on a yearly or per-pay-period bases. Common uses for garnishments are court-ordered payments for child support or back taxes. Some companies provide loans to their employees that are repaid via garnishments.
+
+## Attributes
+
+| Attribute                     | Type              | Read-Only | Optional | Default | Description
+| :----------                   |:-------------     |:---------:|:--------:|:--------|:-------------
+| `id`                          | Integer           |     X     |          |         | the unique identifier of this garnishment
+| `version`                     | String            |     X     |          |         | version of this object. See <a href="/v1/considerations/versioning/">the versioning documentation</a> for a more in depth explaination of versions
+| `employee_id`                 | Integer           |     X     |          |         | id for the employee to which this garnishment belongs
+| `active`                      |  Boolean          |           |     X    | true    | whether or not this garnishment is currently active
+| `amount`                      |  Float            |           |          |         | amount of the garnisment. Either a percentage or fixed dollar amount.
+| `description`                 | String            |           |          |         | description of this garnishment
+| `court_ordered`               | Boolean           |           |          |         | whether this garnishment was court ordered
+| `times`                       | Integer           |           |     X    | null    | how many times to apply this garnisment. Optional (and will be ignored) if recurring is set to `true`
+| `recurring`                   | Boolean           |           |     X    | false   | if this garnishment should recur indefinitely
+| `annual_maximum`              | Float             |           |     X    | null    | maximum deduction per annum. Null indicates no annual limit
+| `pay_period_maximum`          | Float             |           |     X    | null    | maximum deduction per pay period. Null indicates no annual limit
+| `deduct_as_percentage`        | Boolean           |           |     X    | false   | if true, treats the `amount` as a percentage to be deducted per pay period
+
+
 ## Get garnishments for an employee
 
 **HTTP Method**: `GET`
