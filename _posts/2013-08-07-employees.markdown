@@ -24,11 +24,7 @@ title: Employees
 | `garnishments`                | Array             |     X     |          |         | array of garnishments. See <a href="/v1/garnishments">garnishments documentation</a> for full documentation and endpoints.
 | `eligible_paid_time_off`      | Array             |     X     |          |         | array of paid time off information. See <a href="/v1/paid_time_off">paid time off documentation</a> for full documentation and endpoints.
 | `terminated`                  | Boolean           |     X     |          |         | whether the employee has been terminated from the company.
-| `terminations`                | Array             |     X     |          |         | array of terminations for this employee
-| `active`                      | Boolean           |     X     |          |         | whether this termination is currently in effect
-| `effective_date`              | String            |     X     |          |         | The employee's last day of work at the company
-| `run_termination_payroll`     | Boolean           |     X     |          |         | If true, employee will recieve their last, prorated wages via an offcycle payroll. If false, they will recieve their final wages with the rest of the company
-
+| `terminations`                | Array             |     X     |          |         | array of terminations for this employee. See <a href="/v1/terminations">terminations documentation</a> for full documentation and endpoints.
 
 ## Get an employee
 
