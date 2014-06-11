@@ -6,7 +6,9 @@ title: Terminations
 
 # Terminations
 
-These enpoints handle paid time off for an employee. Currently only 'Vacation Hours' and 'Sick Hours' are supported.
+Terminations are created whenever an employee is scheduled to leave the company. The only things required are an effective date (their last day of work) and whether they should receive their wages in a one-off termination payroll or with the rest of the company.
+
+Note that some states require employees to receive their final wages within 24 hours (unless they consent otherwise,) in which case running a one-off payroll may be the only option.
 
 ## Attributes
 
@@ -42,7 +44,7 @@ These enpoints handle paid time off for an employee. Currently only 'Vacation Ho
   ]
 ```
 
-## Get a particular paid time off type for an employee
+## Get a termination for an employee
 
 **HTTP Method**: `GET`
 
@@ -78,7 +80,7 @@ These enpoints handle paid time off for an employee. Currently only 'Vacation Ho
   }
 ```
 
-## Create paid time off
+## Create a termination
 
 **HTTP Method**: `POST`
 
