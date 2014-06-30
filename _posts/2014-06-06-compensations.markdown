@@ -24,28 +24,6 @@ Currently, jobs are arbitrarily limited to a single compensation as multiple com
 | `flsa_status`                 | String            |           |          |         | FLSA status for this compensation. Salaried ("Exempt") Employees are paid a fixed salary every pay period. Hourly ("Nonexempt") Employees are paid for the hours they work, and receive overtime pay when applicable. Owners ("Owner") are employees that own at least twenty percent of the company. More information can be found on the <a href="http://www.dol.gov/whd/overtime/fs17b_executive.pdf" target="_blank">Department of Labor's site</a>.
 | `effective_date`               | String           |           |    X     |[hire_date]| the effective date for this compensation rate. For the first compensation, this defaults to the job's hire_date
 
-## Get a single compensation
-
-**HTTP Method**: `GET`
-
-**Endpoint**: `/api/v1/compensations/:compensation_id`
-
-**Returns**: Single compensation object
-
-#### Sample Response Body:
-
-```javascript
-  {
-    "id" : 1363316536327004,
-    "version" : "98jr3289h3298hr9329gf9egskt3kagri32qqgiqe3872",
-    "job_id" : 1123581321345589,
-    "rate" : "70.00",
-    "payment_unit" : "Hour",
-    "flsa_status" : "Nonexempt",
-    "effective_date": "2012-12-11"
-  }
-```
-
 ## Get compensations for a job
 
 **HTTP Method**: `GET`
@@ -68,6 +46,28 @@ Currently, jobs are arbitrarily limited to a single compensation as multiple com
       "effective_date": "2012-12-11"
     }
   ]
+```
+
+## Get a single compensation
+
+**HTTP Method**: `GET`
+
+**Endpoint**: `/api/v1/compensations/:compensation_id`
+
+**Returns**: Single compensation object
+
+#### Sample Response Body:
+
+```javascript
+  {
+    "id" : 1363316536327004,
+    "version" : "98jr3289h3298hr9329gf9egskt3kagri32qqgiqe3872",
+    "job_id" : 1123581321345589,
+    "rate" : "70.00",
+    "payment_unit" : "Hour",
+    "flsa_status" : "Nonexempt",
+    "effective_date": "2012-12-11"
+  }
 ```
 
 ## Update a compensation
