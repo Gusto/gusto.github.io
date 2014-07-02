@@ -6,7 +6,7 @@ title: Garnishments
 
 # Garnishments
 
-Garnisments, or employee deductions, are fixed amounts or percentages deducted from an employee's pay. They can be deducted a specific number of times or on a recurring basis. Garnishments can also have maximum deductions on a yearly or per-pay-period bases. Common uses for garnishments are court-ordered payments for child support or back taxes. Some companies provide loans to their employees that are repaid via garnishments.
+Garnishments, or employee deductions, are fixed amounts or percentages deducted from an employee's pay. They can be deducted a specific number of times or on a recurring basis. Garnishments can also have maximum deductions on a yearly or per-pay-period bases. Common uses for garnishments are court-ordered payments for child support or back taxes. Some companies provide loans to their employees that are repaid via garnishments.
 
 ## Attributes
 
@@ -100,7 +100,7 @@ Garnisments, or employee deductions, are fixed amounts or percentages deducted f
 
 **HTTP Method**: `PUT`
 
-**Endpoint**: `/api/v1/employees/:employee_id/garnishments/`
+**Endpoint**: `/api/v1/garnishments/:garnishment_id`
 
 **Returns**: Updated garnishment or errors which prevent update
 
@@ -117,7 +117,7 @@ Garnisments, or employee deductions, are fixed amounts or percentages deducted f
 
 **HTTP Method**: `POST`
 
-**Endpoint**: `/api/v1/garnishments/:garnishment_id`
+**Endpoint**: `/api/v1/employees/:employee_id/garnishments/`
 
 **Returns**: New garnishment or errors which prevented creation
 
