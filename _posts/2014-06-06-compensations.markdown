@@ -91,7 +91,7 @@ Currently, jobs are arbitrarily limited to a single compensation as multiple com
 
 ## Create a compensation
 
-**HTTP Method**: `PUT`
+**HTTP Method**: `POST`
 
 **Endpoint**: `/api/v1/jobs/:job_id/compensations`
 
