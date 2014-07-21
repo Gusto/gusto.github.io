@@ -81,7 +81,7 @@ Note that company benefits, once created, can be disabled (`active=false`) only 
 ```javascript
   {
     "version": "98jr3289h3298hr9329gf9egskt3kagri32qqgiqe3872",
-    "supports_percentage_amounts": false
+    "active": false
   }
 ```
 
