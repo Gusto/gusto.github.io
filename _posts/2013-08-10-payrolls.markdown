@@ -125,7 +125,7 @@ You may provide all, none, or any combination of them to scope the returned data
 
 **HTTP Method**: `PUT`
 
-**Endpoint**: `/api/v1/companies/:company_id/payrolls/:pay_period_start_date/:pay_period_start_date`
+**Endpoint**: `/api/v1/companies/:company_id/payrolls/:pay_period_start_date/:pay_period_end_date`
 
 This endpoint allows you to update information for one or more employees for a specific payroll.
 
