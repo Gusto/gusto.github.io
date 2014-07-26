@@ -16,7 +16,8 @@ Note that company benefits, once created, can be disabled (`active=false`) only 
 | :----------                   |:-------------     |:---------:|:--------:|:--------|:-------------
 | `id`                          | Integer           |     X     |          |         | the unique identifier of this company benefit
 | `version`                     | String            |     X     |          |         | version of this object. See <a href="/v1/considerations/versioning/">the versioning documentation</a> for a more in depth explaination of versions
-| `company_id`                 | Integer           |     X     |          |         | id for the company to which this company benefit belongs
+| `benefit_id`                 | Integer            |     X     |          |         | id for the benefit to which this company benefit belongs
+| `company_id`                 | Integer            |     X     |          |         | id for the company to which this company benefit belongs
 | `active`                      |  Boolean          |           |     X    | true    | if true, employees may actively participate. May only be set to false if no employees are actively participating (e.g. if an Employee Benefit exists with this company_benefit_id)
 | `description`                      |  String            |           |          |         | description of this benfit offering. For example, a company may offer multiple benefits with `benefit_id` 1 (for Medical Insurance.) So here they would put something more specific like "Kaiser Permanente" or "Blue Cross/ Blue Shield"
 | `supports_percentage_amounts`               | Boolean           |      X     |          |         | if true, employee deductions and company contributions can be set as percentages of payroll for an individual employee. This is determined by the type of benefit, so not settable by the client.
