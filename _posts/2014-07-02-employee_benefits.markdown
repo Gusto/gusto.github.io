@@ -20,7 +20,7 @@ Employee benefits represent an <a href="/v1/employees">employee</a> enrolled in 
 | `employee_deduction` | String | | X | '0.00' | the amount to be deducted, per pay period, from the employee's pay.
 | `employee_deduction_annual_maximum` | String | | X | null | the maximum employee deduction per year. A null amount signifies no limit.
 | `company_contribution` | String | | X | '0.00' | the amount to be paid, per pay period, from by the company
-| `employee_deduction_annual_maximum` | String | | X | null | the maximum company contribution per year. A null amount signifies no limit.
+| `company_contribution_annual_maximum` | String | | X | null | the maximum company contribution per year. A null amount signifies no limit.
 | `limit_option` | String | | X | null | certain benefits have particular options that need to be set to determine their limit option. For HSA, this should be either 'Family' or 'Individual' and for Dependent Care FSA this should be either 'Joint Filing or Single' or 'Married and Filing Separately'.
 | `deduct_as_percentage` | Boolean | | X | false | if true, the employee_deduction amount will be treated as a percentage to be deducted from each payroll
 | `contribute_as_percentage` | Boolean | | X | false | if true, the company_contribution amount will be treated as a percentage to be deducted from each payroll
