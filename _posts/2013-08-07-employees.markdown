@@ -30,9 +30,9 @@ title: Employees
 
 **HTTP Method**: `GET`
 
-**Endpoint**: `/api/v1/companies/:company_id/employees`
+**Endpoint**: `/api/v1/employees/:employee_id`
 
-**Returns**: Array of all employees currently employeed with this company.
+**Returns**: Receive a single employee representation
 
 #### Sample Response Body:
 
