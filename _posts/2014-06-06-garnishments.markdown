@@ -125,7 +125,6 @@ Garnishments, or employee deductions, are fixed amounts or percentages deducted 
 
 ```javascript
   {
-    "employee_id": 8964216891236743
     "amount": "150.00"
     "description": "Back taxes"
     "court_ordered": true
