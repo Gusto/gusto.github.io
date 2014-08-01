@@ -29,7 +29,7 @@ Note that company benefits, once created, can be disabled (`active=false`) only 
 
 **Endpoint**: `/api/v1/companies/:company_id/company_benefits`
 
-**Returns**: Array of all company benefits for this employee
+**Returns**: Array of all company benefits.
 
 #### Sample Response Body:
 
