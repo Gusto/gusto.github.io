@@ -5,9 +5,12 @@ title: Authentication Example
 ---
 
 # Authentication
+
 ##  Safety First!
 
 Due to the sensitive nature of payroll, all potential integrations must be vetted and approved by ZenPayroll.  To register an application, send an email to api@zenpayroll.com with a description of your company and use case.
+
+## OAuth
 
 ### Getting Started
 
@@ -139,4 +142,21 @@ The corresponding response, including both a fresh access token and a new refres
    "expires_in": 7200,
    "refresh_token": "8257e65c97202ed1726cf9571600918f3bffb2544b26e00a61df9897668c33a1"
   }
+```
+
+
+## API Token Authentication
+
+There are certain endpoints that involve the application acting on behalf of
+itself rather than a ZenPayroll user. For these, certified partners are granted
+an API token. This token is included in the authorization HTTP header with the
+`Token` scheme.
+
+### Example
+
+**HTTP Headers**
+
+```
+Content-Type: application/json
+Authorization: Token bbb286ff1a4fe6b84742b0d49b8d0d65bd0208d27d3d50333591df71c45da519
 ```
