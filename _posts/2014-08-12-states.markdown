@@ -1,0 +1,91 @@
+---
+permalink: v1/states
+layout: resource
+title: States
+---
+
+<h1>States</h1>
+
+<p>The states endpoint is a public API endpoint that returns the list of supported
+states within ZenPayroll. For reference, the current supported and unsupported
+states are shown below.</p>
+
+<p>Note that including a <code>callback</code> parameter will return this
+response as JSONP wrapped in a function named as the <code>callback</code>
+parameter.</p>
+
+<script type="text/javascript">
+  $(function(){
+    var hostParts = window.location.host.split('.').reverse();
+    var host = hostParts[1] + '.' + hostParts[0];
+    var jqxhr = $.ajax('https://' + host + '/api/v1/states', { dataType: 'jsonp' });
+    jqxhr.done(function(response){
+      supportedHtml = ''
+      for (var i = 0; i < response.supported.length; i++) {
+        state = response.supported[i]
+        supportedHtml += '<li class="state supported">'+ state +'</li>'
+      };
+      unsupportedHtml = ''
+      for (var i = 0; i < response.unsupported.length; i++) {
+        state = response.unsupported[i]
+        unsupportedHtml += '<li class="state unsupported">'+ state +'</li>'
+      };
+      $('#supported').html(supportedHtml);
+      $('#unsupported').html(unsupportedHtml);
+    });
+  });
+</script>
+
+<style type="text/css">
+  .state {
+    width: 30%;
+    float: left;
+  }
+  .supported { color: green; }
+  section.states { clear: both; }
+</style>
+
+<section class="states">
+  <h2>Supported</h2>
+  <ul id="supported"></ul>
+</section>
+
+<section class="states">
+  <h2>Unsupported</h2>
+  <ul id="unsupported"></ul>
+</section>
+
+
+<h2>Get a list of supported and unsupported states</h2>
+
+<p>
+  <strong>HTTP Method</strong>: <code>GET</code>
+</p>
+
+<p>
+  <strong>Endpoint</strong>: <code>/api/v1/states</code>
+</p>
+
+<p>
+  <strong>Returns</strong>: List of supported and unsupported states
+</p>
+
+### Example Response
+
+As JSON:
+
+```javascript
+{
+  supported: ["AZ","CA","CO","CT","FL","GA","IL","MA","NC","NJ","NV","NY","OR","TN","TX","UT","WA"],
+  unsupported:["AK","AL","AR","DC","DE","HI","IA","ID","IN","KS","KY","LA","MD","ME","MI","MN","MO","MS","MT","ND","NE","NH","NM","OH","OK","PA","RI","SC","SD","VA","VT","WI","WV","WY"]
+}
+```
+
+With a `callback=handleCallback` parameter
+
+```javascript
+handleCallback({
+  supported: ["AZ","CA","CO","CT","FL","GA","IL","MA","NC","NJ","NV","NY","OR","TN","TX","UT","WA"],
+  unsupported:["AK","AL","AR","DC","DE","HI","IA","ID","IN","KS","KY","LA","MD","ME","MI","MN","MO","MS","MT","ND","NE","NH","NM","OH","OK","PA","RI","SC","SD","VA","VT","WI","WV","WY"]
+})
+```
