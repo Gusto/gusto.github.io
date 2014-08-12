@@ -35,6 +35,8 @@ account creation. Please contact api@zenpayroll.com for more information on beco
 **Returns**: OAuth authorization code for new user or errors which prevented
              creation
 
+**Response Codes**: 200, 422
+
 #### Sample Request Body:
 
 ```javascript
