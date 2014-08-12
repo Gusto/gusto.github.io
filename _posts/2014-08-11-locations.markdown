@@ -67,10 +67,8 @@ property while an employee's home addres will instead have an `"employee_id"`.
 ### Sample Request Body
 
 ```javascript
-[
-  {
-    "street_1": "425 2nd Street",
-    "street_2": "Suite 602"
-  }
-]
+{
+  "street_1": "425 2nd Street",
+  "street_2": "Suite 602"
+}
 ```
