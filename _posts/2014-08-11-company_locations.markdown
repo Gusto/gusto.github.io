@@ -20,7 +20,8 @@ retrieving or updating an individual record should be done via the <a href="/v1/
 | :----------                   |:-------------     |:---------:|:--------:|:--------|:-------------
 | `id`                          | Integer           |     X     |          |         | the unique identifier of this company location
 | `version`                     | String            |     X     |          |         | version of this object. See <a href="/v1/considerations/versioning/">the versioning documentation</a> for a more in depth explaination of versions
-| `company_id`                 | Integer            |     X     |          |         | id for the company to which this location belongs
+| `company_id`                  | Integer            |     X     |          |         | id for the company to which this location belongs
+| `phone_number`                | String             |           |          |         | Phone number for this company location. Formatted as ten digits
 | `street_1`                    | String            |           |          |         | first line of the address
 | `street_2`                    | String            |           |    X     | null    | second line of the address
 | `city`                        | String            |           |          |         | city of the address
@@ -46,6 +47,7 @@ retrieving or updating an individual record should be done via the <a href="/v1/
     "id" : 1402342024000
     "version" : "fe75bd065ff48b91c35fe8ff842f986c",
     "company_id" : 1402341716000,
+    "phone_number" : "8009360383",
     "street_1": "425 2nd Street",
     "street_2": "Suite 602",
     "city" : "San Francisco",
@@ -71,6 +73,7 @@ retrieving or updating an individual record should be done via the <a href="/v1/
 ```javascript
 [
   {
+    "phone_number" : "8009360383",
     "street_1": "425 2nd Street",
     "street_2": "Suite 602",
     "city" : "San Francisco",
