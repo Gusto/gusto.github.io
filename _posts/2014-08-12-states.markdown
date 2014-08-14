@@ -55,7 +55,6 @@ parameter.</p>
   <ul id="unsupported"></ul>
 </section>
 
-
 <h2>Get a list of supported and unsupported states</h2>
 
 <p>

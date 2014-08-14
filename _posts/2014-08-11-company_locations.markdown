@@ -32,7 +32,7 @@ retrieving or updating an individual record should be done via the <a href="/v1/
 
 **HTTP Method**: `GET`
 
-**Endpoint**: `/api/v1/companies/:company_id/company_locations`
+**Endpoint**: `/api/v1/companies/:company_id/locations`
 
 **Returns**: Array of all locations for this company
 
@@ -60,7 +60,7 @@ retrieving or updating an individual record should be done via the <a href="/v1/
 
 **HTTP Method**: `POST`
 
-**Endpoint**: `/api/v1/companies/:company_id/company_locations`
+**Endpoint**: `/api/v1/companies/:company_id/locations`
 
 **Returns**: Newly created company location or errors which prevented creation
 
