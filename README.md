@@ -1,4 +1,4 @@
 zenpayroll.github.io
 ====================
 
-Api Documentation for the ZenPayroll API
+Api Documentation for versions 1 and 2 of the ZenPayroll API
