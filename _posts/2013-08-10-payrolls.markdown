@@ -27,6 +27,15 @@ layout: resource
           "start_date" : "2013-02-01",
           "end_date" : "2013-02-15"
         },
+        "totals" : {
+          "company_debit" : "2791.25",
+          "reimbursements" : "0.00",
+          "net_pay" : "1953.31",
+          "correction" : "0.00",
+          "employer_taxes" : "191.25",
+          "employee_taxes" : "646.69",
+          "benefits" : "0.0"
+        },
         "employee_compensations" : [
           {
             "employee_id" : 1123581321345589,
@@ -84,6 +93,14 @@ layout: resource
 | `pay_period`              | the start and end date for the pay period corresponding with this payroll.
 | `payroll_deadline`        | deadline for the payroll to be run in order for employees to be paid on-time.
 | `processed`               | whether or not this payroll has been successfully run. If it has, you should consider it 'frozen', as any attempts to update its data will be rejected. Note that passing the `payroll_deadline` does not guarantee that the payroll has been processed; running late payrolls is not uncommon.  Similarly, ZenPayroll users may choose to run payroll before the `payroll_deadline`.
+| `totals`                  | subtotals for this payroll
+| `company_debit`           | the total company debit for the payroll
+| `reimbursements`          | the total reimbursements for the payroll
+| `net_pay`                 | the net pay amount for the payroll
+| `correction`              | the amount of correction for the payroll
+| `employer_taxes`          | the amount of employer paid taxes for the payroll
+| `employee_taxes`          | the amount of employee paid taxes for the payroll
+| `benefits`                | the amount of company contributed benefits for the payroll
 | `employee_compensations`  | array of every employee eligible for this pay period. For a given employee, we return the current state of information related to this employee for this payroll.
 | `employee_id`             | the unique identifier for this employee in the ZenPayroll system.
 | `fixed_compensations`     | array of fixed compensations. Examples of fixed compensations include tips, bonus, or one time reimbursements. If this payroll has been processed, returns only those which have values greater than 0.00. For unprocessed payrolls, returns all active compensations.
