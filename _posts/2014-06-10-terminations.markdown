@@ -68,7 +68,7 @@ Note that some states require employees to receive their final wages within 24 h
 
 **HTTP Method**: `PUT`
 
-**Endpoint**: `/api/v1/termination/:termination_id`
+**Endpoint**: `/api/v1/terminations/:termination_id`
 
 **Returns**: Updated termination or errors which prevented update
 
