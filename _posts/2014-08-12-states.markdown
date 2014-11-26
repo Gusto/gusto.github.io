@@ -55,19 +55,12 @@ parameter.</p>
   <ul id="unsupported"></ul>
 </section>
 
-<h2>Get a list of supported and unsupported states</h2>
-
-<p>
-  <strong>HTTP Method</strong>: <code>GET</code>
-</p>
-
-<p>
-  <strong>Endpoint</strong>: <code>/api/v1/states</code>
-</p>
-
-<p>
-  <strong>Returns</strong>: List of supported and unsupported states
-</p>
+<section class="states">
+  <h2>Get a list of supported and unsupported states</h2>
+  <p><strong>HTTP Method</strong>: <code>GET</code></p>
+  <p><strong>Endpoint</strong>: <code>/api/v1/states</code></p>
+  <p><strong>Returns</strong>: List of supported and unsupported states</p>
+</section>
 
 ### Example Response
 

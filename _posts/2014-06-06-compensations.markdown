@@ -6,11 +6,15 @@ title: Compensations
 
 # Compensations
 
-Compensations contain information on how much is paid out for a job. Jobs may have many compensations, but only one that is active. The current compensation is the one with the most recent `effective_date`.
+Compensations contain information on how much is paid out for a job. Jobs may have many compensations, but only one
+that is active. The current compensation is the one with the most recent `effective_date`.
 
 **_Note_**
 
-Currently, jobs are arbitrarily limited to a single compensation as multiple compensations per job are not yet available in ZenPayroll. The API is architected as if multiple compensations may exists, so integrations should integrate under the same assumption. The only exception is that creating a compensation with the same `job_id` as another will fail with a relevant error.
+Currently, jobs are arbitrarily limited to a single compensation as multiple compensations per job are not yet available
+in ZenPayroll. The API is architected as if multiple compensations may exist, so integrations should integrate under
+the same assumption. The only exception is that creating a compensation with the same `job_id` as another will fail with
+a relevant error.
 
 ## Attributes
 
