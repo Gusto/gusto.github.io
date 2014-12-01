@@ -6,7 +6,7 @@ title: Paid Time Off
 
 # Paid Time Off
 
-These enpoints handle paid time off for an employee. Currently only 'Vacation Hours' and 'Sick Hours' are supported.
+These endpoints handle paid time off for an employee. Currently only 'Vacation Hours' and 'Sick Hours' are supported.
 
 ## Attributes
 
