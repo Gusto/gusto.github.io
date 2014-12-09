@@ -57,7 +57,7 @@ layout: resource
             "name" : "Bonus"
           },
           {
-            "name" : "One Time Reimbursement"
+            "name" : "Commission"
           }
         ],
         "paid_time_off" : [

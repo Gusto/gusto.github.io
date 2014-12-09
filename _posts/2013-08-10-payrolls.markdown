@@ -46,7 +46,7 @@ layout: resource
                 "job_id" : 1
               },
               {
-                "name" : "One Time Reimbursement",
+                "name" : "Commission",
                 "amount" : "100.00",
                 "job_id" : 1
               }
