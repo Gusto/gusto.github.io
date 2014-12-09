@@ -66,7 +66,7 @@ json_response = [
             "job_id" => 1
           },
           {
-            "name" => "One Time Reimbursement",
+            "name" => "Commission",
             "amount" => "0.00",
             "job_id" => 1
           }
@@ -101,7 +101,7 @@ json_response = [
             "job_id" => 1
           },
           {
-            "name" => "One Time Reimbursement",
+            "name" => "Commission",
             "amount" => "0.00",
             "job_id" => 1
           }
