@@ -28,6 +28,7 @@ retrieving or updating an individual record should be done via the <a href="/v1/
 | `state`                       | String            |           |          |         | state of this address
 | `zip`                         | String            |           |          |         | zipcode of this address
 | `country`                     | String            |           |    X     | "USA"   | country for this address
+| `active`                      | Boolean           |     X     |          |         | status of the address, addresses with `active: false` have been deleted, but may still have historical data associated with them
 
 ## Get company locations for a company
 

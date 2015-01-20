@@ -21,6 +21,7 @@ The home address of an employee determines some tax information about them. Addr
 | `state`                       | String            |           |          |         | state of this address
 | `zip`                         | String            |           |          |         | zipcode of this address
 | `country`                     | String            |           |    X     | "USA"   | country for this address
+| `active`                      | Boolean           |     X     |          |         | status of the address, addresses with `active: false` have been deleted, but may still have historical data associated with them
 
 ## Get an employee's home address
 
