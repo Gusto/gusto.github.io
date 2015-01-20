@@ -28,6 +28,7 @@ property while an employee's home addres will instead have an `"employee_id"`.
 | `state`                       | String            |           |          |         | state of this address
 | `zip`                         | String            |           |          |         | zipcode of this address
 | `country`                     | String            |           |    X     | "USA"   | country for this address
+| `active`                      | Boolean           |     X     |          |         | status of the address, addresses with `active: false` have been deleted, but may still have historical data associated with them
 
 ## Get a location by id
 
