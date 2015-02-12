@@ -69,6 +69,11 @@ json_response = [
             "name" => "Commission",
             "amount" => "0.00",
             "job_id" => 1
+          },
+          {
+            "name" => "Reimbursement",
+            "amount" => "0.00",
+            "job_id" => 1
           }
         ],
         "hourly_compensations" => [
@@ -104,6 +109,11 @@ json_response = [
             "name" => "Commission",
             "amount" => "0.00",
             "job_id" => 1
+          },
+          {
+           "name" => "Reimbursement",
+           "amount" => "0.00",
+           "job_id" => 1
           }
         ],
         "hourly_compensations" => [
