@@ -127,10 +127,10 @@ Access tokens expire 2 hours after they are issued.
 
 You may exchange your refresh token for a new access token once, making a request very similar to exchanging authorization code for an access token.
 
-The only difference is that `code` is set to your refresh token and `grant_type` is set to "refresh_token". Assuming you are refreshing the access token received in the previous section, here is the request you would make:
+The only difference is that `code` is now `refresh_token` and `grant_type` is set to "refresh_token". Assuming you are refreshing the access token received in the previous section, here is the request you would make:
 
 ```
-https://zenpayroll.com/oauth/token?client_id=bbb286ff1a4fe6b84742b0d49b8d0d65bd0208d27d3d50333591df71c45da519&client_secret=cb06cb755b868a819ead51671f0f7e9c35c7c4cbbae0e38bef167e0e4ba64ee6&redirect_uri=http%3A%2F%2Fexample.com%2Fcallback&code=8257e65c97202ed1726cf9571600918f3bffb2544b26e00a61df9897668c33a1&grant_type=refresh_token
+https://zenpayroll.com/oauth/token?client_id=bbb286ff1a4fe6b84742b0d49b8d0d65bd0208d27d3d50333591df71c45da519&client_secret=cb06cb755b868a819ead51671f0f7e9c35c7c4cbbae0e38bef167e0e4ba64ee6&redirect_uri=http%3A%2F%2Fexample.com%2Fcallback&refresh_token=8257e65c97202ed1726cf9571600918f3bffb2544b26e00a61df9897668c33a1&grant_type=refresh_token
 ```
 
 The corresponding response, including both a fresh access token and a new refresh token, will look something like this:
