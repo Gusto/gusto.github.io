@@ -12,7 +12,7 @@ a minimum amount of information, partners may create a user, company, and the
 related permissions to go from setup onboarding information.
 
 **Note** This endpoint requires authorization via [Token Authentication](/v1/examples/authentication#api-token-authentication) with an API token. Normal OAuth credentials will _not_ allow
-account creation. Please contact api@zenpayroll.com for more information on becoming a partner.
+account creation.
 
 ## Attributes
 

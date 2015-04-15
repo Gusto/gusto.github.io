@@ -8,7 +8,7 @@ title: Authentication Example
 
 ##  Safety First!
 
-Due to the sensitive nature of payroll, all potential integrations must be vetted and approved by ZenPayroll.  To register an application, send an email to api@zenpayroll.com with a description of your company and use case.
+Due to the sensitive nature of payroll, all potential integrations must be vetted and approved by ZenPayroll.
 
 ## OAuth
 
