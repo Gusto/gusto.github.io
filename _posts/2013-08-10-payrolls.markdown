@@ -169,7 +169,7 @@ The payrolls are identified by their pay periods' `start_date` and `end_date`. B
               "job_id" : 1
             },
             {
-              "name" : "Double Overtime Hours",
+              "name" : "Double Overtime",
               "hours" : "20.000",
               "job_id" : 1
             }
