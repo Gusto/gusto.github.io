@@ -26,7 +26,7 @@ These endpoints handle paid time off for an employee. Currently only 'Vacation H
 
 **HTTP Method**: `GET`
 
-**Endpoint**: `/api/v1/employees/:employee_id/paid_time_off`
+**Endpoint**: `/v1/employees/:employee_id/paid_time_off`
 
 **Returns**: All paid time off for which an employee is eligible
 
@@ -63,7 +63,7 @@ These endpoints handle paid time off for an employee. Currently only 'Vacation H
 
 **HTTP Method**: `GET`
 
-**Endpoint**: `/api/v1/paid_time_off/:paid_time_off_id`
+**Endpoint**: `/v1/paid_time_off/:paid_time_off_id`
 
 **Returns**: Representation of a single paid time off
 
@@ -87,7 +87,7 @@ These endpoints handle paid time off for an employee. Currently only 'Vacation H
 
 **HTTP Method**: `PUT`
 
-**Endpoint**: `/api/v1/paid_time_off/:paid_time_off_id`
+**Endpoint**: `/v1/paid_time_off/:paid_time_off_id`
 
 **Returns**: Updated paid time off or errors which prevented update
 
@@ -104,7 +104,7 @@ These endpoints handle paid time off for an employee. Currently only 'Vacation H
 
 **HTTP Method**: `POST`
 
-**Endpoint**: `/api/v1/employees/:employee_id/paid_time_off`
+**Endpoint**: `/v1/employees/:employee_id/paid_time_off`
 
 **Returns**: Created paid time off or errors which prevented creation
 

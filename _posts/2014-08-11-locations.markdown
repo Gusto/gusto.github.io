@@ -34,7 +34,7 @@ property while an employee's home addres will instead have an `"employee_id"`.
 
 **HTTP Method**: `GET`
 
-**Endpoint**: `/api/v1/locations/:location_id`
+**Endpoint**: `/v1/locations/:location_id`
 
 **Returns**: A single location representation
 
@@ -61,7 +61,7 @@ property while an employee's home addres will instead have an `"employee_id"`.
 
 **HTTP Method**: `PUT`
 
-**Endpoint**: `/api/v1/locations/:location_id`
+**Endpoint**: `/v1/locations/:location_id`
 
 **Returns**: Updated location or errors which prevented update
 

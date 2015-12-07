@@ -18,7 +18,7 @@ parameter.</p>
   $(function(){
     var hostParts = window.location.host.split('.').reverse();
     var host = hostParts[1] + '.' + hostParts[0];
-    var jqxhr = $.ajax('https://' + host + '/api/v1/states', { dataType: 'jsonp' });
+    var jqxhr = $.ajax('https://api.' + host + '/v1/states', { dataType: 'jsonp' });
     jqxhr.done(function(response){
       supportedHtml = ''
       for (var i = 0; i < response.supported.length; i++) {
@@ -58,7 +58,7 @@ parameter.</p>
 <section class="states">
   <h2>Get a list of supported and unsupported states</h2>
   <p><strong>HTTP Method</strong>: <code>GET</code></p>
-  <p><strong>Endpoint</strong>: <code>/api/v1/states</code></p>
+  <p><strong>Endpoint</strong>: <code>/v1/states</code></p>
   <p><strong>Returns</strong>: List of supported and unsupported states</p>
 </section>
 

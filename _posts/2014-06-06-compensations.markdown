@@ -32,7 +32,7 @@ a relevant error.
 
 **HTTP Method**: `GET`
 
-**Endpoint**: `/api/v1/jobs/:job_id/compensations`
+**Endpoint**: `/v1/jobs/:job_id/compensations`
 
 **Returns**: Array of all compensations associated with this job.
 
@@ -56,7 +56,7 @@ a relevant error.
 
 **HTTP Method**: `GET`
 
-**Endpoint**: `/api/v1/compensations/:compensation_id`
+**Endpoint**: `/v1/compensations/:compensation_id`
 
 **Returns**: Single compensation object
 
@@ -78,7 +78,7 @@ a relevant error.
 
 **HTTP Method**: `PUT`
 
-**Endpoint**: `/api/v1/compensations/:compensation_id`
+**Endpoint**: `/v1/compensations/:compensation_id`
 
 **Returns**: Updated compensation or errors which prevented update
 
@@ -97,7 +97,7 @@ a relevant error.
 
 **HTTP Method**: `POST`
 
-**Endpoint**: `/api/v1/jobs/:job_id/compensations`
+**Endpoint**: `/v1/jobs/:job_id/compensations`
 
 **Returns**: Created compensation or errors which prevented creation
 

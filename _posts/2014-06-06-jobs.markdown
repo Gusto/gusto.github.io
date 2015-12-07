@@ -32,7 +32,7 @@ In the future, ZenPayroll will support an employee having multiple jobs. The API
 
 **HTTP Method**: `GET`
 
-**Endpoint**: `/api/v1/employees/:employee_id/jobs`
+**Endpoint**: `/v1/employees/:employee_id/jobs`
 
 **Returns**: Array of all jobs this employee holds.
 
@@ -78,7 +78,7 @@ In the future, ZenPayroll will support an employee having multiple jobs. The API
 
 **HTTP Method**: `GET`
 
-**Endpoint**: `/api/v1/jobs/:job_id`
+**Endpoint**: `/v1/jobs/:job_id`
 
 **Returns**: A single job representation
 
@@ -123,7 +123,7 @@ In the future, ZenPayroll will support an employee having multiple jobs. The API
 
 **HTTP Method**: `PUT`
 
-**Endpoint**: `/api/v1/jobs/:job_id`
+**Endpoint**: `/v1/jobs/:job_id`
 
 **Returns**: An updated job representation or errors which prevented update
 
@@ -140,7 +140,7 @@ In the future, ZenPayroll will support an employee having multiple jobs. The API
 
 **HTTP Method**: `POST`
 
-**Endpoint**: `/api/v1/employees/:employee_id/jobs`
+**Endpoint**: `/v1/employees/:employee_id/jobs`
 
 **Returns**: The new job object or errors which prevented creation
 

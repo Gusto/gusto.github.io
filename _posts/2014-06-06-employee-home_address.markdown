@@ -27,7 +27,7 @@ The home address of an employee determines some tax information about them. Addr
 
 **HTTP Method**: `GET`
 
-**Endpoint**: `/api/v1/employees/:employee_id/home_address`
+**Endpoint**: `/v1/employees/:employee_id/home_address`
 
 **Returns**: Address object for an employee's home address
 
@@ -51,7 +51,7 @@ The home address of an employee determines some tax information about them. Addr
 
 **HTTP Method**: `PUT`
 
-**Endpoint**: `/api/v1/employees/:employee_id/home_address`
+**Endpoint**: `/v1/employees/:employee_id/home_address`
 
 **Returns**: Updated address or errors which prevented update
 

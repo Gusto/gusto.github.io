@@ -30,7 +30,7 @@ Garnishments, or employee deductions, are fixed amounts or percentages deducted 
 
 **HTTP Method**: `GET`
 
-**Endpoint**: `/api/v1/employees/:employee_id/garnishments`
+**Endpoint**: `/v1/employees/:employee_id/garnishments`
 
 **Returns**: Array of all garnishments for this employee
 
@@ -73,7 +73,7 @@ Garnishments, or employee deductions, are fixed amounts or percentages deducted 
 
 **HTTP Method**: `GET`
 
-**Endpoint**: `/api/v1/garnishments/:garnishment_id`
+**Endpoint**: `/v1/garnishments/:garnishment_id`
 
 **Returns**: Single garnishment representation
 
@@ -100,7 +100,7 @@ Garnishments, or employee deductions, are fixed amounts or percentages deducted 
 
 **HTTP Method**: `PUT`
 
-**Endpoint**: `/api/v1/garnishments/:garnishment_id`
+**Endpoint**: `/v1/garnishments/:garnishment_id`
 
 **Returns**: Updated garnishment or errors which prevent update
 
@@ -117,7 +117,7 @@ Garnishments, or employee deductions, are fixed amounts or percentages deducted 
 
 **HTTP Method**: `POST`
 
-**Endpoint**: `/api/v1/employees/:employee_id/garnishments/`
+**Endpoint**: `/v1/employees/:employee_id/garnishments/`
 
 **Returns**: New garnishment or errors which prevented creation
 

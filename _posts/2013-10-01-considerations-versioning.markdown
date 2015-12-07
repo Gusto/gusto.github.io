@@ -10,7 +10,7 @@ Versions are essentially snapshots of a given resource. If things change, we wan
 
 ### API Layer
 
-The ZenPayroll API itself is versioned directly in the url - `/api/:version_string` - to allow for backwards compatibility. We guarantee that an application built with v1 of the API will always work, without changes, as long as that API version is supported. If we would like to implement breaking changes into the API, like changing request or response signatures, we will create a separate version of the API for new applications while supporting existing applications using our previous version.
+The ZenPayroll API itself is versioned directly in the url - `/:version_string` - to allow for backwards compatibility. We guarantee that an application built with v1 of the API will always work, without changes, as long as that API version is supported. If we would like to implement breaking changes into the API, like changing request or response signatures, we will create a separate version of the API for new applications while supporting existing applications using our previous version.
 
 In essence, this means changes will only be additive. A given version of the API will always provide as much or more information than when you first implement the integration.
 

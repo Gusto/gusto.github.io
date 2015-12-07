@@ -11,7 +11,7 @@ layout: resource
 
 **HTTP Method**: `GET`
 
-**Endpoint**: `/api/v1/companies/:company_id/payrolls`
+**Endpoint**: `/v1/companies/:company_id/payrolls`
 
 **Returns**: Array of all payrolls, current and past, for a company.
 
@@ -129,20 +129,20 @@ As with pay periods, there are likely to be a very large amount of payrolls avai
 
 You may provide all, none, or any combination of them to scope the returned data. Here are some common use cases:
 
-    GET /api/v1/companies/3337/payrolls?processed=false
+    GET /v1/companies/3337/payrolls?processed=false
       => returns all payrolls that have not yet been processed (and are therefore eligible to be updated)
 
-    GET /api/v1/companies/3337/payrolls?start_date=2012-01-31
+    GET /v1/companies/3337/payrolls?start_date=2012-01-31
       => returns all payrolls whose pay period is from the one encompassing January 31, 2012 through the current pay period
 
-    GET /api/v1/companies/3337/payrolls?start_date=2012-01-31&end_date=2012-06-30
+    GET /v1/companies/3337/payrolls?start_date=2012-01-31&end_date=2012-06-30
       => returns all payrolls whose pay period is from January 31, 2012 through June 30, 2012-01-31
 
 ### Update Payroll
 
 **HTTP Method**: `PUT`
 
-**Endpoint**: `/api/v1/companies/:company_id/payrolls/:pay_period_start_date/:pay_period_end_date`
+**Endpoint**: `/v1/companies/:company_id/payrolls/:pay_period_start_date/:pay_period_end_date`
 
 This endpoint allows you to update information for one or more employees for a specific payroll.
 

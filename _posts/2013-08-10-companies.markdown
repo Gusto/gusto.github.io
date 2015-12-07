@@ -10,7 +10,7 @@ layout: resource
 
 **HTTP Method**: `GET`
 
-**Endpoint**: `/api/v1/companies/:company_id`
+**Endpoint**: `/v1/companies/:company_id`
 
 **Returns**: Get information about a particular company
 

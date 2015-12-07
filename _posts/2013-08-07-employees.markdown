@@ -30,7 +30,7 @@ title: Employees
 
 **HTTP Method**: `GET`
 
-**Endpoint**: `/api/v1/employees/:employee_id`
+**Endpoint**: `/v1/employees/:employee_id`
 
 **Returns**: Receive a single employee representation
 
@@ -101,7 +101,7 @@ title: Employees
 
 **HTTP Method**: `GET`
 
-**Endpoint**: `/api/v1/companies/:company_id/employees`
+**Endpoint**: `/v1/companies/:company_id/employees`
 
 **Returns**: Array of all employees currently employeed with this company.
 
@@ -175,14 +175,14 @@ You can pare down the results by passing in additional parameters:
 
   Available options: terminated
 
-    GET /api/v1/companies/3337/employees?terminated=false
+    GET /v1/companies/3337/employees?terminated=false
       => returns all employees that have not been terminated
 
 ## Update an employee
 
 **HTTP Method**: `PUT`
 
-**Endpoint**: `/api/v1/employees/:employee_id`
+**Endpoint**: `/v1/employees/:employee_id`
 
 **Returns**: Updated employee or errors which prevented update
 
@@ -201,7 +201,7 @@ You can pare down the results by passing in additional parameters:
 
 **HTTP Method**: `POST`
 
-**Endpoint**: `/api/v1/companies/:company_id/employees`
+**Endpoint**: `/v1/companies/:company_id/employees`
 
 **Returns**: Created employee or errors which prevented creation
 

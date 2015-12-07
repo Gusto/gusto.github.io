@@ -15,7 +15,7 @@ layout: resource
 
 **HTTP Method**: `GET`
 
-**Endpoint**: `/api/v1/me`
+**Endpoint**: `/v1/me`
 
 **Returns**: Information pertaining to the currently authenticated user.
 
