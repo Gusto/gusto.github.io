@@ -41,7 +41,7 @@ Let's say we have information for the regular hours of Patricia Churchland from 
  First we'll request the unprocessed payrolls for that time-period:
 
 ```
-  GET https://zenpayroll.com/api/v1/companies/94158/payrolls?processed=false&start_date=2014-01-01&end_date=2014-01-20
+  GET https://api.gusto.com/v1/companies/94158/payrolls?processed=false&start_date=2014-01-01&end_date=2014-01-20
 ```
 
 After deserializing the JSON response, we'll have an array of payroll objects:
@@ -235,7 +235,7 @@ At this point, our JSON structure should look something like this:
 ```
 Note that we had recorded 24 hours worked for the second pay period, but the above shows 34.0 hours worked. Unless you are certain that you want to overwrite the data returned via the API, you should only add to it. Making a request with 24.0 hours for the January 16-31 pay period would overwrite the existing 10 hours that are already in our system.
 
-Now, for each payroll, we can send a PUT request to `https://zenpayroll.com/api/v1/companies/94158/payrolls/:start_date/:end_date` (where start_date and end_date are for that payroll.) If everything goes well, we'll get response with a 200 OK status. But what if things have changed since we last pulled data from ZenPayroll?
+Now, for each payroll, we can send a PUT request to `https://api.gusto.com/v1/companies/94158/payrolls/:start_date/:end_date` (where start_date and end_date are for that payroll.) If everything goes well, we'll get response with a 200 OK status. But what if things have changed since we last pulled data from ZenPayroll?
 
 ### Conflicts
 
@@ -244,7 +244,7 @@ If information has changed since your last pull of information from ZenPayroll, 
 This means that you will need to refetch the payroll data for that pay period and resubmit it. If, for example, the January 16-31 payroll has been updated, we can fetch it with a call to:
 
 ```
-  GET https://zenpayroll.com/api/v1/companies/94158/payrolls?processed=false&start_date=2014-01-16&end_date=2014-01-31
+  GET https://api.gusto.com/v1/companies/94158/payrolls?processed=false&start_date=2014-01-16&end_date=2014-01-31
 ```
 
 This should only return that one payroll and we can recompute the data specifically for that pay period. Do not simply copy over the new `version` and resubmit, as you'll likely be overwriting information that the user, an internal ZenPayroll process, or another 3rd party application. This can lead to incorrect pay, miscalculated taxes, and upset users.

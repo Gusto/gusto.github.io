@@ -30,7 +30,7 @@ Employee benefits represent an <a href="/v1/employees">employee</a> enrolled in 
 
 **HTTP Method**: `GET`
 
-**Endpoint**: `/api/v1/employees/:employee_id/employee_benefits`
+**Endpoint**: `/v1/employees/:employee_id/employee_benefits`
 
 **Returns**: Array of all employee benefits for this employee
 
@@ -61,7 +61,7 @@ Employee benefits represent an <a href="/v1/employees">employee</a> enrolled in 
 
 **HTTP Method**: `GET`
 
-**Endpoint**: `/api/v1/employee_benefits/:employee_benefit_id`
+**Endpoint**: `/v1/employee_benefits/:employee_benefit_id`
 
 **Returns**: Single employee benefit representation
 
@@ -89,7 +89,7 @@ Employee benefits represent an <a href="/v1/employees">employee</a> enrolled in 
 
 **HTTP Method**: `PUT`
 
-**Endpoint**: `/api/v1/employee_benefits/:employee_benefit_id`
+**Endpoint**: `/v1/employee_benefits/:employee_benefit_id`
 
 **Returns**: Updated employee benefit or errors which prevent update
 
@@ -106,7 +106,7 @@ Employee benefits represent an <a href="/v1/employees">employee</a> enrolled in 
 
 **HTTP Method**: `POST`
 
-**Endpoint**: `/api/v1/employees/:employee_id/employee_benefits`
+**Endpoint**: `/v1/employees/:employee_id/employee_benefits`
 
 **Returns**: New employee benefit or errors which prevented creation
 
@@ -125,6 +125,6 @@ Employee benefits represent an <a href="/v1/employees">employee</a> enrolled in 
 
 **HTTP Method**: `DELETE`
 
-**Endpoint**: `/api/v1/employee_benefits/:employee_benefit_id`
+**Endpoint**: `/v1/employee_benefits/:employee_benefit_id`
 
 **Returns**: HTTP Status Code 204 (No Content) or errors which prevented destruction

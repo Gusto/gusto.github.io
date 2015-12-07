@@ -27,7 +27,7 @@ The benefit object in ZenPayroll contains high level information about a particu
 
 **HTTP Method**: `GET`
 
-**Endpoint**: `/api/v1/benefits`
+**Endpoint**: `/v1/benefits`
 
 **Returns**: All benefits supported by ZenPayroll
 

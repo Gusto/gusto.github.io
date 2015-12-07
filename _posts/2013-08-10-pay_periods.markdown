@@ -15,7 +15,7 @@ title: Pay Periods
 
 **HTTP Method**: `GET`
 
-**Endpoint**: `/api/v1/companies/:company_id/pay_periods`
+**Endpoint**: `/v1/companies/:company_id/pay_periods`
 
 **Returns**: Array of all pay periods, past and current, for a company.
 
@@ -62,9 +62,9 @@ This endpoint, by default, returns all pay periods for a given company. Companie
 
 You may provide all, none, or any combination of them to scope the returned data. Here are some common use cases:
 
-    GET /api/v1/companies/3337/pay_periods?start_date=2012-01-31
+    GET /v1/companies/3337/pay_periods?start_date=2012-01-31
       => returns all pay periods from the one encompassing January 31, 2012 through the current pay period
 
-    GET /api/v1/companies/3337/pay_periods?start_date=2012-01-31&end_date=2012-06-30
+    GET /v1/companies/3337/pay_periods?start_date=2012-01-31&end_date=2012-06-30
       => returns all pay periods from January 31, 2012 through June 30, 2012-01-31
 

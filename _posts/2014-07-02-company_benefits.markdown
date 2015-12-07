@@ -27,7 +27,7 @@ Note that company benefits, once created, can be disabled (`active=false`) only 
 
 **HTTP Method**: `GET`
 
-**Endpoint**: `/api/v1/companies/:company_id/company_benefits`
+**Endpoint**: `/v1/companies/:company_id/company_benefits`
 
 **Returns**: Array of all company benefits.
 
@@ -51,7 +51,7 @@ Note that company benefits, once created, can be disabled (`active=false`) only 
 
 **HTTP Method**: `GET`
 
-**Endpoint**: `/api/v1/company_benefits/:company_benefit_id`
+**Endpoint**: `/v1/company_benefits/:company_benefit_id`
 
 **Returns**: Single company benefit representation
 
@@ -73,7 +73,7 @@ Note that company benefits, once created, can be disabled (`active=false`) only 
 
 **HTTP Method**: `PUT`
 
-**Endpoint**: `/api/v1/company_benefits/:company_benefit_id`
+**Endpoint**: `/v1/company_benefits/:company_benefit_id`
 
 **Returns**: Updated company benefit or errors which prevent update
 
@@ -90,7 +90,7 @@ Note that company benefits, once created, can be disabled (`active=false`) only 
 
 **HTTP Method**: `POST`
 
-**Endpoint**: `/api/v1/companies/:company_id/company_benefits`
+**Endpoint**: `/v1/companies/:company_id/company_benefits`
 
 **Returns**: New company benefit or errors which prevented creation
 

@@ -26,7 +26,7 @@ Note that some states require employees to receive their final wages within 24 h
 
 **HTTP Method**: `GET`
 
-**Endpoint**: `/api/v1/employees/:employee_id/terminations`
+**Endpoint**: `/v1/employees/:employee_id/terminations`
 
 **Returns**: All terminations for this employee
 
@@ -48,7 +48,7 @@ Note that some states require employees to receive their final wages within 24 h
 
 **HTTP Method**: `GET`
 
-**Endpoint**: `/api/v1/terminations/:termination_id`
+**Endpoint**: `/v1/terminations/:termination_id`
 
 **Returns**: Representation of a single termination
 
@@ -68,7 +68,7 @@ Note that some states require employees to receive their final wages within 24 h
 
 **HTTP Method**: `PUT`
 
-**Endpoint**: `/api/v1/terminations/:termination_id`
+**Endpoint**: `/v1/terminations/:termination_id`
 
 **Returns**: Updated termination or errors which prevented update
 
@@ -84,7 +84,7 @@ Note that some states require employees to receive their final wages within 24 h
 
 **HTTP Method**: `POST`
 
-**Endpoint**: `/api/v1/employees/:employee_id/terminations`
+**Endpoint**: `/v1/employees/:employee_id/terminations`
 
 **Returns**: Created termination or errors which prevented creation
 

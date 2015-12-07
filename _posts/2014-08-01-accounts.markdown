@@ -30,7 +30,7 @@ account creation.
 
 **HTTP Method**: `POST`
 
-**Endpoint**: `/api/v1/accounts`
+**Endpoint**: `/v1/accounts`
 
 **Returns**: OAuth authorization code for new user or errors which prevented
              creation
