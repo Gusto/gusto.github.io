@@ -54,13 +54,13 @@ layout: resource
             "hourly_compensations" : [
               {
                 "name" : "Regular Hours",
-                "hours" : "80.000",
+                "hours" : "40.000",
                 "job_id" : 1,
                 "compensation_multiplier" : 1
               },
               {
                 "name" : "Overtime",
-                "hours" : "20.000",
+                "hours" : "15.000",
                 "job_id" : 1,
                 "compensation_multiplier" : 1.5
               },
@@ -68,6 +68,24 @@ layout: resource
                 "name" : "Double Overtime",
                 "hours" : "0.000",
                 "job_id" : 1,
+                "compensation_multiplier" : 2
+              },
+              {
+                "name" : "Regular Hours",
+                "hours" : "40.000",
+                "job_id" : 2,
+                "compensation_multiplier" : 1
+              },
+              {
+                "name" : "Overtime",
+                "hours" : "5.000",
+                "job_id" : 2,
+                "compensation_multiplier" : 1.5
+              },
+              {
+                "name" : "Double Overtime",
+                "hours" : "0.000",
+                "job_id" : 2,
                 "compensation_multiplier" : 2
               }
             ],
@@ -172,7 +190,12 @@ The payrolls are identified by their pay periods' `start_date` and `end_date`. B
               "name" : "Double Overtime",
               "hours" : "20.000",
               "job_id" : 1
-            }
+            },
+            {
+              "name" : "Overtime",
+              "hours" : "10.000",
+              "job_id" : 2
+            },
           ],
           "paid_time_off" : [
             {
