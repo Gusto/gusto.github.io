@@ -54,7 +54,8 @@ json_response = [
     "processed" => false,
     "pay_period" => {
       "start_date" => "2014-01-01",
-      "end_date" => "2014-01-15"
+      "end_date" => "2014-01-15",
+      "pay_schedule_id" => 7757500908984137
     },
     "employee_compensations" => [
       {
@@ -94,7 +95,8 @@ json_response = [
     "processed" => false,
     "pay_period" => {
       "start_date" => "2014-01-16",
-      "end_date" => "2014-01-31"
+      "end_date" => "2014-01-31",
+      "pay_schedule_id" => 7757500908984137
     },
     "employee_compensations" => [
       {

@@ -26,6 +26,7 @@ title: Pay Periods
     {
       "start_date" : "2013-02-01",
       "end_date" : "2013-02-15",
+      "pay_schedule_id" : 7757500908984137,
       "payroll" : {
         "payroll_deadline" : "2013-02-18",
         "processed" : true,

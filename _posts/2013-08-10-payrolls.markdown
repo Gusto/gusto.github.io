@@ -25,7 +25,8 @@ layout: resource
         "processed" : false,
         "pay_period" : {
           "start_date" : "2013-02-01",
-          "end_date" : "2013-02-15"
+          "end_date" : "2013-02-15",
+          "pay_schedule_id" : 7757500908984137
         },
         "totals" : {
           "company_debit" : "2791.25",
