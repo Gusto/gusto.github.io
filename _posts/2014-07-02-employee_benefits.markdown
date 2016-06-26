@@ -25,6 +25,7 @@ Employee benefits represent an <a href="/v1/employees">employee</a> enrolled in 
 | `deduct_as_percentage` | Boolean | | X | false | if true, the employee_deduction amount will be treated as a percentage to be deducted from each payroll
 | `contribute_as_percentage` | Boolean | | X | false | if true, the company_contribution amount will be treated as a percentage to be deducted from each payroll
 | `catch_up` | Boolean | | X | | if true, the employee should use a benefit's special 'catch up' rate. Currently only the Roth 401k and 401k use this value for employees over 50.
+| `coverage_amount` | String | | X | null | the amount that the employee is insured for (only applicable for group term life benefit). Note: company_contribution and coverage_amount cannot both be present.
 
 ## Get employee benefits for an employee
 
@@ -52,7 +53,8 @@ Employee benefits represent an <a href="/v1/employees">employee</a> enrolled in 
       "limit_option": null,
       "deduct_as_percentage": true,
       "contribute_as_percentage": true,
-      "catch_up": false
+      "catch_up": false,
+      "coverage_amount": null
     }
   ]
 ```
@@ -81,7 +83,8 @@ Employee benefits represent an <a href="/v1/employees">employee</a> enrolled in 
     "limit_option": null,
     "deduct_as_percentage": true,
     "contribute_as_percentage": true,
-    "catch_up": false
+    "catch_up": false,
+    "coverage_amount": null
   }
 ```
 
