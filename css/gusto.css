@@ -32,3 +32,17 @@
     width: 0;
     right: 0;
 }
+
+/* footer */
+
+footer {
+    background-color: #303030;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+
+}
+
+footer p {
+    color: #fff;
+}

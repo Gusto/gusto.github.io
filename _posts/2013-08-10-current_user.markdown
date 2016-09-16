@@ -23,7 +23,7 @@ layout: resource
 
 {% highlight javascript %}
     {
-      "email" : "chris@zenpayroll.com",
+      "email" : "chris@gusto.com",
       "roles" : {
         "payroll_admin" : {
           "companies" : [

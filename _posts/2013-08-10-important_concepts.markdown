@@ -23,7 +23,7 @@ We strictly require all API requests to be over [SSL](http://en.wikipedia.org/wi
 
 ### Idempotency
 
-Requests are [idempotent](http://en.wikipedia.org/wiki/Idempotence#Computer_science_meaning) such that 50 identical requests will only update the data once. This applies both to retrieving information (via GET requests) as well as updating information in the ZenPayroll ecosystem (via POST requests.)
+Requests are [idempotent](http://en.wikipedia.org/wiki/Idempotence#Computer_science_meaning) such that 50 identical requests will only update the data once. This applies both to retrieving information (via GET requests) as well as updating information in the Gusto ecosystem (via POST requests.)
 
 In practice, this allows you to try identical requests multiple times without fear that data will be altered multiple times. This also means that any updates will overwrite the existing data, instead of allowing additive or incremental changes.
 
