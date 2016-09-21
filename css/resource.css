@@ -21,11 +21,9 @@ blockquote {
 pre {
   border-radius: 0;
   border: 1px solid #ddd;
+  padding: 15px;
 }
 
-body {
-	background: $white url("https://zenpayroll.com/assets/corporate/plaid-texture.png") repeat top center;
-}
 code {
 	color: #32823f;
 }

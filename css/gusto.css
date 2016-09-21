@@ -1,17 +1,48 @@
 
 /* text */
-h2 {
-    font-size: 24px;
+body {
+    color: #333;
+}
 
+h1 {
+    color: #54555A;
+    margin-bottom: 35px;
+}
+
+h1.block {
+    background-color: #25D6C9;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+h2 {
+    border-bottom: 1px solid #f3f3f3;
+    color: #696B74;
+    margin-bottom: 15px;
+    margin-top: 25px;
+    padding-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 h3 {
-    font-size: 20px;
+    color: #1EC4B4;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h4 {
+    color: #1EC4B4;
+    font-size: 16px;
     font-weight: bold;
 }
 
 p {
+    color: #333;
     font-size: 14px;
+    line-height: 1.7em;
+    margin-bottom: 15px;
 }
 
 a,
@@ -45,6 +76,19 @@ a:hover {
     display: none;
 }
 
+.margin-top-50px {
+    margin-top: 50px;
+}
+
+.margin-bottom-50px {
+    margin-bottom: 50px;
+}
+
+.col-img {
+    background-color: #f3f3f3;
+    padding: 15px 0;
+}
+
 /* nav */
 nav.navbar {
     background-color: #fff;
@@ -55,12 +99,39 @@ nav.navbar {
     z-index: 100;
 }
 
+.nav>li {
+    border-bottom: 1px solid #5099DE;
+}
+
+.nav.navbar-right>li {
+    border: 0;
+}
+
+.navbar-default .navbar-toggle {
+    border: 0;
+    background-color: #1679C4;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+.navbar-default .navbar-toggle:after {
+    content: 'menu';
+}
+.navbar-default .navbar-toggle .icon-bar {
+    display: none;
+}
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    background-color: #1679C4;
+}
+
 .navbar-default .container {
     border-bottom: 1px solid #ddd;
 }
 
 .navbar-default .navbar-nav>li>a {
-    color: #1679C4;
+    color: #fff;
 }
 
 .navbar-default .navbar-nav>li>a:focus,
@@ -69,8 +140,17 @@ nav.navbar {
 }
 
 .nav>li>a {
-    font-size: 14px;
-    padding: 17px 15px;
+    font-size: 18px;
+    padding: 12px 15px;
+}
+
+.navbar-nav .open .dropdown-menu>li>a {
+    padding: 5px 15px;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a,
+.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
+    color: #fff;
 }
 
 .navbar-brand {
@@ -90,8 +170,6 @@ nav.navbar {
     color: #25D6C9;
 }
 
-/* nav - dropdown */
-
 .navbar-nav>li>a.dropdown-toggle {
     padding-right: 25px;
     position: relative;
@@ -100,14 +178,14 @@ nav.navbar {
 .navbar-nav>li>a.dropdown-toggle:after {
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
-    border-top: 4px solid #1679C4;
+    border-top: 4px solid #fff;
     content: '';
-    display: block;
+    display: inline-block;
     height: 0;
-    margin-top: -12px;
-    position: absolute;
+    margin-left: 10px;
+    position: relative;
     width: 0;
-    right: 10px;
+    top: -4px;
 }
 
 .navbar-default .navbar-nav>li>a:focus:after,
@@ -151,11 +229,6 @@ nav.navbar {
     margin-top: 20px;
 }
 
-.sub-menu h4 {
-    font-weight: bold;
-    font-size: 16px;
-}
-
 .sub-menu ul {
     list-style-type: none;
     margin: 0;
@@ -164,6 +237,14 @@ nav.navbar {
 
 .sub-menu li {
     margin-bottom: 10px;
+}
+
+.sub-menu li a {
+    color: #333;
+}
+
+.sub-menu li a:hover {
+    color: #25D6C9;
 }
 
 /* footer */
@@ -202,8 +283,34 @@ footer {
         position: relative;
     }
 
+    .nav>li {
+        border-bottom: 0;
+    }
+
+
+    .navbar-nav>li>a.dropdown-toggle:after {
+        border-top: 4px solid #1679C4;
+    }
+
+    .navbar-default .navbar-collapse,
+    .navbar-default .navbar-form {
+        background-color: #fff;
+    }
+
     .navbar-default .container {
         padding-bottom: 5px;
+    }
+
+    .navbar-default .navbar-nav>li>a {
+        color: #1679C4;
+    }
+
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+        color: #777;
+    }
+
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
+        color: #25D6C9;
     }
 
     .outer {
@@ -217,6 +324,11 @@ footer {
         padding: 0;
     }
 
+    .nav>li>a {
+        font-size: 14px;
+        padding: 17px 15px;
+    }
+
 
     .nav>li>a.sign-in {
         border: 1px solid #1679C4;
@@ -225,6 +337,16 @@ footer {
         margin-top: 13px;
         padding: 3px 10px;
     }
+
+
+    .navbar-nav>li>a.dropdown-toggle:after {
+        display: block;
+        margin-top: -14px;
+        position: absolute;
+        right: 10px;
+        top: auto;
+    }
+
     .navbar-default .navbar-nav>li>a.sign-in:focus,
     .navbar-default .navbar-nav>li>a.sign-in:hover {
         background-color: #25D6C9;
@@ -244,6 +366,10 @@ footer {
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+
+    .container {
+        width: 1000px;
+    }
 
 }
 
