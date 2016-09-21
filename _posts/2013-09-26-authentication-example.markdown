@@ -1,6 +1,6 @@
 ---
 permalink: v1/examples/authentication
-layout: resource
+layout: layout_examples
 title: Authentication Example
 ---
 

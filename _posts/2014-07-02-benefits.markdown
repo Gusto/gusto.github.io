@@ -1,6 +1,6 @@
 ---
 permalink: v1/benefits
-layout: resource
+layout: layout_resources
 title: Benefits
 ---
 

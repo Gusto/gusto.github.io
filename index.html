@@ -1,5 +1,5 @@
 ---
-layout: resource
+layout: home
 ---
 <h1>API Documentation</h1>
 
@@ -8,36 +8,41 @@ layout: resource
 
 <p>We designed the objects and their properties to require as little domain-specific payroll knowledge as possible.</p>
 
-<h3>Getting Started</h3>
 
-<p>The first step towards integration is obtaining API credentials. These include the application id and secret necessary to interact with any part of the Gusto API. Due to overwhelming demand, Gusto is not currently enrolling new integrations.</p>
+<div class="row">
+	<div class="col-sm-9">
 
-<p>Next, you'll want to successfully authenticate a user using OAuth. The <a href="/v1/examples/authentication">Authentication Example</a> has everything you need to get started. Should you run into issues, don't hesitate to email us and we will be happy to help in any way possible.</p>
+		<h3>Getting Started</h3>
 
-<h3>(Zen)Payroll Basics</h3>
+		<p>The first step towards integration is obtaining API credentials. These include the application id and secret necessary to interact with any part of the Gusto API. Due to overwhelming demand, Gusto is not currently enrolling new integrations.</p>
 
-<p>Payroll in its entirety is rather complex, but the API is designed to shield as much complexity as possible from the end user, without sacrificing functionality. This section gives a birds-eye view of the objects that make up the Gusto system.</p>
+		<p>Next, you'll want to successfully authenticate a user using OAuth. The <a href="/v1/examples/authentication">Authentication Example</a> has everything you need to get started. Should you run into issues, don't hesitate to email us and we will be happy to help in any way possible.</p>
 
-<p>Starting with an authenticated user, you will notice that they may be administrators for multiple companies. This is not uncommon, and your application should prepare for it. Accountants use Gusto to manage payroll for many companies simultaneously.</p>
+		<h3>Payroll Basics</h3>
 
-<p class="text-center">
-	<img src="/images/authenticated-user-company.png">
+		<p>Payroll in its entirety is rather complex, but the API is designed to shield as much complexity as possible from the end user, without sacrificing functionality. This section gives a birds-eye view of the objects that make up the Gusto system.</p>
+
+		<p>Starting with an authenticated user, you will notice that they may be administrators for multiple companies. This is not uncommon, and your application should prepare for it. Accountants use Gusto to manage payroll for many companies simultaneously.</p>
+
+		<p>Companies themselves are, naturally, a collection of one to hundreds of employees. Employee data, on the payroll side, is relatively static. Compensation information, addresses, and tax information changes rather infrequently once set.</p>
+
+		<p>Companies can have multiple work locations, across multiple states, but everyone gets paid at the same time.</p>
+
+
+		<p>Pay periods are the combination of a company, a subset of its employees, and a time range. Not every employee at a company will be a part of every payroll. One-off (or'off-cycle') payrolls are run for special events such as hiring or termination, and employees can be excluded from payrolls.</p>
+
+		<p>Regular payrolls are tied to a specific pay periods, and all associated information - vacation & sick time, hours worked, bonuses, etc. - should be applied to that time range.</p>
+
+	</div>
+	<div class="col-sm-3">
+		<img src="/images/authenticated-user-company.png" class="img-fluid">
+		<img src="/images/company-to-employees.png" class="img-fluid">
+		<img src="/images/pay-periods.png" class="img-fluid">
+	</div>
+</div>
+
+
+
+<p>
+	By using the Gusto API, you are agreeing to the following <a href="https://gusto.com/about/terms">terms and conditions</a>.
 </p>
-
-<p>Companies themselves are, naturally, a collection of one to hundreds of employees. Employee data, on the payroll side, is relatively static. Compensation information, addresses, and tax information changes rather infrequently once set.</p>
-
-<p>Companies can have multiple work locations, across multiple states, but everyone gets paid at the same time.</p>
-
-<p class="text-center">
-	<img src="/images/company-to-employees.png">
-</p>
-
-<p>Pay periods are the combination of a company, a subset of its employees, and a time range. Not every employee at a company will be a part of every payroll. One-off (or'off-cycle') payrolls are run for special events such as hiring or termination, and employees can be excluded from payrolls.</p>
-
-<p>Regular payrolls are tied to a specific pay periods, and all associated information - vacation & sick time, hours worked, bonuses, etc. - should be applied to that time range.</p>
-
-<p class="text-center">
-	<img src="/images/pay-periods.png">
-</p>
-
-<p class="margin-top">By using the Gusto API, you are agreeing to the following <a href="https://gusto.com/about/terms">terms and conditions</a>.</p>

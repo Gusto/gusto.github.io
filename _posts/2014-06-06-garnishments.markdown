@@ -1,6 +1,6 @@
 ---
 permalink: v1/garnishments
-layout: resource
+layout: layout_resources
 title: Garnishments
 ---
 

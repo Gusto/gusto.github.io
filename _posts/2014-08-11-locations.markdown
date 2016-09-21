@@ -1,6 +1,6 @@
 ---
 permalink: v1/locations
-layout: resource
+layout: layout_resources
 title: Locations
 ---
 

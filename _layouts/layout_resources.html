@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+{% include head.html %}
+
+<body class="active-font">
+
+<div class="outer">
+  {% include nav.html %}
+  <!--<section id="staticimage" class="container-fluid company"></section>-->
+
+  <section class="main">
+    <div class="container">
+      <div class="row">
+
+        <div class="hidden-md col-sm-3">
+          <div class="sub-menu">
+            <h4>Resources</h4>
+            <ul>
+              <ul>
+                <li>
+                  <a href="/v1/current_user">Current User</a>
+                </li>
+                <li>
+                  <a href="/v1/companies">Companies</a>
+                </li>
+                <li>
+                  <a href="/v1/company_locations">Company Locations</a>
+                </li>
+                <li>
+                  <a href="/v1/employees">Employees</a>
+                </li>
+                <li>
+                  <a href="/v1/employee_home_address">Employees Home Address</a>
+                </li>
+                <li>
+                  <a href="/v1/jobs">Jobs</a>
+                </li>
+                <li>
+                  <a href="/v1/compensations">Compensations</a>
+                </li>
+                <li>
+                  <a href="/v1/paid_time_off">Paid Time Off</a>
+                </li>
+                <li>
+                  <a href="/v1/garnishments">Garnishments</a>
+                </li>
+                <li>
+                  <a href="/v1/terminations">Terminations</a>
+                </li>
+                <li>
+                  <a href="/v1/pay_periods">Pay Periods</a>
+                </li>
+                <li>
+                  <a href="/v1/payrolls">Payrolls</a>
+                </li>
+                <li>
+                  <a href="/v1/benefits">Benefits</a>
+                </li>
+                <li>
+                  <a href="/v1/company_benefits">Company Benefits</a>
+                </li>
+                <li>
+                  <a href="/v1/employee_benefits">Employee Benefits</a>
+                </li>
+                <li>
+                  <a href="/v1/locations">Locations</a>
+                </li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-9">
+          {{ content }}
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  {% include footer.html %}
+
+</div>
+
+</body>
+</html>

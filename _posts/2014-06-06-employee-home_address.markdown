@@ -1,6 +1,6 @@
 ---
 permalink: v1/employee_home_address
-layout: resource
+layout: layout_resources
 title: Employee Home Address
 ---
 

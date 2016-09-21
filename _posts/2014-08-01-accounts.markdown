@@ -1,6 +1,6 @@
 ---
 permalink: v1/accounts
-layout: resource
+layout: layout_endpoints
 title: Accounts
 ---
 

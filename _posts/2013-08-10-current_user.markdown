@@ -1,17 +1,12 @@
 ---
 permalink: /v1/current_user
 title: Current User
-layout: resource
+layout: layout_resources
 ---
 
 # Current User
 
 ## Get information about the current user
-
-> The self is a relation which relates itself to its own self, or it is that in the relation that the relation relates
-> itself to its own self; the self is not the relation but that the relation relates itself to its own self.
->
-> -Søren Kierkegaard
 
 **HTTP Method**: `GET`
 

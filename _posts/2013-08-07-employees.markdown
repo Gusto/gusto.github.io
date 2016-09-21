@@ -1,6 +1,6 @@
 ---
 permalink: v1/employees
-layout: resource
+layout: layout_resources
 title: Employees
 ---
 

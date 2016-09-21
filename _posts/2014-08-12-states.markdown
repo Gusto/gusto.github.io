@@ -1,6 +1,6 @@
 ---
 permalink: v1/states
-layout: resource
+layout: layout_endpoints
 title: States
 ---
 

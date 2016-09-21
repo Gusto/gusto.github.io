@@ -1,6 +1,6 @@
 ---
 permalink: v1/payrolls
-layout: resource
+layout: layout_resources
 ---
 
 # Payrolls
