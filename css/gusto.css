@@ -70,9 +70,9 @@ a:hover {
     height: auto;
 }
 
-.hidden-xs,
-.hidden-sm,
-.hidden-md {
+.xs-hidden,
+.sm-hidden,
+.md-hidden {
     display: none;
 }
 
@@ -268,7 +268,7 @@ footer a:hover {
 
 /* In between XSmall & Small devices (phones & tablets, 480px and up) */
 @media (min-width: 480px) {
-    .hidden-xs {
+    .xs-hidden {
         display: block;
     }
 }
@@ -322,7 +322,7 @@ footer a:hover {
         color: #25D6C9;
     }
 
-    .hidden-sm {
+    .sm-hidden {
         display: block;
     }
 
@@ -371,7 +371,7 @@ footer a:hover {
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
 
-    .hidden-md {
+    .md-hidden {
         display: block;
     }
 
