@@ -10,9 +10,7 @@ h1 {
 }
 
 h1.block {
-    background-color: #25D6C9;
-    color: #fff;
-    padding: 50px 0;
+    padding: 20px 0;
     text-align: center;
 }
 
@@ -72,6 +70,8 @@ a:hover {
     height: auto;
 }
 
+.hidden-xs,
+.hidden-sm,
 .hidden-md {
     display: none;
 }
@@ -85,7 +85,6 @@ a:hover {
 }
 
 .col-img {
-    background-color: #f3f3f3;
     padding: 15px 0;
 }
 
@@ -255,13 +254,23 @@ footer {
     margin-top: 80px;
     padding: 10px;
     text-align: center;
-
 }
 
+footer a,
+footer a:focus,
+footer a:visited {
+    color: #333;
+}
+
+footer a:hover {
+    color: #666;
+}
 
 /* In between XSmall & Small devices (phones & tablets, 480px and up) */
 @media (min-width: 480px) {
-
+    .hidden-xs {
+        display: block;
+    }
 }
 
 /* Small devices (tablets, 768px and up) */
@@ -311,6 +320,10 @@ footer {
 
     .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
         color: #25D6C9;
+    }
+
+    .hidden-sm {
+        display: block;
     }
 
     .outer {
