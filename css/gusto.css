@@ -1,17 +1,22 @@
 
 /* text */
 body {
-    color: #333;
+    color: #54555A;
 }
 
 h1 {
-    color: #54555A;
+    color: #696B74;
+    font-weight: bold;
     margin-bottom: 35px;
 }
 
 h1.block {
     padding: 20px 0;
     text-align: center;
+}
+
+h1.block img {
+    vertical-align: bottom;
 }
 
 h2 {
