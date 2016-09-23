@@ -115,22 +115,3 @@ table tbody tr:nth-child(2n+1) td,
 table tbody tr:nth-child(2n+1) th {
 	background-color: #F0F0F0;
 }
-
-@media only screen and (max-width: 980px) {
-	table,
-	tbody,
-	td,
-	tr {
-		display: block;
-	}
-	thead {
-		display: none;
-	}
-
-	table td {
-		border: none;
-	}
-	table tr {
-		border: 1px solid #c4c4c4;
-	}
-}
