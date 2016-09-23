@@ -1,6 +1,6 @@
 ---
 permalink: v1/benefits
-layout: layout_resources
+layout: sidebar
 title: Benefits
 ---
 

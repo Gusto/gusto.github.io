@@ -1,6 +1,6 @@
 ---
 permalink: v1/company_benefits
-layout: layout_resources
+layout: sidebar
 title: Company Benefits
 ---
 

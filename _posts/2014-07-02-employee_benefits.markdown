@@ -1,6 +1,6 @@
 ---
 permalink: v1/employee_benefits
-layout: layout_resources
+layout: sidebar
 title: Employee Benefits
 ---
 

@@ -1,6 +1,6 @@
 ---
 permalink: v1/faq
-layout: home
+layout: sidebar
 title: Frequently Asked Questions
 ---
 

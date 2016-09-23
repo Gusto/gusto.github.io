@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: sidebar
 ---
 <h1 class="block">
 	<img src="/images/rocket.svg"  width="50" />
@@ -15,28 +15,28 @@ layout: home
 
 <p>The first step towards integration is obtaining API credentials. These include the application id and secret necessary to interact with any part of the Gusto API. Due to overwhelming demand, Gusto is not currently enrolling new integrations.</p>
 
-<p>Next, you'll want to successfully authenticate a user using OAuth. The <a href="/v1/examples/authentication">Authentication Example</a> has everything you need to get started. Should you run into issues, don't hesitate to <a href="https://gusto.com/about/contact" target="_blank">contact us</a> and we will be happy to help in any way possible.</p>
+<p>Next, you'll want to successfully authenticate a user using OAuth. The <a href="/v1/examples/authentication">Authentication Example</a> has everything you need to get started. </p>
 
 
 
 <div class="row margin-bottom-50px">
-	<div class="col-sm-8">
+	<div class="col-sm-7">
 		<h3>Payroll Basics</h3>
 		<p>Payroll in its entirety is rather complex, but the API is designed to shield as much complexity as possible from the end user, without sacrificing functionality. This section gives a birds-eye view of the objects that make up the Gusto system.</p>
 
 		<p>Starting with an authenticated user, you will notice that they may be administrators for multiple companies. This is not uncommon, and your application should prepare for it. Accountants use Gusto to manage payroll for many companies simultaneously.</p>
 
 	</div>
-	<div class="col-sm-4 col-img xs-hidden">
+	<div class="col-sm-5 col-img xs-hidden">
 		<img src="/images/authenticated-user-company.svg" class="img-fluid">
 	</div>
 </div>
 
 <div class="row margin-bottom-50px">
-	<div class="col-sm-4 col-img xs-hidden">
+	<div class="col-sm-5 col-img xs-hidden">
 		<img src="/images/company-to-employees.svg" class="img-fluid">
 	</div>
-	<div class="col-sm-8">
+	<div class="col-sm-7">
 		<p>Companies themselves are, naturally, a collection of one to hundreds of employees. Employee data, on the payroll side, is relatively static. Compensation information, addresses, and tax information changes rather infrequently once set.</p>
 
 		<p>Companies can have multiple work locations, across multiple states, but everyone gets paid at the same time.</p>

@@ -1,6 +1,6 @@
 ---
 permalink: v1/terminations
-layout: layout_resources
+layout: sidebar
 title: Terminations
 ---
 

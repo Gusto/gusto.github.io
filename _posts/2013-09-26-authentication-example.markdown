@@ -1,6 +1,6 @@
 ---
 permalink: v1/examples/authentication
-layout: layout_examples
+layout: sidebar
 title: Authentication Example
 ---
 

@@ -1,6 +1,6 @@
 ---
 permalink: v1/examples/syncing-employees
-layout: layout_examples
+layout: sidebar
 title: Syncing Employees Example
 ---
 

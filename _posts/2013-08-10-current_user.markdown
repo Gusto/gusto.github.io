@@ -1,7 +1,7 @@
 ---
 permalink: /v1/current_user
 title: Current User
-layout: layout_resources
+layout: sidebar
 ---
 
 # Current User

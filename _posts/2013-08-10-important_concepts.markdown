@@ -1,6 +1,6 @@
 ---
 permalink: v1/important_concepts
-layout: layout_resources
+layout: sidebar
 ---
 
 # Important Concepts

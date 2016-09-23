@@ -1,6 +1,6 @@
 ---
 permalink: v1/jobs
-layout: layout_resources
+layout: sidebar
 title: Jobs
 ---
 

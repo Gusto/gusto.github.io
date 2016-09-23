@@ -1,7 +1,7 @@
 ---
 permalink: v1/companies
 title: Companies
-layout: layout_resources
+layout: sidebar
 ---
 
 # Companies

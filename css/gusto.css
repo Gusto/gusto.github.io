@@ -1,6 +1,7 @@
 
 /* text */
 body {
+    background: #fff;
     color: #54555A;
 }
 
@@ -235,7 +236,7 @@ nav.navbar {
 
 .sub-menu ul {
     list-style-type: none;
-    margin: 0;
+    margin: 0 0 2em 0;
     padding: 0;
 }
 
@@ -300,7 +301,6 @@ footer a:hover {
     .nav>li {
         border-bottom: 0;
     }
-
 
     .navbar-nav>li>a.dropdown-toggle:after {
         border-top: 4px solid #1679C4;
@@ -385,18 +385,5 @@ footer a:hover {
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
 
-    .container {
-        width: 1000px;
-    }
 
-}
-
-
-/* Extra large devices (extra large desktops, 1600px and up) */
-@media (min-width: 1600px) {
-
-    .outer {
-        margin: 15px auto;
-        max-width: 1580px;
-    }
 }

@@ -1,6 +1,6 @@
 ---
 permalink: v1/paid_time_off
-layout: layout_resources
+layout: sidebar
 title: Paid Time Off
 ---
 

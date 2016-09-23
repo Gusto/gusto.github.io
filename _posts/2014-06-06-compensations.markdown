@@ -1,6 +1,6 @@
 ---
 permalink: v1/compensations
-layout: layout_resources
+layout: sidebar
 title: Compensations
 ---
 

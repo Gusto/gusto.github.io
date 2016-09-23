@@ -1,6 +1,6 @@
 ---
 permalink: v1/examples/updating-payrolls
-layout: layout_examples
+layout: sidebar
 title: Updating Payrolls Example
 ---
 

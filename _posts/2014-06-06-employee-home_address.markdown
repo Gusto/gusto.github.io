@@ -1,6 +1,6 @@
 ---
 permalink: v1/employee_home_address
-layout: layout_resources
+layout: sidebar
 title: Employee Home Address
 ---
 

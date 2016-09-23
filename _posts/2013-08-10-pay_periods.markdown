@@ -1,6 +1,6 @@
 ---
 permalink: v1/pay_periods
-layout: layout_resources
+layout: sidebar
 title: Pay Periods
 ---
 

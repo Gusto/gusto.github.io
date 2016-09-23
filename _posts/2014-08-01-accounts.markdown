@@ -1,6 +1,6 @@
 ---
 permalink: v1/accounts
-layout: layout_endpoints
+layout: sidebar
 title: Accounts
 ---
 

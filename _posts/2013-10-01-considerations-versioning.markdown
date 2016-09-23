@@ -1,6 +1,6 @@
 ---
 permalink: /v1/considerations/versioning
-layout: home
+layout: sidebar
 title: Versioning Considerations
 ---
 
