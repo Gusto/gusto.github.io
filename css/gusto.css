@@ -380,10 +380,17 @@ footer a:hover {
         display: block;
     }
 
+    .navbar-left {
+        display: none;
+    }
+
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
 
+    .sub-menu {
+        margin-right: 15px;
+    }
 
 }
