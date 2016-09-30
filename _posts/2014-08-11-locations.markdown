@@ -1,13 +1,13 @@
 ---
 permalink: v1/locations
-layout: resource
+layout: sidebar
 title: Locations
 ---
 
 
 # Locations
 
-Locations represent addresses inside ZenPayroll. Locations may belong to a number
+Locations represent addresses inside Gusto. Locations may belong to a number
 of objects, from employees and contractors to companies, and return their
 respective association's id via an appropriately named attribute. For example, a
 <a href="/v1/company_locations">company location</a> will have a `"company_id"`

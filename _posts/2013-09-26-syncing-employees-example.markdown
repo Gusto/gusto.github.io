@@ -1,6 +1,6 @@
 ---
 permalink: v1/examples/syncing-employees
-layout: resource
+layout: sidebar
 title: Syncing Employees Example
 ---
 
@@ -21,14 +21,14 @@ that is returned by the Api, rather than redoing the match at the beginning of a
 ### Email Addresses
 
 We provided email addresses with employee information specifically for matching employees between systems. For just
-under 75% companies on ZenPayroll, every single employee has an email address available.
+under 75% companies on Gusto, every single employee has an email address available.
 
 This assumes that employees provide the same email address to both systems, but for work applications this is by far
 the norm.
 
 ### Date of Birth
 
-Almost 98% of employees in the ZenPayroll system have birthdays associated with them. Of those that do, ~81% have a
+Almost 98% of employees in the Gusto system have birthdays associated with them. Of those that do, ~81% have a
 unique birthday (comprised of year, month, and day).
 
 Be careful when only comparing month and day, as it takes
@@ -36,7 +36,7 @@ Be careful when only comparing month and day, as it takes
 
 ### Full Name
 
-First and last name are required for employees in the ZenPayroll system. Additionally, ~55% provide middle initials.
+First and last name are required for employees in the Gusto system. Additionally, ~55% provide middle initials.
 If you can find an exact match based on full-name, then you're finished.
 
 Typos do happen, in which case checking the [Hamming Distance](http://en.wikipedia.org/wiki/Hamming_distance) can be

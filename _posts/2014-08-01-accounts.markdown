@@ -1,13 +1,13 @@
 ---
 permalink: v1/accounts
-layout: resource
+layout: sidebar
 title: Accounts
 ---
 
 
 # Accounts
 
-The accounts API is for creating accounts for new customers on ZenPayroll. With
+The accounts API is for creating accounts for new customers on Gusto. With
 a minimum amount of information, partners may create a user, company, and the
 related permissions to go from setup onboarding information.
 

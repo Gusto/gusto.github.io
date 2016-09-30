@@ -1,7 +1,7 @@
 ---
 permalink: v1/companies
 title: Companies
-layout: resource
+layout: sidebar
 ---
 
 # Companies
@@ -74,11 +74,11 @@ layout: resource
 
 | Field                     | Description
 | :----------               |:-------------
-| `id`                      | the unique identifier of this company in the ZenPayroll system.
+| `id`                      | the unique identifier of this company in the Gusto system.
 | `name`                    | name of this company.
 | `trade_name`              | trade name of this company. This is an optional field.
 | `locations`               | array of addresses for all known locations of this company.
-| `id`                      | the unique identifier of this location in the ZenPayroll system.
+| `id`                      | the unique identifier of this location in the Gusto system.
 | `street_1`                | first line of this address' street.
 | `street_2`                | second line of this address' street.
 | `city`                    | name of address' city.

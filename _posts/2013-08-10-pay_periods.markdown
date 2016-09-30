@@ -1,6 +1,6 @@
 ---
 permalink: v1/pay_periods
-layout: resource
+layout: sidebar
 title: Pay Periods
 ---
 
@@ -50,9 +50,9 @@ title: Pay Periods
 | `start_date` & `end_date` | the range of the pay period. So any information you have from February 1, 2013 through February 15, 2013 (inclusive) should be applied to this pay period.
 | `payroll`                 | meta information relative to the company's payroll for the requested pay period.
 | `payroll_deadline`        | date by which payroll should be run for employees to be paid on time. This helps you plan in advance for submitting data. For example, if you are tracking time and attendance data, you should submit the cumulative hours for the tracked employees on, and preferably before, this date.
-| `processed`               | whether or not this payroll has been successfully run. If it has, you should consider it 'frozen', as any attempts to update its data will be rejected. Note that passing the `payroll_deadline` does not guarantee that the payroll has been processed; running late payrolls is not uncommon.  Similarly, ZenPayroll users may choose to run payroll before the `payroll_deadline`.
+| `processed`               | whether or not this payroll has been successfully run. If it has, you should consider it 'frozen', as any attempts to update its data will be rejected. Note that passing the `payroll_deadline` does not guarantee that the payroll has been processed; running late payrolls is not uncommon.  Similarly, Gusto users may choose to run payroll before the `payroll_deadline`.
 | `eligible_employees`      | array of all employees who are (or were) eligible during the given pay period.
-| `id`                      | the unique identifier of this employee in the ZenPayroll system.
+| `id`                      | the unique identifier of this employee in the Gusto system.
 | `job_ids`                 | unique ids of jobs worked (or eligible to be worked) by this employee during this pay period.
 
 ### Optional Parameters

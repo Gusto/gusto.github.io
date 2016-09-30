@@ -13,15 +13,17 @@
 */
 
 blockquote {
-  border-radius: 5px;
-  padding: 10px;
+  padding: 15px;
   background-color: #EFEFEF;
-	border-left-color: #C4C4C4;
+  border-left-color: #25D6C9;
 }
 
-body {
-	background: $white url("https://zenpayroll.com/assets/corporate/plaid-texture.png") repeat top center;
+pre {
+  border-radius: 0;
+  border: 1px solid #ddd;
+  padding: 15px;
 }
+
 code {
 	color: #32823f;
 }
@@ -112,23 +114,4 @@ table th {
 table tbody tr:nth-child(2n+1) td,
 table tbody tr:nth-child(2n+1) th {
 	background-color: #F0F0F0;
-}
-
-@media only screen and (max-width: 980px) {
-	table,
-	tbody,
-	td,
-	tr {
-		display: block;
-	}
-	thead {
-		display: none;
-	}
-
-	table td {
-		border: none;
-	}
-	table tr {
-		border: 1px solid #c4c4c4;
-	}
 }

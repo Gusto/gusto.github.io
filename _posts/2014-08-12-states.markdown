@@ -1,13 +1,13 @@
 ---
 permalink: v1/states
-layout: resource
+layout: sidebar
 title: States
 ---
 
 <h1>States</h1>
 
 <p>The states endpoint is a public API endpoint that returns the list of supported
-states within ZenPayroll. For reference, the current supported and unsupported
+states within Gusto. For reference, the current supported and unsupported
 states are shown below.</p>
 
 <p>Note that including a <code>callback</code> parameter will return this

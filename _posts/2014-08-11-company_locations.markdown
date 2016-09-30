@@ -1,6 +1,6 @@
 ---
 permalink: v1/company_locations
-layout: resource
+layout: sidebar
 title: Company Locations
 ---
 
