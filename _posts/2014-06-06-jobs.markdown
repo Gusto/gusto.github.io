@@ -34,71 +34,71 @@ Jobs are essentially the intersection of <a href="/v1/employees">an employee</a>
 
 #### Sample Response Body:
 
-```javascript
-  [
-    {
-      "id" : 1123581321345589,
-      "version" : "gr78930htutrz444kuytr3s5hgxykuveb523fwl8sir",
-      "employee_id" : 1363316536327001
-      "location_id" : 1363316536327002,
-      "location": {
-        "id": 1363316536327002,
-        "street_1": "425 2nd Street",
-        "street_2": "Suite 602",
-        "city" : "San Francisco",
-        "state" : "CA",
-        "zip" : "94107",
-        "country" : "USA"
-      },
-      "hire_date" : "2012-12-11",
-      "title" : "Assistant to the Regional Manager",
-      "rate" : "70.00",
-      "payment_unit" : "Hour",
-      "current_compensation_id" : 1363316536327003
-      "compensations" : [
-        {
-          "id" : 1363316536327003,
-          "version" : "98jr3289h3298hr9329gf9egskt3kagri32qqgiqe3872",
-          "job_id" : 1123581321345589,
-          "rate" : "70.00",
-          "payment_unit" : "Hour",
-          "flsa_status" : "Nonexempt",
-          "effective_date": "2012-12-11"
-        }
-      ]
+```json
+[
+  {
+    "id": 1123581321345589,
+    "version": "gr78930htutrz444kuytr3s5hgxykuveb523fwl8sir",
+    "employee_id": 1363316536327001,
+    "location_id": 1363316536327002,
+    "location": {
+      "id": 1363316536327002,
+      "street_1": "425 2nd Street",
+      "street_2": "Suite 602",
+      "city": "San Francisco",
+      "state": "CA",
+      "zip": "94107",
+      "country": "USA"
     },
-    {
-      "id" : 1123581321345590,
-      "version" : "4tvwfa4qjmxvb3rabr4xfejoa3lixwgt4rpbdxe9id9",
-      "employee_id" : 1363316536327001
-      "location_id" : 1363316536327002,
-      "location": {
-        "id": 1363316536327002,
-        "street_1": "425 2nd Street",
-        "street_2": "Suite 602",
-        "city" : "San Francisco",
-        "state" : "CA",
-        "zip" : "94107",
-        "country" : "USA"
-      },
-      "hire_date" : "2012-12-11",
-      "title" : "Receptionist",
-      "rate" : "18.00",
-      "payment_unit" : "Hour",
-      "current_compensation_id" : 1363316536327004
-      "compensations" : [
-        {
-          "id" : 1363316536327004,
-          "version" : "98jr3289h3298hr9329gf9egskt3kagri32qqgiqe3872",
-          "job_id" : 1123581321345590,
-          "rate" : "45.00",
-          "payment_unit" : "Hour",
-          "flsa_status" : "Nonexempt",
-          "effective_date": "2012-12-11"
-        }
-      ]
-    }
-  ]
+    "hire_date": "2012-12-11",
+    "title": "Assistant to the Regional Manager",
+    "rate": "70.00",
+    "payment_unit": "Hour",
+    "current_compensation_id": 1363316536327003,
+    "compensations": [
+      {
+        "id": 1363316536327003,
+        "version": "98jr3289h3298hr9329gf9egskt3kagri32qqgiqe3872",
+        "job_id": 1123581321345589,
+        "rate": "70.00",
+        "payment_unit": "Hour",
+        "flsa_status": "Nonexempt",
+        "effective_date": "2012-12-11"
+      }
+    ]
+  },
+  {
+    "id": 1123581321345590,
+    "version": "4tvwfa4qjmxvb3rabr4xfejoa3lixwgt4rpbdxe9id9",
+    "employee_id": 1363316536327001,
+    "location_id": 1363316536327002,
+    "location": {
+      "id": 1363316536327002,
+      "street_1": "425 2nd Street",
+      "street_2": "Suite 602",
+      "city": "San Francisco",
+      "state": "CA",
+      "zip": "94107",
+      "country": "USA"
+    },
+    "hire_date": "2012-12-11",
+    "title": "Receptionist",
+    "rate": "18.00",
+    "payment_unit": "Hour",
+    "current_compensation_id": 1363316536327004,
+    "compensations": [
+      {
+        "id": 1363316536327004,
+        "version": "98jr3289h3298hr9329gf9egskt3kagri32qqgiqe3872",
+        "job_id": 1123581321345590,
+        "rate": "45.00",
+        "payment_unit": "Hour",
+        "flsa_status": "Nonexempt",
+        "effective_date": "2012-12-11"
+      }
+    ]
+  }
+]
 ```
 
 ## Get an individual job
@@ -112,38 +112,38 @@ Jobs are essentially the intersection of <a href="/v1/employees">an employee</a>
 #### Sample Response Body:
 
 
-```javascript
-  {
-    "id" : 1123581321345589,
-    "version" : "gr78930htutrz444kuytr3s5hgxykuveb523fwl8sir",
-    "employee_id" : 1363316536327001
-    "location_id" : 1363316536327002,
-    "location": {
-      "id": 1363316536327002,
-      "street_1": "425 2nd Street",
-      "street_2": "Suite 602",
-      "city" : "San Francisco",
-      "state" : "CA",
-      "zip" : "94107",
-      "country" : "USA"
-    },
-    "hire_date" : "2012-12-11",
-    "title" : "Assistant to the Regional Manager",
-    "rate" : "70.00",
-    "payment_unit" : "Hour",
-    "current_compensation_id" : 1363316536327003
-    "compensations" : [
-      {
-        "id" : 1363316536327004,
-        "version" : "98jr3289h3298hr9329gf9egskt3kagri32qqgiqe3872",
-        "job_id" : 1123581321345589,
-        "rate" : "70.00",
-        "payment_unit" : "Hour",
-        "flsa_status" : "Nonexempt",
-        "effective_date": "2012-12-11"
-      }
-    ]
-  }
+```json
+{
+  "id": 1123581321345589,
+  "version": "gr78930htutrz444kuytr3s5hgxykuveb523fwl8sir",
+  "employee_id": 1363316536327001,
+  "location_id": 1363316536327002,
+  "location": {
+    "id": 1363316536327002,
+    "street_1": "425 2nd Street",
+    "street_2": "Suite 602",
+    "city": "San Francisco",
+    "state": "CA",
+    "zip": "94107",
+    "country": "USA"
+  },
+  "hire_date": "2012-12-11",
+  "title": "Assistant to the Regional Manager",
+  "rate": "70.00",
+  "payment_unit": "Hour",
+  "current_compensation_id": 1363316536327003,
+  "compensations": [
+    {
+      "id": 1363316536327004,
+      "version": "98jr3289h3298hr9329gf9egskt3kagri32qqgiqe3872",
+      "job_id": 1123581321345589,
+      "rate": "70.00",
+      "payment_unit": "Hour",
+      "flsa_status": "Nonexempt",
+      "effective_date": "2012-12-11"
+    }
+  ]
+}
 ```
 
 ## Update an individual job
@@ -156,11 +156,11 @@ Jobs are essentially the intersection of <a href="/v1/employees">an employee</a>
 
 ### Sample Request Body
 
-```javascript
-  {
-    "version" : "gr78930htutrz444kuytr3s5hgxykuveb523fwl8sir",
-    "title" : "Assistant Regional Manager"
-  }
+```json
+{
+  "version": "gr78930htutrz444kuytr3s5hgxykuveb523fwl8sir",
+  "title": "Assistant Regional Manager"
+}
 ```
 
 ## Create a Job
@@ -173,9 +173,9 @@ Jobs are essentially the intersection of <a href="/v1/employees">an employee</a>
 
 ### Sample Request Body
 
-```javascript
-  {
-    "title" : "Assistant to the Regional Manager",
-    "hire_date" : "2012-12-21"
-  }
+```json
+{
+  "title": "Assistant to the Regional Manager",
+  "hire_date": "2012-12-21"
+}
 ```

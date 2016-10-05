@@ -14,63 +14,63 @@ layout: sidebar
 
 **Returns**: Get information about a particular company
 
-{% highlight javascript %}
+```json
+{
+  "id": 2357111317192329,
+  "name": "Ye Olde Wig Shoppe",
+  "trade_name": "Fezziwig's",
+  "locations": [
     {
-      "id" : 2357111317192329,
-      "name" : "Ye Olde Wig Shoppe",
-      "trade_name" : "Fezziwig's",
-      "locations" : [
-        {
-          "id" : 3141592653589793,
-          "street_1" : "450 Serra Mall",
-          "street_2" : "Department of Philosophy",
-          "city" : "Stanford",
-          "state" : "CA",
-          "zip" : "94305"
-        },
-        {
-          "id" : 2718281828459045,
-          "street_1" : "314 Moses Hall #2390",
-          "street_2" : "University of California",
-          "city" : "Berkeley",
-          "state" : "CA",
-          "zip" : "94720"
-        }
-      ],
-      "compensations" : {
-        "hourly" : [
-          {
-            "name" : "Regular Hours",
-            "multiple" : 1
-          },
-          {
-            "name" : "Overtime",
-            "multiple" : 1.5
-          },
-          {
-            "name" : "Double Overtime",
-            "multiple" : 2
-          }
-        ],
-        "fixed" : [
-          {
-            "name" : "Bonus"
-          },
-          {
-            "name" : "Commission"
-          }
-        ],
-        "paid_time_off" : [
-          {
-            "name" : "Vacation Hours"
-          },
-          {
-            "name" : "Sick Hours"
-          }
-        ]
-      }
+      "id": 3141592653589793,
+      "street_1": "450 Serra Mall",
+      "street_2": "Department of Philosophy",
+      "city": "Stanford",
+      "state": "CA",
+      "zip": "94305"
+    },
+    {
+      "id": 2718281828459045,
+      "street_1": "314 Moses Hall #2390",
+      "street_2": "University of California",
+      "city": "Berkeley",
+      "state": "CA",
+      "zip": "94720"
     }
-{% endhighlight %}
+  ],
+  "compensations": {
+    "hourly": [
+      {
+        "name": "Regular Hours",
+        "multiple": 1
+      },
+      {
+        "name": "Overtime",
+        "multiple": 1.5
+      },
+      {
+        "name": "Double Overtime",
+        "multiple": 2
+      }
+    ],
+    "fixed": [
+      {
+        "name": "Bonus"
+      },
+      {
+        "name": "Commission"
+      }
+    ],
+    "paid_time_off": [
+      {
+        "name": "Vacation Hours"
+      },
+      {
+        "name": "Sick Hours"
+      }
+    ]
+  }
+}
+```
 
 | Field                     | Description
 | :----------               |:-------------

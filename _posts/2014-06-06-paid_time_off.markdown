@@ -32,31 +32,31 @@ These endpoints handle paid time off for an employee. Currently only 'Vacation H
 
 #### Sample Response Body:
 
-```javascript
-  [
-    {
-      "id": 891238902131212,
-      "version" : "d487dd0b55dfcacdd920ccbdaeafa351",
-      "name" : "Vacation Hours",
-      "accrual_unit" : "Hour",
-      "accrual_period" : "Year",
-      "accrual_rate" : "160.00",
-      "accrual_balance" : "20.47",
-      "maximum_accrual_balance" : null,
-      "paid_at_termination" : true
-    },
-    {
-      "id": 89123890217803,
-      "version" : "9dee45a24efffc78483a02cfcfd83433",
-      "name" : "Sick Hours",
-      "accrual_unit" : "Hour",
-      "accrual_period" : "Year",
-      "accrual_rate" : "80.00",
-      "accrual_balance" : "9.12",
-      "maximum_accrual_balance" : "100.00",
-      "paid_at_termination" : false
-    }
-  ]
+```json
+[
+  {
+    "id": 891238902131212,
+    "version": "d487dd0b55dfcacdd920ccbdaeafa351",
+    "name": "Vacation Hours",
+    "accrual_unit": "Hour",
+    "accrual_period": "Year",
+    "accrual_rate": "160.00",
+    "accrual_balance": "20.47",
+    "maximum_accrual_balance": null,
+    "paid_at_termination": true
+  },
+  {
+    "id": 89123890217803,
+    "version": "9dee45a24efffc78483a02cfcfd83433",
+    "name": "Sick Hours",
+    "accrual_unit": "Hour",
+    "accrual_period": "Year",
+    "accrual_rate": "80.00",
+    "accrual_balance": "9.12",
+    "maximum_accrual_balance": "100.00",
+    "paid_at_termination": false
+  }
+]
 ```
 
 ## Get a particular paid time off type for an employee
@@ -69,18 +69,18 @@ These endpoints handle paid time off for an employee. Currently only 'Vacation H
 
 #### Sample Response Body:
 
-```javascript
-  {
-    "id": 891238902131212,
-    "version" : "d487dd0b55dfcacdd920ccbdaeafa351",
-    "name" : "Vacation Hours",
-    "accrual_unit" : "Hour",
-    "accrual_period" : "Year",
-    "accrual_rate" : "160.00",
-    "accrual_balance" : "20.47",
-    "maximum_accrual_balance" : null,
-    "paid_at_termination" : true
-  }
+```json
+{
+  "id": 891238902131212,
+  "version": "d487dd0b55dfcacdd920ccbdaeafa351",
+  "name": "Vacation Hours",
+  "accrual_unit": "Hour",
+  "accrual_period": "Year",
+  "accrual_rate": "160.00",
+  "accrual_balance": "20.47",
+  "maximum_accrual_balance": null,
+  "paid_at_termination": true
+}
 ```
 
 ## Update paid time off
@@ -93,11 +93,11 @@ These endpoints handle paid time off for an employee. Currently only 'Vacation H
 
 #### Sample Request Body:
 
-```javascript
-  {
-    "accrual_rate" : "180.00",
-    "maximum_accrual_balance" : "200.00"
-  }
+```json
+{
+  "accrual_rate": "180.00",
+  "maximum_accrual_balance": "200.00"
+}
 ```
 
 ## Create paid time off
@@ -110,9 +110,9 @@ These endpoints handle paid time off for an employee. Currently only 'Vacation H
 
 #### Sample Request Body:
 
-```javascript
-  {
-    "accrual_rate" : "180.00",
-    "maximum_accrual_balance" : "200.00"
-  }
+```json
+{
+  "accrual_rate": "180.00",
+  "maximum_accrual_balance": "200.00"
+}
 ```

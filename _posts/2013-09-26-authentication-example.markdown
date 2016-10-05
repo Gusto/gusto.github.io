@@ -96,13 +96,13 @@ The `client_id`, `client_secret`, and `redirect_uri` are used to identify your a
 
 Upon successful authentication, the response will look like this:
 
-```javascript
-  {
-   "access_token": "de6780bc506a0446309bd9362820ba8aed28aa506c71eedbe1c5c4f9dd350e54",
-   "token_type": "bearer",
-   "expires_in": 7200,
-   "refresh_token": "8257e65c97202ed1726cf9571600918f3bffb2544b26e00a61df9897668c33a1"
-  }
+```json
+{
+  "access_token": "de6780bc506a0446309bd9362820ba8aed28aa506c71eedbe1c5c4f9dd350e54",
+  "token_type": "bearer",
+  "expires_in": 7200,
+  "refresh_token": "8257e65c97202ed1726cf9571600918f3bffb2544b26e00a61df9897668c33a1"
+}
 ```
 
 The `access_token` should be included as a query parameter with every call to the API. Failure to include the `access_token` or using an expired token will result in a 401 response.
@@ -135,13 +135,13 @@ https://api.gusto.com/oauth/token?client_id=bbb286ff1a4fe6b84742b0d49b8d0d65bd02
 
 The corresponding response, including both a fresh access token and a new refresh token, will look something like this:
 
-```javascript
-  {
-   "access_token": "de6780bc506a0446309bd9362820ba8aed28aa506c71eedbe1c5c4f9dd350e54",
-   "token_type": "bearer",
-   "expires_in": 7200,
-   "refresh_token": "8257e65c97202ed1726cf9571600918f3bffb2544b26e00a61df9897668c33a1"
-  }
+```json
+{
+  "access_token": "de6780bc506a0446309bd9362820ba8aed28aa506c71eedbe1c5c4f9dd350e54",
+  "token_type": "bearer",
+  "expires_in": 7200,
+  "refresh_token": "8257e65c97202ed1726cf9571600918f3bffb2544b26e00a61df9897668c33a1"
+}
 ```
 
 

@@ -38,25 +38,25 @@ Employee benefits represent an <a href="/v1/employees">employee</a> enrolled in 
 #### Sample Response Body:
 
 
-```javascript
-  [
-    {
-      "id": 1363316536327004,
-      "version": '09j3d29jqdpj92109j9j2d90dq',
-      "employee_id": 908123091820398,
-      "company_benefit_id": 290384923980230,
-      "active": true,
-      "employee_deduction": '100.00',
-      "company_contribution": '100.00',
-      "employee_deduction_annual_maximum": '200.00',
-      "company_contribution_annual_maximum": '200.00',
-      "limit_option": null,
-      "deduct_as_percentage": true,
-      "contribute_as_percentage": true,
-      "catch_up": false,
-      "coverage_amount": null
-    }
-  ]
+```json
+[
+  {
+    "id": 1363316536327004,
+    "version": "09j3d29jqdpj92109j9j2d90dq",
+    "employee_id": 908123091820398,
+    "company_benefit_id": 290384923980230,
+    "active": true,
+    "employee_deduction": "100.00",
+    "company_contribution": "100.00",
+    "employee_deduction_annual_maximum": "200.00",
+    "company_contribution_annual_maximum": "200.00",
+    "limit_option": null,
+    "deduct_as_percentage": true,
+    "contribute_as_percentage": true,
+    "catch_up": false,
+    "coverage_amount": null
+  }
+]
 ```
 
 ## Get a single employee benefit
@@ -69,23 +69,23 @@ Employee benefits represent an <a href="/v1/employees">employee</a> enrolled in 
 
 #### Sample Response Body:
 
-```javascript
-  {
-    "id": 1363316536327004,
-    "version": '09j3d29jqdpj92109j9j2d90dq',
-    "employee_id": 908123091820398,
-    "company_benefit_id": 290384923980230,
-    "active": true,
-    "employee_deduction": '100.00',
-    "company_contribution": '100.00',
-    "employee_deduction_annual_maximum": '200.00',
-    "company_contribution_annual_maximum": '200.00',
-    "limit_option": null,
-    "deduct_as_percentage": true,
-    "contribute_as_percentage": true,
-    "catch_up": false,
-    "coverage_amount": null
-  }
+```json
+{
+  "id": 1363316536327004,
+  "version": "09j3d29jqdpj92109j9j2d90dq",
+  "employee_id": 908123091820398,
+  "company_benefit_id": 290384923980230,
+  "active": true,
+  "employee_deduction": "100.00",
+  "company_contribution": "100.00",
+  "employee_deduction_annual_maximum": "200.00",
+  "company_contribution_annual_maximum": "200.00",
+  "limit_option": null,
+  "deduct_as_percentage": true,
+  "contribute_as_percentage": true,
+  "catch_up": false,
+  "coverage_amount": null
+}
 ```
 
 ## Update an employee benefit
@@ -98,11 +98,11 @@ Employee benefits represent an <a href="/v1/employees">employee</a> enrolled in 
 
 #### Sample Request Body:
 
-```javascript
-  {
-    "version": '09j3d29jqdpj92109j9j2d90dq',
-    "employee_deduction": '250.00'
-  }
+```json
+{
+  "version": "09j3d29jqdpj92109j9j2d90dq",
+  "employee_deduction": "250.00"
+}
 ```
 
 ## Create an employee benefit
@@ -115,13 +115,13 @@ Employee benefits represent an <a href="/v1/employees">employee</a> enrolled in 
 
 #### Sample Request Body:
 
-```javascript
-  {
-    "company_benefit_id": 290384923980230,
-    "active": true,
-    "employee_deduction": '100.00',
-    "company_contribution": '100.00'
-  }
+```json
+{
+  "company_benefit_id": 290384923980230,
+  "active": true,
+  "employee_deduction": "100.00",
+  "company_contribution": "100.00"
+}
 ```
 
 ## Delete an employee benefit
