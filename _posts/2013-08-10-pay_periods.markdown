@@ -29,7 +29,7 @@ title: Pay Periods
     "pay_schedule_id": 7757500908984137,
     "payroll": {
       "payroll_deadline": "2013-02-18",
-      "processed": true,
+      "processed": true
     },
     "eligible_employees": [
       {

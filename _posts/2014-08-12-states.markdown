@@ -66,10 +66,10 @@ parameter.</p>
 
 As JSON:
 
-```javascript
+```json
 {
-  supported: ["AZ","CA","CO","CT","FL","GA","IL","MA","NC","NJ","NV","NY","OR","TN","TX","UT","WA"],
-  unsupported:["AK","AL","AR","DC","DE","HI","IA","ID","IN","KS","KY","LA","MD","ME","MI","MN","MO","MS","MT","ND","NE","NH","NM","OH","OK","PA","RI","SC","SD","VA","VT","WI","WV","WY"]
+  "supported": ["AZ","CA","CO","CT","FL","GA","IL","MA","NC","NJ","NV","NY","OR","TN","TX","UT","WA"],
+  "unsupported": ["AK","AL","AR","DC","DE","HI","IA","ID","IN","KS","KY","LA","MD","ME","MI","MN","MO","MS","MT","ND","NE","NH","NM","OH","OK","PA","RI","SC","SD","VA","VT","WI","WV","WY"]
 }
 ```
 
@@ -78,6 +78,6 @@ With a `callback=handleCallback` parameter
 ```javascript
 handleCallback({
   supported: ["AZ","CA","CO","CT","FL","GA","IL","MA","NC","NJ","NV","NY","OR","TN","TX","UT","WA"],
-  unsupported:["AK","AL","AR","DC","DE","HI","IA","ID","IN","KS","KY","LA","MD","ME","MI","MN","MO","MS","MT","ND","NE","NH","NM","OH","OK","PA","RI","SC","SD","VA","VT","WI","WV","WY"]
+  unsupported: ["AK","AL","AR","DC","DE","HI","IA","ID","IN","KS","KY","LA","MD","ME","MI","MN","MO","MS","MT","ND","NE","NH","NM","OH","OK","PA","RI","SC","SD","VA","VT","WI","WV","WY"]
 })
 ```
