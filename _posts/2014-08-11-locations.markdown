@@ -42,18 +42,18 @@ property while an employee's home addres will instead have an `"employee_id"`.
 
 ### Sample Response Body
 
-```javascript
+```json
 {
-  "id" : 1402342024000
-  "version" : "fe75bd065ff48b91c35fe8ff842f986c",
-  "phone_number" : "8009360383",
-  "company_id" : 1402341716000,
+  "id": 1402342024000,
+  "version": "fe75bd065ff48b91c35fe8ff842f986c",
+  "phone_number": "8009360383",
+  "company_id": 1402341716000,
   "street_1": "21 Stillman Street",
   "street_2": "Apartment 6",
-  "city" : "San Francisco",
-  "state" : "CA",
-  "zip" : "94107",
-  "country" : "USA"
+  "city": "San Francisco",
+  "state": "CA",
+  "zip": "94107",
+  "country": "USA"
 }
 ```
 
@@ -69,7 +69,7 @@ property while an employee's home addres will instead have an `"employee_id"`.
 
 ### Sample Request Body
 
-```javascript
+```json
 {
   "street_1": "425 2nd Street",
   "street_2": "Suite 602"

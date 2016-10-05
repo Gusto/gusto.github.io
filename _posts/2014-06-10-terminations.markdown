@@ -32,16 +32,16 @@ Note that some states require employees to receive their final wages within 24 h
 
 #### Sample Response Body:
 
-```javascript
-  [
-    {
-      "id": 891238902131212,
-      "version" : "d487dd0b55dfcacdd920ccbdaeafa351",
-      "active" : true,
-      "effective_date" : "2014-03-10",
-      "run_termination_payroll" : false
-    }
-  ]
+```json
+[
+  {
+    "id": 891238902131212,
+    "version": "d487dd0b55dfcacdd920ccbdaeafa351",
+    "active": true,
+    "effective_date": "2014-03-10",
+    "run_termination_payroll": false
+  }
+]
 ```
 
 ## Get a termination for an employee
@@ -54,14 +54,14 @@ Note that some states require employees to receive their final wages within 24 h
 
 #### Sample Response Body:
 
-```javascript
-  {
-    "id": 891238902131212,
-    "version" : "d487dd0b55dfcacdd920ccbdaeafa351",
-    "active" : true,
-    "effective_date" : "2014-03-10",
-    "run_termination_payroll" : false
-  }
+```json
+{
+  "id": 891238902131212,
+  "version": "d487dd0b55dfcacdd920ccbdaeafa351",
+  "active": true,
+  "effective_date": "2014-03-10",
+  "run_termination_payroll": false
+}
 ```
 
 ## Update a termination
@@ -74,10 +74,10 @@ Note that some states require employees to receive their final wages within 24 h
 
 #### Sample Request Body:
 
-```javascript
-  {
-    "effective_date" : "2014-03-11"
-  }
+```json
+{
+  "effective_date": "2014-03-11"
+}
 ```
 
 ## Create a termination
@@ -90,9 +90,9 @@ Note that some states require employees to receive their final wages within 24 h
 
 #### Sample Request Body:
 
-```javascript
-  {
-    "effective_date" : "2014-06-30",
-    "run_termination_payroll" : true
-  }
+```json
+{
+  "effective_date": "2014-06-30",
+  "run_termination_payroll": true
+}
 ```

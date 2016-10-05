@@ -39,24 +39,24 @@ account creation.
 
 #### Sample Request Body:
 
-```javascript
-  {
-    "user" : {
-      "first_name" : "Frank",
-      "last_name" : "Ocean",
-      "email" : "bubbles@TusksRUs.biz"
-    },
-    "company" : {
-      "name" : "Frank's Walrus Emporium",
-      "states" : ["CA", "WA", "TN"]
-    }
+```json
+{
+  "user": {
+    "first_name": "Frank",
+    "last_name": "Ocean",
+    "email": "bubbles@TusksRUs.biz"
+  },
+  "company": {
+    "name": "Frank's Walrus Emporium",
+    "states": ["CA", "WA", "TN"]
   }
+}
 ```
 
 #### Sample Response Body
 
-```javascript
-  {
-    "authorization_code" : "4a8a08f09d37b73795649038408b5f3333f5b80483094659737b73d90f80a8a4"
-  }
+```json
+{
+  "authorization_code": "4a8a08f09d37b73795649038408b5f3333f5b80483094659737b73d90f80a8a4"
+}
 ```

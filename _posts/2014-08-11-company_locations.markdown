@@ -42,19 +42,19 @@ retrieving or updating an individual record should be done via the <a href="/v1/
 
 ### Sample Response Body
 
-```javascript
+```json
 [
   {
-    "id" : 1402342024000
-    "version" : "fe75bd065ff48b91c35fe8ff842f986c",
-    "company_id" : 1402341716000,
-    "phone_number" : "8009360383",
+    "id": 1402342024000,
+    "version": "fe75bd065ff48b91c35fe8ff842f986c",
+    "company_id": 1402341716000,
+    "phone_number": "8009360383",
     "street_1": "425 2nd Street",
     "street_2": "Suite 602",
-    "city" : "San Francisco",
-    "state" : "CA",
-    "zip" : "94107",
-    "country" : "USA"
+    "city": "San Francisco",
+    "state": "CA",
+    "zip": "94107",
+    "country": "USA"
   }
 ]
 ```
@@ -71,16 +71,16 @@ retrieving or updating an individual record should be done via the <a href="/v1/
 
 ### Sample Request Body
 
-```javascript
+```json
 [
   {
-    "phone_number" : "8009360383",
+    "phone_number": "8009360383",
     "street_1": "425 2nd Street",
     "street_2": "Suite 602",
-    "city" : "San Francisco",
-    "state" : "CA",
-    "zip" : "94107",
-    "country" : "USA"
+    "city": "San Francisco",
+    "state": "CA",
+    "zip": "94107",
+    "country": "USA"
   }
 ]
 ```

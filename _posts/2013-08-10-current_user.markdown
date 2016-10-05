@@ -16,40 +16,40 @@ layout: sidebar
 
 #### Sample Response Body:
 
-{% highlight javascript %}
-    {
-      "email" : "chris@gusto.com",
-      "roles" : {
-        "payroll_admin" : {
-          "companies" : [
+```json
+{
+  "email": "chris@gusto.com",
+  "roles": {
+    "payroll_admin": {
+      "companies": [
+        {
+          "id": 2357111317192329,
+          "name": "Ye Olde Wig Shoppe",
+          "trade_name": "Fezziwig's",
+          "locations": [
             {
-              "id" : 2357111317192329,
-              "name" : "Ye Olde Wig Shoppe",
-              "trade_name" : "Fezziwig's",
-              "locations" : [
-                {
-                  "id" : 3141592653589793,
-                  "street_1" : "450 Serra Mall",
-                  "street_2" : "Department of Philosophy",
-                  "city" : "Stanford",
-                  "state" : "CA",
-                  "zip" : "94305"
-                },
-                {
-                  "id" : 2718281828459045,
-                  "street_1" : "314 Moses Hall #2390",
-                  "street_2" : "University of California",
-                  "city" : "Berkeley",
-                  "state" : "CA",
-                  "zip" : "94720"
-                }
-              ],
+              "id": 3141592653589793,
+              "street_1": "450 Serra Mall",
+              "street_2": "Department of Philosophy",
+              "city": "Stanford",
+              "state": "CA",
+              "zip": "94305"
+            },
+            {
+              "id": 2718281828459045,
+              "street_1": "314 Moses Hall #2390",
+              "street_2": "University of California",
+              "city": "Berkeley",
+              "state": "CA",
+              "zip": "94720"
             }
           ]
         }
-      }
+      ]
     }
-{% endhighlight %}
+  }
+}
+```
 
 | Field                     | Description
 | :----------               |:-------------

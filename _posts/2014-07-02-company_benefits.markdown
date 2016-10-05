@@ -33,15 +33,15 @@ Note that company benefits, once created, can be disabled (`active=false`) only 
 
 #### Sample Response Body:
 
-```javascript
+```json
   [
     {
-      "id": 1363316536327004
-      "version": '98jr3289h3298hr9329gf9egskt3kagri32qqgiqe3872'
-      "company_id": 1363316537128394
-      "benefit_id": 1
-      "active": true
-      "description": "Kaiser Permanente"
+      "id": 1363316536327004,
+      "version": "98jr3289h3298hr9329gf9egskt3kagri32qqgiqe3872",
+      "company_id": 1363316537128394,
+      "benefit_id": 1,
+      "active": true,
+      "description": "Kaiser Permanente",
       "supports_percentage_amounts": true
     }
   ]
@@ -57,16 +57,16 @@ Note that company benefits, once created, can be disabled (`active=false`) only 
 
 #### Sample Response Body:
 
-```javascript
-  {
-    "id": 1363316536327004
-    "version": '98jr3289h3298hr9329gf9egskt3kagri32qqgiqe3872'
-    "company_id": 1363316537128394
-    "benefit_id": 1
-    "active": true
-    "description": "Kaiser Permanente"
-    "supports_percentage_amounts": true
-  }
+```json
+{
+  "id": 1363316536327004,
+  "version": "98jr3289h3298hr9329gf9egskt3kagri32qqgiqe3872",
+  "company_id": 1363316537128394,
+  "benefit_id": 1,
+  "active": true,
+  "description": "Kaiser Permanente",
+  "supports_percentage_amounts": true
+}
 ```
 
 ## Update a company benefit
@@ -79,11 +79,11 @@ Note that company benefits, once created, can be disabled (`active=false`) only 
 
 #### Sample Request Body:
 
-```javascript
-  {
-    "version": "98jr3289h3298hr9329gf9egskt3kagri32qqgiqe3872",
-    "active": false
-  }
+```json
+{
+  "version": "98jr3289h3298hr9329gf9egskt3kagri32qqgiqe3872",
+  "active": false
+}
 ```
 
 ## Create a company benefit
@@ -96,10 +96,10 @@ Note that company benefits, once created, can be disabled (`active=false`) only 
 
 #### Sample Request Body:
 
-```javascript
-  {
-    "benefit_id": 1
-    "active": false
-    "description": "Kaiser Permanente"
-  }
+```json
+{
+  "benefit_id": 1,
+  "active": false,
+  "description": "Kaiser Permanente"
+}
 ```

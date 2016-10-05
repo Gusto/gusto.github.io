@@ -33,18 +33,18 @@ The benefit object in Gusto contains high level information about a particular b
 
 #### Sample Response Body:
 
-```javascript
-  [
-    {
-      "id": 1,
-      "name": "Medical Insurance (pre-tax)",
-      "description": "Pre-tax deductions and contributions for Medical Insurance",
-      "pretax": true,
-      "posttax": false,
-      "imputed": false,
-      "retirement": false,
-      "healthcare": false,
-      "yearly_limit": false
-    }
-  ]
+```json
+[
+  {
+    "id": 1,
+    "name": "Medical Insurance (pre-tax)",
+    "description": "Pre-tax deductions and contributions for Medical Insurance",
+    "pretax": true,
+    "posttax": false,
+    "imputed": false,
+    "retirement": false,
+    "healthcare": false,
+    "yearly_limit": false
+  }
+]
 ```

@@ -21,21 +21,21 @@ These examples will assume an <a href="/v1/examples/authentication">authenticate
 Let's say we have information for the regular hours of Patricia Churchland from January 01, 2014 through January 20, 2014:
 
 ```ruby
-  work_data = [
-    { date: '2014-01-02', hours: 8 },
-    { date: '2014-01-03', hours: 8 },
-    { date: '2014-01-06', hours: 8 },
-    { date: '2014-01-07', hours: 8 },
-    { date: '2014-01-08', hours: 8 },
-    { date: '2014-01-09', hours: 8 },
-    { date: '2014-01-10', hours: 8 },
-    { date: '2014-01-13', hours: 8 },
-    { date: '2014-01-14', hours: 8 },
-    { date: '2014-01-15', hours: 8 },
-    { date: '2014-01-16', hours: 8 },
-    { date: '2014-01-17', hours: 8 },
-    { date: '2014-01-20', hours: 8 }
-  ]
+work_data = [
+  { date: '2014-01-02', hours: 8 },
+  { date: '2014-01-03', hours: 8 },
+  { date: '2014-01-06', hours: 8 },
+  { date: '2014-01-07', hours: 8 },
+  { date: '2014-01-08', hours: 8 },
+  { date: '2014-01-09', hours: 8 },
+  { date: '2014-01-10', hours: 8 },
+  { date: '2014-01-13', hours: 8 },
+  { date: '2014-01-14', hours: 8 },
+  { date: '2014-01-15', hours: 8 },
+  { date: '2014-01-16', hours: 8 },
+  { date: '2014-01-17', hours: 8 },
+  { date: '2014-01-20', hours: 8 }
+]
 ```
 
  First we'll request the unprocessed payrolls for that time-period:

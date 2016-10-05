@@ -21,29 +21,29 @@ title: Pay Periods
 
 #### Sample Response Body:
 
-{% highlight javascript %}
-  [
-    {
-      "start_date" : "2013-02-01",
-      "end_date" : "2013-02-15",
-      "pay_schedule_id" : 7757500908984137,
-      "payroll" : {
-        "payroll_deadline" : "2013-02-18",
-        "processed" : true,
+```json
+[
+  {
+    "start_date": "2013-02-01",
+    "end_date": "2013-02-15",
+    "pay_schedule_id": 7757500908984137,
+    "payroll": {
+      "payroll_deadline": "2013-02-18",
+      "processed": true
+    },
+    "eligible_employees": [
+      {
+        "employee_id": 1123581321345589,
+        "job_ids": [1]
       },
-      "eligible_employees" : [
-        {
-          "employee_id" : 1123581321345589,
-          "job_ids" : [1]
-        },
-        {
-          "employee_id" : 1442333776109871,
-          "job_ids" : [2]
-        }
-      ]
-    }
-  ]
-{% endhighlight %}
+      {
+        "employee_id": 1442333776109871,
+        "job_ids": [2]
+      }
+    ]
+  }
+]
+```
 
 | Field                     | Description
 | :----------               |:-------------
