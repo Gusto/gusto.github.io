@@ -24,7 +24,7 @@ a relevant error.
 | `version`                     | String            |     X     |          |         | version of this object. See <a href="/v1/considerations/versioning/">the versioning documentation</a> for a more in depth explaination of versions
 | `job_id`                      | Integer           |     X     |          |         | id of the job to which this compensation belongs
 | `rate`                        | String            |           |          |         | dollar amount paid per payment_unit
-| `payment_unit`                | String            |           |          |         | timescale accompanying the rate. Should be one of 'Hour', 'Week', 'Month', or 'Year'
+| `payment_unit`                | String            |           |          |         | timescale accompanying the rate. Should be one of 'Hour', 'Week', 'Month', or 'Year'. Should be 'Paycheck' if the employee is an owner (see `flsa_status`).
 | `flsa_status`                 | String            |           |          |         | FLSA status for this compensation. Salaried ("Exempt") Employees are paid a fixed salary every pay period. Hourly ("Nonexempt") Employees are paid for the hours they work, and receive overtime pay when applicable. Owners ("Owner") are employees that own at least twenty percent of the company. More information can be found on the <a href="http://www.dol.gov/whd/overtime/fs17b_executive.pdf" target="_blank">Department of Labor's site</a>.
 | `effective_date`               | String           |           |    X     |[hire_date]| the effective date for this compensation rate. For the first compensation, this defaults to the job's hire_date
 
