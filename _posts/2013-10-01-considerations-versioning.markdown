@@ -5,6 +5,7 @@ title: Versioning Considerations
 ---
 
 # Versioning
+
 ## Building for the Future
 Versions are essentially snapshots of a given resource. If things change, we want you to find out immediately. We'd rather an extra HTTP request or 2 than employees receiving incorrect pay.
 
