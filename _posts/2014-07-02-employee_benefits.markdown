@@ -26,7 +26,7 @@ Employee benefits represent an <a href="/v1/employees">employee</a> enrolled in 
 | `contribute_as_percentage` | Boolean | | X | false | if true, the company_contribution amount will be treated as a percentage to be deducted from each payroll
 | `catch_up` | Boolean | | X | | if true, the employee should use a benefit's special 'catch up' rate. Currently only the Roth 401k and 401k use this value for employees over 50.
 | `coverage_amount` | String | | X | null | the amount that the employee is insured for (only applicable for group term life benefit). Note: company_contribution and coverage_amount cannot both be present.
-| `deduction_reduces_taxable_income` | String | | X | `'unset'` | An enum flagging whether or not the `employee_deduction` reduces taxable income or not. Valid values are 'unset', 'reduces_taxable_income', and 'does_not_reduce_taxable_income'. Only valid for a Group Term Life benefit. When the value is not 'unset', 'coverage_amount' and 'coverage_salary_multiplier' are ignored. |
+| `deduction_reduces_taxable_income` | String | | X | 'unset' | An enum flagging whether or not the `employee_deduction` reduces taxable income or not. Valid values are 'unset', 'reduces_taxable_income', and 'does_not_reduce_taxable_income'. Only valid for a Group Term Life benefit. When the value is not 'unset', 'coverage_amount' and 'coverage_salary_multiplier' are ignored. |
 | `coverage_salary_multiplier` | String | | X | '0.00' | Represents the coverage amount as a multiple of the employee’s salary. Applicable only for Group Term Life insurance benefits. Cannot be set if 'coverage_amount' is also set. |
 
 ## Get employee benefits for an employee
