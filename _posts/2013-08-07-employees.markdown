@@ -25,6 +25,7 @@ title: Employees
 | `eligible_paid_time_off`      | Array             |     X     |          |         | array of paid time off information. See <a href="/v1/paid_time_off">paid time off documentation</a> for full documentation and endpoints.
 | `terminated`                  | Boolean           |     X     |          |         | whether the employee has been terminated from the company.
 | `terminations`                | Array             |     X     |          |         | array of terminations for this employee. See <a href="/v1/terminations">terminations documentation</a> for full documentation and endpoints.
+| `two_percent_shareholder`     | Boolean           |           |    X      |  false       | Flag to indicate whether or not the employee is a two percent shareholder of an S-Corp for tax purposes.
 
 ## Get an employee
 
