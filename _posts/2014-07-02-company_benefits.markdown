@@ -15,7 +15,7 @@ Note that company benefits, once created, can be disabled (`active=false`) only 
 | Attribute                     | Type              | Read-Only | Optional | Default | Description
 | :----------                   |:-------------     |:---------:|:--------:|:--------|:-------------
 | `id`                          | Integer           |     X     |          |         | the unique identifier of this company benefit
-| `version`                     | String            |     X     |          |         | version of this object. See <a href="/v1/considerations/versioning/">the versioning documentation</a> for a more in depth explaination of versions
+| `version`                     | String            |     X     |          |         | version of this object. See <a href="/v1/considerations/versioning">the versioning documentation</a> for a more in depth explaination of versions
 | `benefit_id`                 | Integer            |     X     |          |         | id for the benefit to which this company benefit belongs
 | `company_id`                 | Integer            |     X     |          |         | id for the company to which this company benefit belongs
 | `active`                      |  Boolean          |           |     X    | true    | if true, employees may actively participate. May only be set to false if no employees are actively participating (e.g. if an Employee Benefit exists with this company_benefit_id)
