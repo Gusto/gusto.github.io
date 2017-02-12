@@ -68,6 +68,21 @@ layout: sidebar
         "name": "Sick Hours"
       }
     ]
+  },
+  "primary_signatory": {
+    "first_name": "Isaiah",
+    "middle_initial": "H",
+    "last_name"  : "Berlin",
+    "phone": "8001234567",
+    "email": "crooked-timber@initech.biz",
+    "home_address": {
+      "street_1": "314 Moses Hall #2390",
+      "street_2": "University of California",
+      "city": "Berkeley",
+      "state": "CA",
+      "zip": "94720",
+      "country": "USA"
+    }
   }
 }
 ```
@@ -92,3 +107,9 @@ layout: sidebar
 | `name`                    | name of the compensation
 | `paid_time_off`           | available types of paid time off
 | `name`                    | name of the time off
+| `first_name`              | primary signatory's first name
+| `middle_initial`          | primary signatory's middle initial
+| `last_name`               | primary signatory's last name
+| `phone`                   | primary signatory's phone number
+| `email`                   | primary signatory's email
+| `home_address`            | primary signatory's home address
