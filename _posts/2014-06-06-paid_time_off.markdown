@@ -12,10 +12,10 @@ title: Paid Time Off
 | :----------                   |:-------------     |:---------:|:--------:|:--------|:-------------
 | `id`                          | Integer           |     X     |          |         | the unique identifier of this paid time off
 | `version`                     | String            |     X     |          |         | version of this object. See <a href="/v1/considerations/versioning/">the versioning documentation</a> for a more in depth explaination of versions
-| `name`                        | String            |           |          |         | the name of this paid time off type. Currently only 'Vacation Hours' and 'Sick Hours' are supported
+| `name`                        | String            |     X     |          |         | the name of this paid time off type. Currently only 'Vacation Hours' and 'Sick Hours' are supported
 | `accrual_unit`                | String            |     X     |          |         | the unit this PTO is accrued in. Currently only 'Hour' is supported
 | `accrual_period`              | String            |     X     |          |         | how often the pto accrues. Currently only 'Year' is supported
-| `accrual_rate`                | String            |           |          |         | the rate at which accrual_unit is accrued per accrual_period
-| `accrual_balance`             | String            |           |    X     |    0    | how many accrual_units have been accrued
-| `maximum_accrual_balance`     | String            |           |    X     | null    | the maximum accrual allowed. A null value signifies no maximum accrual
+| `accrual_rate`                | String            |     X     |          |         | the rate at which accrual_unit is accrued per accrual_period
+| `accrual_balance`             | String            |     X     |          |         | how many accrual_units have been accrued
+| `maximum_accrual_balance`     | String            |     X     |          |         | the maximum accrual allowed. A null value signifies no maximum accrual
 | `paid_at_termination`         | Boolean           |     X     |          |         | whether to pay out the accrual_balance to the employee upon their termaination
