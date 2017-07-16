@@ -86,6 +86,12 @@ layout: sidebar
       "zip": "94720",
       "country": "USA"
     }
+  },
+  "primary_payroll_admin": {
+    "first_name": "Isaiah",
+    "last_name"  : "Berlin",
+    "phone": "8001234567",
+    "email": "crooked-timber@initech.biz",
   }
 }
 ```
@@ -119,3 +125,7 @@ layout: sidebar
 | `phone`                   | primary signatory's phone number
 | `email`                   | primary signatory's email
 | `home_address`            | primary signatory's home address
+| `first_name`              | primary payroll admin's first name
+| `last_name`               | primary payroll admin's last name
+| `phone`                   | primary payroll admin's phone number
+| `email`                   | primary payroll admin's email
