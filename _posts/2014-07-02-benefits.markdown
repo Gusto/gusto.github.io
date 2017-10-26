@@ -37,8 +37,8 @@ The benefit object in Gusto contains high level information about a particular b
 [
   {
     "id": 1,
-    "name": "Medical Insurance (pre-tax)",
-    "description": "Pre-tax deductions and contributions for Medical Insurance",
+    "name": "Medical Insurance",
+    "description": "Deductions and contributions for Medical Insurance",
     "pretax": true,
     "posttax": false,
     "imputed": false,
@@ -48,3 +48,9 @@ The benefit object in Gusto contains high level information about a particular b
   }
 ]
 ```
+
+
+#### Note for S-Corporations
+An update to Gusto's payroll engine in October, 2017, has pushed the responsibility of understanding how benefits should be taxed for 2% shareholders of S-Corporations onto the engine itself. Previously, Payroll Administrators had to associate 2% shareholders with `posttax` medical, dental, and vision benefits in order to tax those employees correctly (2% shareholders are not eligible for pre-tax deductions, and contributions are treated as imputed wages). That is no longer the case.
+
+Now, S-Corp Payroll Administrators should associate all 2% shareholders to `pretax` medical, dental, and vision benefits through our [Employee Benefits API](/v1/employee_benefits). When payroll runs, Gusto will automatically determine whether to treat the benefit as `pretax` or `posttax` based an employee's 2% shareholder status.
