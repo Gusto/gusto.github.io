@@ -202,6 +202,10 @@ The payrolls are identified by their pay periods' `start_date` and `end_date`. B
         {
           "name": "Vacation Hours",
           "hours": "25.000"
+        },
+        {
+          "name": "Sick Hours",
+          "hours": "10.000"
         }
       ]
     }
