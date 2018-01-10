@@ -10,7 +10,6 @@ title: Paid Time Off
 
 | Attribute                     | Type              | Read-Only | Optional | Default | Description
 | :----------                   |:-------------     |:---------:|:--------:|:--------|:-------------
-| `id`                          | Integer           |     X     |          |         | the unique identifier of this paid time off
 | `name`                        | String            |     X     |          |         | the name of this paid time off type. Currently only 'Vacation Hours' and 'Sick Hours' are supported
 | `accrual_unit`                | String            |     X     |          |         | the unit this PTO is accrued in. Currently only 'Hour' is supported
 | `accrual_period`              | String            |     X     |          |         | how often the pto accrues. Currently only 'Year' is supported
