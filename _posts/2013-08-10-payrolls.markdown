@@ -40,6 +40,9 @@ layout: sidebar
     "employee_compensations": [
       {
         "employee_id": 1123581321345589,
+        "gross_pay": "2791.25",
+        "net_pay": "1953.31",
+        "payment_method":,
         "fixed_compensations": [
           {
             "name": "Bonus",
@@ -99,6 +102,19 @@ layout: sidebar
             "name": "Sick Hours",
             "hours": "0.000"
           }
+        ],
+        "benefits": [],
+        "taxes": [
+          {
+            name: "Federal Income Tax",
+            employer: false,
+            amount: "646.69"
+          },
+          {
+            name: "Social Security",
+            employer: true,
+            amount: "191.25"
+          }
         ]
       }
     ]
@@ -133,7 +149,12 @@ layout: sidebar
 | `paid_time_off`           | array of all paid time off (PTO) for which this employee is eligible
 | `name`                    | name of the PTO. This also serves as the unique, immutable identifier for this PTO.
 | `hours`                   | hours taken of this PTO during this pay period.
-
+| `gross_pay`               | employee's gross pay, only available for processed payrolls
+| `net_pay`                 | employee's net pay, only available for prcoessed payrolls
+| `payment_method`          | compensation payment method (direct deposit or check), only available for processed payrolls
+| `benefits`                | array of employee benefits, only available for processed payrolls when optional `include` parameter is used. Refer to Optional Parameters section for more details.
+| `deduction`               | array of employee deductions, only available for processed payrolls when optional `include` parameter is used. Refer to Optional Parameters section for more details.
+| `taxes`                   | array of employee taxes, only available for processed payrolls when optional `include` parameter is used. Refer to Optional Parameters section for more details.
 Notes:
 
 + Hour and dollar amounts are returned as string representations of numeric decimals.
@@ -144,12 +165,18 @@ Notes:
 
 As with pay periods, there are likely to be a very large amount of payrolls available - one for each pay period, but with far more associated data. You can pare down the results by passing in additional parameters:
 
-  Available options: start_date, end_date, processed
+  Available options: start_date, end_date, processed, include_off_cycle, include,
 
 You may provide all, none, or any combination of them to scope the returned data. Here are some common use cases:
 
     GET /v1/companies/3337/payrolls?processed=false
       => returns all payrolls that have not yet been processed (and are therefore eligible to be updated)
+
+    GET /v1/companies/3337/payrolls?include_off_cycle=true
+      => returns both regular and off cycle payrolls
+
+    GET /v1/companies/3337/payrolls?include=benefits,deductions,taxes
+      => returns payrolls and include benefits, deductions, and taxes in employee_compensation. You can choose to include only what you need (/v1/companies/3337/payrolls?include=benefits,taxes)
 
     GET /v1/companies/3337/payrolls?start_date=2012-01-31
       => returns all payrolls whose pay period is from the one encompassing January 31, 2012 through the current pay period
