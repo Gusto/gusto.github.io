@@ -16,6 +16,9 @@ title: Employees
 | `middle_initial`              | String            |           |    X     | null    | employee's middle initial. Not guaranteed to exist.
 | `last_name`                   | String            |           |          |         | employee's last name.
 | `email`                       | String            |           |    X     | null    | employee's email address. This is provided specifically to sync users between our system and yours. You may not use this address for any other purpose (e.g. marketing.) Not guaranteed to exist.
+| `company_id`                  | Integer           |     X     |          |         | employee's company ID
+| `manager_id`                  | Integer           |     X     |          | null    | employee's manager ID
+| `department`                  | String            |     X     |          | null    | employee's department.
 | `ssn`                         | String            |           |    X     | null    | masked social security number. When updating this attribute, format should be a string of nine numbers (no dashes.)
 | `date_of_birth`               | String            |           |    X     | null    | employee's birthday!
 | `jobs`                        | Array             |     X     |          |         | array of job information. See <a href="/v1/jobs">jobs documentation</a> for full documentation and endpoints.
@@ -43,6 +46,9 @@ title: Employees
   "first_name": "Soren",
   "middle_initial": "A",
   "last_name": "Kierkegaard",
+  "company_id": 7757616923531095,
+  "manager_id": 7757869431804236,
+  "department": "Marketing",
   "email": "knight0faith@initech.biz",
   "ssn": "XXX-XX-2940",
   "date_of_birth": "1813-05-05",
@@ -107,6 +113,9 @@ title: Employees
     "first_name": "Soren",
     "middle_initial": "A",
     "last_name": "Kierkegaard",
+    "company_id": 7757616923531095,
+    "manager_id": 7757869431804236,
+    "department": "Marketing",
     "email": "knight0faith@initech.biz",
     "ssn": "XXX-XX-2940",
     "date_of_birth": "1813-05-05",
