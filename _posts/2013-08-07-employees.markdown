@@ -20,7 +20,6 @@ title: Employees
 | `date_of_birth`               | String            |           |    X     | null    | employee's birthday!
 | `jobs`                        | Array             |     X     |          |         | array of job information. See <a href="/v1/jobs">jobs documentation</a> for full documentation and endpoints.
 | `home_address`                | Object            |     X     |          |         | employee's home address. See <a href="/v1/employee_home_address">employee home address documentation</a> for full documentation and endpoints.
-| `federal_tax_information`     | Object            |     X     |          |         | employee's federal tax information, including withholding and filing status information.
 | `garnishments`                | Array             |     X     |          |         | array of garnishments. See <a href="/v1/garnishments">garnishments documentation</a> for full documentation and endpoints.
 | `eligible_paid_time_off`      | Array             |     X     |          |         | array of paid time off information. See <a href="/v1/paid_time_off">paid time off documentation</a> for full documentation and endpoints.
 | `terminated`                  | Boolean           |     X     |          |         | whether the employee has been terminated from the company.
@@ -66,14 +65,6 @@ title: Employees
     "state": "CA",
     "zip": "94107",
     "country": "USA"
-  },
-  "federal_tax_information":   {
-    "version": "6e177399876585d0dc493e439c00d18e",
-    "employee_id": 1123581321345589,
-    "withholding_allowance": 2,
-    "additional_withholding": "0.00",
-    "filing_status": "Single",
-    "decline_withholding": false
   },
   "garnishments": [
     {
@@ -138,14 +129,6 @@ title: Employees
       "state": "CA",
       "zip": "94107",
       "country": "USA"
-    },
-    "federal_tax_information":   {
-      "version": "6e177399876585d0dc493e439c00d18e",
-      "employee_id": 1123581321345589,
-      "withholding_allowance": 2,
-      "additional_withholding": "0.00",
-      "filing_status": "Single",
-      "decline_withholding": false
     },
     "garnishments": [
       {
