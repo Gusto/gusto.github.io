@@ -106,14 +106,14 @@ layout: sidebar
         "benefits": [],
         "taxes": [
           {
-            name: "Federal Income Tax",
-            employer: false,
-            amount: "646.69"
+            "name": "Federal Income Tax",
+            "employer": false,
+            "amount": "646.69"
           },
           {
-            name: "Social Security",
-            employer: true,
-            amount: "191.25"
+            "name": "Social Security",
+            "employer": true,
+            "amount": "191.25"
           }
         ]
       }
