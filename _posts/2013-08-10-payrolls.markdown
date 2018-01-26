@@ -155,6 +155,7 @@ layout: sidebar
 | `benefits`                | array of employee benefits, only available for processed payrolls when optional `include` parameter is used. Refer to Optional Parameters section for more details.
 | `deductions`              | array of employee deductions, only available for processed payrolls when optional `include` parameter is used. Refer to Optional Parameters section for more details.
 | `taxes`                   | array of employer and employee taxes, only available for processed payrolls when optional `include` parameter is used. Refer to Optional Parameters section for more details.
+
 Notes:
 
 + Hour and dollar amounts are returned as string representations of numeric decimals.
