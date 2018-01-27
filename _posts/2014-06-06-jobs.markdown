@@ -50,7 +50,7 @@ Jobs are essentially the intersection of <a href="/v1/employees">an employee</a>
       "zip": "94107",
       "country": "USA"
     },
-    "hire_date": "2012-12-11",
+    "hire_date": "{{ site.time | date: '%Y' }}-12-11",
     "title": "Assistant to the Regional Manager",
     "rate": "70.00",
     "payment_unit": "Hour",
@@ -63,7 +63,7 @@ Jobs are essentially the intersection of <a href="/v1/employees">an employee</a>
         "rate": "70.00",
         "payment_unit": "Hour",
         "flsa_status": "Nonexempt",
-        "effective_date": "2012-12-11"
+        "effective_date": "{{ site.time | date: '%Y' }}-12-11"
       }
     ]
   },
@@ -81,7 +81,7 @@ Jobs are essentially the intersection of <a href="/v1/employees">an employee</a>
       "zip": "94107",
       "country": "USA"
     },
-    "hire_date": "2012-12-11",
+    "hire_date": "{{ site.time | date: '%Y' }}-12-11",
     "title": "Receptionist",
     "rate": "18.00",
     "payment_unit": "Hour",
@@ -94,7 +94,7 @@ Jobs are essentially the intersection of <a href="/v1/employees">an employee</a>
         "rate": "45.00",
         "payment_unit": "Hour",
         "flsa_status": "Nonexempt",
-        "effective_date": "2012-12-11"
+        "effective_date": "{{ site.time | date: '%Y' }}-12-11"
       }
     ]
   }
@@ -127,7 +127,7 @@ Jobs are essentially the intersection of <a href="/v1/employees">an employee</a>
     "zip": "94107",
     "country": "USA"
   },
-  "hire_date": "2012-12-11",
+  "hire_date": "{{ site.time | date: '%Y' }}-12-11",
   "title": "Assistant to the Regional Manager",
   "rate": "70.00",
   "payment_unit": "Hour",
@@ -140,7 +140,7 @@ Jobs are essentially the intersection of <a href="/v1/employees">an employee</a>
       "rate": "70.00",
       "payment_unit": "Hour",
       "flsa_status": "Nonexempt",
-      "effective_date": "2012-12-11"
+      "effective_date": "{{ site.time | date: '%Y' }}-12-11"
     }
   ]
 }
@@ -176,6 +176,6 @@ Jobs are essentially the intersection of <a href="/v1/employees">an employee</a>
 ```json
 {
   "title": "Assistant to the Regional Manager",
-  "hire_date": "2012-12-21"
+  "hire_date": "{{ site.time | date: '%Y' }}-12-21"
 }
 ```

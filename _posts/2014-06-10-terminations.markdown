@@ -38,7 +38,7 @@ Note that some states require employees to receive their final wages within 24 h
     "id": 891238902131212,
     "version": "d487dd0b55dfcacdd920ccbdaeafa351",
     "active": true,
-    "effective_date": "2014-03-10",
+    "effective_date": "{{ site.time | date: '%Y' }}-03-10",
     "run_termination_payroll": false
   }
 ]
@@ -59,7 +59,7 @@ Note that some states require employees to receive their final wages within 24 h
   "id": 891238902131212,
   "version": "d487dd0b55dfcacdd920ccbdaeafa351",
   "active": true,
-  "effective_date": "2014-03-10",
+  "effective_date": "{{ site.time | date: '%Y' }}-03-10",
   "run_termination_payroll": false
 }
 ```
@@ -76,7 +76,7 @@ Note that some states require employees to receive their final wages within 24 h
 
 ```json
 {
-  "effective_date": "2014-03-11"
+  "effective_date": "{{ site.time | date: '%Y' }}-03-11"
 }
 ```
 
@@ -92,7 +92,7 @@ Note that some states require employees to receive their final wages within 24 h
 
 ```json
 {
-  "effective_date": "2014-06-30",
+  "effective_date": "{{ site.time | date: '%Y' }}-06-30",
   "run_termination_payroll": true
 }
 ```

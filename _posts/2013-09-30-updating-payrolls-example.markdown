@@ -18,30 +18,30 @@ These examples will assume an <a href="/v1/examples/authentication">authenticate
 
 ### Get Unprocessed Payroll
 
-Let's say we have information for the regular hours of Patricia Churchland from January 01, 2014 through January 20, 2014:
+Let's say we have information for the regular hours of Patricia Churchland from January 01, {{ site.time | date: '%Y' }} through January 20, {{ site.time | date: '%Y' }}:
 
 ```ruby
 work_data = [
-  { date: '2014-01-02', hours: 8 },
-  { date: '2014-01-03', hours: 8 },
-  { date: '2014-01-06', hours: 8 },
-  { date: '2014-01-07', hours: 8 },
-  { date: '2014-01-08', hours: 8 },
-  { date: '2014-01-09', hours: 8 },
-  { date: '2014-01-10', hours: 8 },
-  { date: '2014-01-13', hours: 8 },
-  { date: '2014-01-14', hours: 8 },
-  { date: '2014-01-15', hours: 8 },
-  { date: '2014-01-16', hours: 8 },
-  { date: '2014-01-17', hours: 8 },
-  { date: '2014-01-20', hours: 8 }
+  { date: '{{ site.time | date: "%Y" }}-01-02', hours: 8 },
+  { date: '{{ site.time | date: "%Y" }}-01-03', hours: 8 },
+  { date: '{{ site.time | date: "%Y" }}-01-06', hours: 8 },
+  { date: '{{ site.time | date: "%Y" }}-01-07', hours: 8 },
+  { date: '{{ site.time | date: "%Y" }}-01-08', hours: 8 },
+  { date: '{{ site.time | date: "%Y" }}-01-09', hours: 8 },
+  { date: '{{ site.time | date: "%Y" }}-01-10', hours: 8 },
+  { date: '{{ site.time | date: "%Y" }}-01-13', hours: 8 },
+  { date: '{{ site.time | date: "%Y" }}-01-14', hours: 8 },
+  { date: '{{ site.time | date: "%Y" }}-01-15', hours: 8 },
+  { date: '{{ site.time | date: "%Y" }}-01-16', hours: 8 },
+  { date: '{{ site.time | date: "%Y" }}-01-17', hours: 8 },
+  { date: '{{ site.time | date: "%Y" }}-01-20', hours: 8 }
 ]
 ```
 
  First we'll request the unprocessed payrolls for that time-period:
 
 ```
-  GET https://api.gusto.com/v1/companies/94158/payrolls?processed=false&start_date=2014-01-01&end_date=2014-01-20
+  GET https://api.gusto.com/v1/companies/94158/payrolls?processed=false&start_date={{ site.time | date: '%Y' }}-01-01&end_date={{ site.time | date: '%Y' }}-01-20
 ```
 
 After deserializing the JSON response, we'll have an array of payroll objects:
@@ -50,11 +50,11 @@ After deserializing the JSON response, we'll have an array of payroll objects:
 json_response = [
   {
     "version" => "6a46821b9249c9e30e66f39d61c209a2",
-    "payroll_deadline" => "2014-01-18",
+    "payroll_deadline" => "{{ site.time | date: '%Y' }}-01-18",
     "processed" => false,
     "pay_period" => {
-      "start_date" => "2014-01-01",
-      "end_date" => "2014-01-15",
+      "start_date" => "{{ site.time | date: '%Y' }}-01-01",
+      "end_date" => "{{ site.time | date: '%Y' }}-01-15",
       "pay_schedule_id" => 7757500908984137
     },
     "employee_compensations" => [
@@ -91,11 +91,11 @@ json_response = [
   },
   {
     "version" => "fb38ac6fdebea9646c4ac2e50ad27a21",
-    "payroll_deadline" => "2014-02-03",
+    "payroll_deadline" => "{{ site.time | date: '%Y' }}-02-03",
     "processed" => false,
     "pay_period" => {
-      "start_date" => "2014-01-16",
-      "end_date" => "2014-01-31",
+      "start_date" => "{{ site.time | date: '%Y' }}-01-16",
+      "end_date" => "{{ site.time | date: '%Y' }}-01-31",
       "pay_schedule_id" => 7757500908984137
     },
     "employee_compensations" => [
@@ -246,7 +246,7 @@ If information has changed since your last pull of information from Gusto, you w
 This means that you will need to refetch the payroll data for that pay period and resubmit it. If, for example, the January 16-31 payroll has been updated, we can fetch it with a call to:
 
 ```
-  GET https://api.gusto.com/v1/companies/94158/payrolls?processed=false&start_date=2014-01-16&end_date=2014-01-31
+  GET https://api.gusto.com/v1/companies/94158/payrolls?processed=false&start_date={{ site.time | date: '%Y' }}-01-16&end_date={{ site.time | date: '%Y' }}-01-31
 ```
 
 This should only return that one payroll and we can recompute the data specifically for that pay period. Do not simply copy over the new `version` and resubmit, as you'll likely be overwriting information that the user, an internal Gusto process, or another 3rd party application. This can lead to incorrect pay, miscalculated taxes, and upset users.
