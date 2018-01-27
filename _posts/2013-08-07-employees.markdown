@@ -52,7 +52,7 @@ title: Employees
   "department": "Marketing",
   "email": "knight0faith@initech.biz",
   "ssn": "XXX-XX-2940",
-  "date_of_birth": "1813-05-05",
+  "date_of_birth": "1990-05-05",
   "jobs": [
     {
       "id": 1,
@@ -120,7 +120,7 @@ title: Employees
     "department": "Marketing",
     "email": "knight0faith@initech.biz",
     "ssn": "XXX-XX-2940",
-    "date_of_birth": "1813-05-05",
+    "date_of_birth": "1990-05-05",
     "jobs": [
       {
         "id": 1,

@@ -21,11 +21,11 @@ layout: sidebar
 [
   {
     "version": "19289df18e6e20f797de4a585ea5a91535c7ddf7",
-    "payroll_deadline": "2013-02-18",
+    "payroll_deadline": "{{ site.time | date: '%Y' }}-02-18",
     "processed": true,
     "pay_period": {
-      "start_date": "2013-02-01",
-      "end_date": "2013-02-15",
+      "start_date": "{{ site.time | date: '%Y' }}-02-01",
+      "end_date": "{{ site.time | date: '%Y' }}-02-15",
       "pay_schedule_id": 7757500908984137
     },
     "totals": {
@@ -179,11 +179,11 @@ You may provide all, none, or any combination of them to scope the returned data
     GET /v1/companies/3337/payrolls?include=benefits,deductions,taxes
       => returns payrolls and includes benefits, deductions, and taxes in employee_compensation. You can choose to include only what you need (/v1/companies/3337/payrolls?include=benefits,taxes)
 
-    GET /v1/companies/3337/payrolls?start_date=2012-01-31
-      => returns all payrolls whose pay period is from the one encompassing January 31, 2012 through the current pay period
+    GET /v1/companies/3337/payrolls?start_date={{ site.time | date: '%Y' }}-01-31
+      => returns all payrolls whose pay period is from the one encompassing January 31, {{ site.time | date: '%Y' }} through the current pay period
 
-    GET /v1/companies/3337/payrolls?start_date=2012-01-31&end_date=2012-06-30
-      => returns all payrolls whose pay period is from January 31, 2012 through June 30, 2012-01-31
+    GET /v1/companies/3337/payrolls?start_date={{ site.time | date: '%Y' }}-01-31&end_date={{ site.time | date: '%Y' }}-06-30
+      => returns all payrolls whose pay period is from January 31, {{ site.time | date: '%Y' }} through June 30, {{ site.time | date: '%Y' }}
 
 ### Update Payroll
 

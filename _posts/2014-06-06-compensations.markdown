@@ -47,7 +47,7 @@ a relevant error.
     "rate": "70.00",
     "payment_unit": "Hour",
     "flsa_status": "Nonexempt",
-    "effective_date": "2012-12-11"
+    "effective_date": "{{ site.time | date: '%Y' }}-12-11"
   }
 ]
 ```
@@ -70,7 +70,7 @@ a relevant error.
   "rate": "70.00",
   "payment_unit": "Hour",
   "flsa_status": "Nonexempt",
-  "effective_date": "2012-12-11"
+  "effective_date": "{{ site.time | date: '%Y' }}-12-11"
 }
 ```
 
@@ -108,6 +108,6 @@ a relevant error.
   "rate": "60000.00",
   "payment_unit": "Year",
   "flsa_status": "Exempt",
-  "effective_date": "2014-03-15"
+  "effective_date": "{{ site.time | date: '%Y' }}-03-15"
 }
 ```
