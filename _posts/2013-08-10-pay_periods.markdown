@@ -67,5 +67,5 @@ You may provide all, none, or any combination of them to scope the returned data
       => returns all pay periods from the one encompassing January 31, {{ site.time | date: '%Y' }} through the current pay period
 
     GET /v1/companies/3337/pay_periods?start_date={{ site.time | date: '%Y' }}-01-31&end_date={{ site.time | date: '%Y' }}-06-30
-      => returns all pay periods from January 31, {{ site.time | date: '%Y' }} through June 30, {{ site.time | date: '%Y' }}-01-31
+      => returns all pay periods from January 31, {{ site.time | date: '%Y' }} through June 30, {{ site.time | date: '%Y' }}
 
