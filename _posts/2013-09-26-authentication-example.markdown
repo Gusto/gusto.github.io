@@ -105,7 +105,11 @@ Upon successful authentication, the response will look like this:
 }
 ```
 
-The `access_token` should be included as a query parameter with every call to the API. Failure to include the `access_token` or using an expired token will result in a 401 response.
+The `access_token` should be included in the `Authorization` HTTP header with every call to the API. Failure to include the `access_token` or using an expired token will result in a 401 response. For example, to use the above token in a subsequent request, include the following in the request's HTTP headers:
+
+```
+Authorization: Bearer de6780bc506a0446309bd9362820ba8aed28aa506c71eedbe1c5c4f9dd350e54
+```
 
 ### Refresh Token
 
