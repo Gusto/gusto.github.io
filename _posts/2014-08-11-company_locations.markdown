@@ -19,7 +19,7 @@ retrieving or updating an individual record should be done via the <a href="/v1/
 | Attribute                     | Type              | Read-Only | Optional | Default | Description
 | :----------                   |:-------------     |:---------:|:--------:|:--------|:-------------
 | `id`                          | Integer           |     X     |          |         | the unique identifier of this company location
-| `version`                     | String            |     X     |          |         | version of this object. See <a href="/v1/considerations/versioning/">the versioning documentation</a> for a more in depth explaination of versions
+| `version`                     | String            |     X     |          |         | version of this object. See <a href="/v1/considerations/versioning">the versioning documentation</a> for a more in depth explaination of versions
 | `company_id`                  | Integer            |     X     |          |         | id for the company to which this location belongs
 | `phone_number`                | String             |           |          |         | Phone number for this company location. Formatted as ten digits
 | `street_1`                    | String            |           |          |         | first line of the address

@@ -13,7 +13,7 @@ Garnishments, or employee deductions, are fixed amounts or percentages deducted 
 | Attribute                     | Type              | Read-Only | Optional | Default | Description
 | :----------                   |:-------------     |:---------:|:--------:|:--------|:-------------
 | `id`                          | Integer           |     X     |          |         | the unique identifier of this garnishment
-| `version`                     | String            |     X     |          |         | version of this object. See <a href="/v1/considerations/versioning/">the versioning documentation</a> for a more in depth explaination of versions
+| `version`                     | String            |     X     |          |         | version of this object. See <a href="/v1/considerations/versioning">the versioning documentation</a> for a more in depth explaination of versions
 | `employee_id`                 | Integer           |     X     |          |         | id for the employee to which this garnishment belongs
 | `active`                      |  Boolean          |           |     X    | true    | whether or not this garnishment is currently active
 | `amount`                      |  Float            |           |          |         | amount of the garnisment. Either a percentage or fixed dollar amount.

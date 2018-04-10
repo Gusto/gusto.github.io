@@ -15,7 +15,7 @@ Note that some states require employees to receive their final wages within 24 h
 | Attribute                     | Type              | Read-Only | Optional | Default | Description
 | :----------                   |:-------------     |:---------:|:--------:|:--------|:-------------
 | `id`                          | Integer           |     X     |          |         | the unique identifier of this termination
-| `version`                     | String            |     X     |          |         | version of this object. See <a href="/v1/considerations/versioning/">the versioning documentation</a> for a more in depth explaination of versions
+| `version`                     | String            |     X     |          |         | version of this object. See <a href="/v1/considerations/versioning">the versioning documentation</a> for a more in depth explaination of versions
 | `employee_id`                 | Integer           |     X     |          |         | id of the employee to which this information is attached
 | `active`                      | Boolean           |     X     |          |         | whether the employee's termination has gone into effect.
 | `effective_date`              | String            |           |          |         | the employee's last day of work
