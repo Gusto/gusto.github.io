@@ -21,7 +21,7 @@ a relevant error.
 | Attribute                     | Type              | Read-Only | Optional | Default | Description
 | :----------                   |:-------------     |:---------:|:--------:|:--------|:-------------
 | `id`                          | Integer           |     X     |          |         | the unique identifier of this compensation
-| `version`                     | String            |     X     |          |         | version of this object. See <a href="/v1/considerations/versioning/">the versioning documentation</a> for a more in depth explaination of versions
+| `version`                     | String            |     X     |          |         | version of this object. See <a href="/v1/considerations/versioning">the versioning documentation</a> for a more in depth explaination of versions
 | `job_id`                      | Integer           |     X     |          |         | id of the job to which this compensation belongs
 | `rate`                        | String            |           |          |         | dollar amount paid per payment_unit
 | `payment_unit`                | String            |           |          |         | timescale accompanying the rate. Should be one of 'Hour', 'Week', 'Month', or 'Year'. Should be 'Paycheck' if the employee is an owner (see `flsa_status`).

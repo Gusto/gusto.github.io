@@ -13,7 +13,7 @@ Employee benefits represent an <a href="/v1/employees">employee</a> enrolled in 
 | Attribute                     | Type              | Read-Only | Optional | Default | Description
 | :----------                   |:-------------     |:---------:|:--------:|:--------|:-------------
 | `id`                          | Integer           |     X     |          |         | the unique identifier of this employee benefit
-| `version`                     | String            |     X     |          |         | version of this object. See <a href="/v1/considerations/versioning/">the versioning documentation</a> for a more in depth explaination of versions
+| `version`                     | String            |     X     |          |         | version of this object. See <a href="/v1/considerations/versioning">the versioning documentation</a> for a more in depth explaination of versions
 | `employee_id`                 | Integer           |     X     |          |         | id for the employee to which this employee benefit belongs
 | `company_benefit_id`                 | Integer           |     X     |          |         | id for the company benefit to which this employee benefit belongs
 | `active`                      |  Boolean          |           |     X    | true    | whether or not this employee benefit is currently active

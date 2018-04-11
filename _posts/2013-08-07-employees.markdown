@@ -11,7 +11,7 @@ title: Employees
 | Attribute                     | Type              | Read-Only | Optional | Default | Description
 | :----------                   |:-------------     |:---------:|:--------:|:--------|:-------------
 | `id`                          | Integer           |     X     |          |         | the unique identifier of this employee in the Gusto system.
-| `version`                     | String            |     X     |          |         | version of this object. See <a href="/v1/considerations/versioning/">the versioning documentation</a> for a more in depth explaination of versions.
+| `version`                     | String            |     X     |          |         | version of this object. See <a href="/v1/considerations/versioning">the versioning documentation</a> for a more in depth explaination of versions.
 | `first_name`                  | String            |           |          |         | employee's first name.
 | `middle_initial`              | String            |           |    X     | null    | employee's middle initial. Not guaranteed to exist.
 | `last_name`                   | String            |           |          |         | employee's last name.

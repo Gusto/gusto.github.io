@@ -13,7 +13,7 @@ The home address of an employee determines some tax information about them. Addr
 | Attribute                     | Type              | Read-Only | Optional | Default | Description
 | :----------                   |:-------------     |:---------:|:--------:|:--------|:-------------
 | `id`                          | Integer           |     X     |          |         | unique identifier of this address
-| `version`                     | String            |     X     |          |         | version of this object. See <a href="/v1/considerations/versioning/">the versioning documentation</a> for a more in depth explaination of versions
+| `version`                     | String            |     X     |          |         | version of this object. See <a href="/v1/considerations/versioning">the versioning documentation</a> for a more in depth explaination of versions
 | `employee_id`                 | Integer           |     X     |          |         | id of the employee to which this address belongs
 | `street_1`                    | String            |           |          |         | first line of the address
 | `street_2`                    | String            |           |    X     | null    | second line of the address
