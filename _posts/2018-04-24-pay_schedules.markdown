@@ -1,0 +1,56 @@
+---
+permalink: v1/pay_schedules
+layout: sidebar
+title: Pay Schedules
+---
+
+# Pay Schedules
+
+The benefit object in Gusto contains high level information about a particular benefit type and its tax considerations. When companies choose to offer a benefit, they are creating a <a href="/v1/company_benefits">Company Benefit</a> object associated with a particular benefit.
+
+## Attributes
+
+| Attribute                     | Type              | Read-Only | Optional | Default | Description
+| :----------                   |:-------------     |:---------:|:--------:|:--------|:-------------
+| `id`                          | Integer           |     X     |          |         | the unique identifier of this benefit
+| `name`                     | String            |     X     |          |         | name of this benefit
+| `description`                 | String           |     X     |          |         | description of this benefit
+| `pretax`                      | Boolean           |     X     |          |         | whether the benefit is deducted before tax calculations, thus reducing one's taxable income
+| `posttax`                      | Boolean           |     X     |          |         | whether the benefit is deducted after tax calculations
+| `imputed`                      | Boolean           |     X     |          |         | whether the benefit is considered imputed income
+| `healthcare`                      | Boolean           |     X     |          |         | whether the benefit is healthcare related
+| `retirement`                      | Boolean           |     X     |          |         | whether the benefit is associated with retirement planning
+| `yearly_limit`                      | Boolean           |     X     |          |         | whether the benefit has a government mandated yearly limit
+
+
+## Get all supported benefits
+
+**HTTP Method**: `GET`
+
+**Endpoint**: `/v1/benefits`
+
+**Returns**: All benefits supported by Gusto
+
+#### Sample Response Body:
+
+```json
+[
+  {
+    "id": 1,
+    "name": "Medical Insurance",
+    "description": "Deductions and contributions for Medical Insurance",
+    "pretax": true,
+    "posttax": false,
+    "imputed": false,
+    "retirement": false,
+    "healthcare": false,
+    "yearly_limit": false
+  }
+]
+```
+
+
+#### Note for S-Corporations
+An update to Gusto's payroll engine in October, 2017, has pushed the responsibility of understanding how benefits should be taxed for 2% shareholders of S-Corporations onto the engine itself. Previously, Payroll Administrators had to associate 2% shareholders with `posttax` medical, dental, and vision benefits in order to tax those employees correctly (2% shareholders are not eligible for pre-tax deductions, and contributions are treated as imputed wages). That is no longer the case.
+
+Now, S-Corp Payroll Administrators should associate all 2% shareholders to `pretax` medical, dental, and vision benefits through our [Employee Benefits API](/v1/employee_benefits). When payroll runs, Gusto will automatically determine whether to treat the benefit as `pretax` or `posttax` based on an employee's 2% shareholder status.
