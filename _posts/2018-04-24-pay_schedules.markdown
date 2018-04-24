@@ -6,30 +6,48 @@ title: Pay Schedules
 
 # Pay Schedules
 
-The benefit object in Gusto contains high level information about a particular benefit type and its tax considerations. When companies choose to offer a benefit, they are creating a <a href="/v1/company_benefits">Company Benefit</a> object associated with a particular benefit.
+The pay schedule object in Gusto captures the details of when employees work and
+when they should be paid. A company can have multiple pay schedules.
 
 ## Attributes
 
 | Attribute                     | Type              | Read-Only | Optional | Default | Description
 | :----------                   |:-------------     |:---------:|:--------:|:--------|:-------------
-| `id`                          | Integer           |     X     |          |         | the unique identifier of this benefit
-| `name`                     | String            |     X     |          |         | name of this benefit
-| `description`                 | String           |     X     |          |         | description of this benefit
-| `pretax`                      | Boolean           |     X     |          |         | whether the benefit is deducted before tax calculations, thus reducing one's taxable income
-| `posttax`                      | Boolean           |     X     |          |         | whether the benefit is deducted after tax calculations
-| `imputed`                      | Boolean           |     X     |          |         | whether the benefit is considered imputed income
-| `healthcare`                      | Boolean           |     X     |          |         | whether the benefit is healthcare related
-| `retirement`                      | Boolean           |     X     |          |         | whether the benefit is associated with retirement planning
-| `yearly_limit`                      | Boolean           |     X     |          |         | whether the benefit has a government mandated yearly limit
+| `id`                          | Integer           |     X     |          |         | The unique identifier of this pay schedule
+| `frequency`                     | String            |     X     |          |         | "Weekly", "Biweekly", "Semi-monthly", or "Monthly".
+| `anchor_pay_date`                 | Date           |     X     |          |         | The first date that employees on this pay schedule are paid with Gusto
+| `day_1`                      | Integer           |     X     |     X    |         | An integer between 1 and 31 indicating the first day of the month that employees are paid. This field is only relevant for pay schedules with the "Semi-monthly" and "Monthly" frequencies. It will be null for pay schedules with other frequencies.
+| `day_2`                      | Integer           |     X     |     X    |         | An integer between 1 and 31 indicating the second day of the month that employees are paid. This field is the second pay date for pay schedules with the "Semi-monthly" frequency. It will be null for pay schedules with other frequencies.
+| `name`                      | String           |     X     |     X     |         | 'Hourly' when the pay schedule is for hourly employees. 'Salaried' when the pay schedule is for salaried employees. '' when the pay schedule is for all employees.
 
-
-## Get all supported benefits
+## Get a pay schedule
 
 **HTTP Method**: `GET`
 
-**Endpoint**: `/v1/benefits`
+**Endpoint**: `/v1/companies/:company_id/pay_schedules/:pay_schedule_id`
 
-**Returns**: All benefits supported by Gusto
+**Returns**: A pay schedule
+
+#### Sample Response Body:
+
+```json
+{
+  "id": 1,
+  "frequency": "Biweekly",
+  "anchor_pay_date": "2018-01-12",
+  "day_1": null,
+  "day_2": null,
+  "name": "Hourly"
+}
+```
+
+## Get pay schedules for the company
+
+**HTTP Method**: `GET`
+
+**Endpoint**: `/v1/companies/:company_id/pay_schedules`
+
+**Returns**: All pay schedules for the company
 
 #### Sample Response Body:
 
@@ -37,20 +55,19 @@ The benefit object in Gusto contains high level information about a particular b
 [
   {
     "id": 1,
-    "name": "Medical Insurance",
-    "description": "Deductions and contributions for Medical Insurance",
-    "pretax": true,
-    "posttax": false,
-    "imputed": false,
-    "retirement": false,
-    "healthcare": false,
-    "yearly_limit": false
+    "frequency": "Biweekly",
+    "anchor_pay_date": "2018-01-12",
+    "day_1": null,
+    "day_2": null,
+    "name": "Hourly"
+  },
+  {
+    "id": 2,
+    "frequency": "Semi-monthly",
+    "anchor_pay_date": "2018-09-01",
+    "day_1": 1,
+    "day_2": 15,
+    "name": null
   }
 ]
 ```
-
-
-#### Note for S-Corporations
-An update to Gusto's payroll engine in October, 2017, has pushed the responsibility of understanding how benefits should be taxed for 2% shareholders of S-Corporations onto the engine itself. Previously, Payroll Administrators had to associate 2% shareholders with `posttax` medical, dental, and vision benefits in order to tax those employees correctly (2% shareholders are not eligible for pre-tax deductions, and contributions are treated as imputed wages). That is no longer the case.
-
-Now, S-Corp Payroll Administrators should associate all 2% shareholders to `pretax` medical, dental, and vision benefits through our [Employee Benefits API](/v1/employee_benefits). When payroll runs, Gusto will automatically determine whether to treat the benefit as `pretax` or `posttax` based on an employee's 2% shareholder status.
