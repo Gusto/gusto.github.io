@@ -67,7 +67,7 @@ when they should be paid. A company can have multiple pay schedules.
     "anchor_pay_date": "2018-09-01",
     "day_1": 1,
     "day_2": 15,
-    "name": null
+    "name": "Salaried"
   }
 ]
 ```
