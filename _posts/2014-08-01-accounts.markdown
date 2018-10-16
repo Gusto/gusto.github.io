@@ -22,9 +22,17 @@ account creation.
 | `user:first_name`             | String            |           |          |         | First name of the primary payroll administrator
 | `user:last_name`              | String            |           |          |         | Last name of the primary payroll administrator
 | `user:email`                  | String            |           |          |         | Email address for primary payroll administrator. Will also be used as their login.
+| `user:phone`                  | String            |           |      Yes |         | Phone number for primary payroll administrator.
 | `company`                     | Object            |           |          |         | Information for the new company
 | `company:name`                | String            |           |          |         | Company name. Must be at least two characters long.
+| `company:trade_name`          | String            |           |      Yes |         | Company legal name.
+| `company:ein`                 | String            |           |      Yes |         | Company's EIN (aka FEIN)
 | `company:states`              | Array             |           |          |         | List of states (two letter abbreviations) in which the company operates.
+| `partner`                     | Object            |           |      Yes |         | Partnership Information
+| `partner:name`                | String            |           |          |         | Name of your application as registered for Gusto API access
+| `partner:company_id`          | String            |           |          |         | Company ID on your platform, for linking with equivalent Gusto entity
+| `partner:user_id`             | String            |           |          |         | User ID on your platform, for linking with equivalent Gusto entity
+| `partner:accounting_firm_id`  | String            |           |          |         | ID of Accounting Firm that manages the company on your platform.
 
 ## Create a new account
 
@@ -44,11 +52,20 @@ account creation.
   "user": {
     "first_name": "Frank",
     "last_name": "Ocean",
-    "email": "bubbles@TusksRUs.biz"
+    "email": "bubbles@TusksRUs.biz",
+    "phone": "2345558899"
   },
   "company": {
     "name": "Frank's Walrus Emporium",
+    "trade_name": "Franklin Emporium",
+    "ein": "123456789",
     "states": ["CA", "WA", "TN"]
+  },
+  "partner": {
+    "name": "Xero",
+    "company_id": "112233445566",
+    "user_id": "abcdef1234",
+    "accounting_firm_id": "wxyz123456"
   }
 }
 ```
@@ -57,6 +74,8 @@ account creation.
 
 ```json
 {
-  "authorization_code": "4a8a08f09d37b73795649038408b5f3333f5b80483094659737b73d90f80a8a4"
+  "authorization_code": "4a8a08f09d37b73795649038408b5f3333f5b80483094659737b73d90f80a8a4",
+  "user_id": 7757869449880258,
+  "company_id": 7757616923697256
 }
 ```
