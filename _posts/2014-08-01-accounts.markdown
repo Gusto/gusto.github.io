@@ -22,17 +22,17 @@ account creation.
 | `user:first_name`             | String            |           |          |         | First name of the primary payroll administrator
 | `user:last_name`              | String            |           |          |         | Last name of the primary payroll administrator
 | `user:email`                  | String            |           |          |         | Email address for primary payroll administrator. Will also be used as their login.
-| `user:phone`                  | String            |           |      Yes |         | Phone number for primary payroll administrator.
+| `user:phone`                  | String            |           |        X |         | Phone number for primary payroll administrator.
 | `company`                     | Object            |           |          |         | Information for the new company
 | `company:name`                | String            |           |          |         | Company name. Must be at least two characters long.
-| `company:trade_name`          | String            |           |      Yes |         | Company legal name.
-| `company:ein`                 | String            |           |      Yes |         | Company's EIN (aka FEIN)
+| `company:trade_name`          | String            |           |        X |         | Company legal name.
+| `company:ein`                 | String            |           |        X |         | Company's EIN (aka FEIN)
 | `company:states`              | Array             |           |          |         | List of states (two letter abbreviations) in which the company operates.
-| `partner`                     | Object            |           |      Yes |         | Partnership Information
+| `partner`                     | Object            |           |        X |         | Partnership information. If this field is specified then `name`, `company_id`, and `user_id` must be present.
 | `partner:name`                | String            |           |          |         | Name of your application as registered for Gusto API access
 | `partner:company_id`          | String            |           |          |         | Company ID on your platform, for linking with equivalent Gusto entity
 | `partner:user_id`             | String            |           |          |         | User ID on your platform, for linking with equivalent Gusto entity
-| `partner:accounting_firm_id`  | String            |           |          |         | ID of Accounting Firm that manages the company on your platform.
+| `partner:accounting_firm_id`  | String            |           |        X |         | ID of Accounting Firm that manages the company on your platform.
 
 ## Create a new account
 
