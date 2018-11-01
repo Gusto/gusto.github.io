@@ -21,7 +21,6 @@ layout: sidebar
   "trade_name": "Fezziwig's",
   "ein": "12-3456789",
   "entity_type": "LLC",
-  "industry_code": "0001",
   "locations": [
     {
       "id": 3141592653589793,
@@ -103,7 +102,6 @@ layout: sidebar
 | `trade_name`              | trade name of this company. This is an optional field.
 | `ein`                     | employer identification number for this company.
 | `entity_type`             | type of company.
-| `industry_code`           | industry code based on https://en.wikipedia.org/wiki/Industry_Classification_Benchmark.
 | `locations`               | array of addresses for all known locations of this company.
 | `id`                      | the unique identifier of this location in the Gusto system.
 | `street_1`                | first line of this address' street.
