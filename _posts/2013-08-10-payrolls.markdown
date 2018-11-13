@@ -23,6 +23,7 @@ layout: sidebar
     "version": "19289df18e6e20f797de4a585ea5a91535c7ddf7",
     "payroll_deadline": "{{ site.time | date: '%Y' }}-02-18",
     "processed": true,
+    "payroll_id": 7786400908986532,
     "pay_period": {
       "start_date": "{{ site.time | date: '%Y' }}-02-01",
       "end_date": "{{ site.time | date: '%Y' }}-02-15",
@@ -129,6 +130,7 @@ layout: sidebar
 | Field                     | Description
 | :----------               |:-------------
 | `version`                 | version of the object in the Gusto system
+| `payroll_id`              | payroll id that can be used to query the specific payroll using get payroll endpoint.
 | `pay_period`              | the start and end date for the pay period corresponding with this payroll.
 | `payroll_deadline`        | deadline for the payroll to be run in order for employees to be paid on-time.
 | `processed`               | whether or not this payroll has been successfully run. If it has, you should consider it 'frozen', as any attempts to update its data will be rejected. Note that passing the `payroll_deadline` does not guarantee that the payroll has been processed; running late payrolls is not uncommon.  Similarly, Gusto users may choose to run payroll before the `payroll_deadline`.
@@ -154,7 +156,7 @@ layout: sidebar
 | `name`                    | name of the PTO. This also serves as the unique, immutable identifier for this PTO.
 | `hours`                   | hours taken of this PTO during this pay period.
 | `gross_pay`               | employee's gross pay, only available for processed payrolls
-| `net_pay`                 | employee's net pay, only available for prcoessed payrolls
+| `net_pay`                 | employee's net pay, only available for processed payrolls
 | `payment_method`          | compensation payment method ("Direct Deposit" or "Check"), only available for processed payrolls
 | `benefits`                | array of employee benefits, only available for processed payrolls when optional `include` parameter is used. Refer to Optional Parameters section for more details.
 | `deductions`              | array of employee deductions, only available for processed payrolls when optional `include` parameter is used. Refer to Optional Parameters section for more details.
@@ -188,6 +190,176 @@ You may provide all, none, or any combination of them to scope the returned data
 
     GET /v1/companies/3337/payrolls?start_date={{ site.time | date: '%Y' }}-01-31&end_date={{ site.time | date: '%Y' }}-06-30
       => returns all payrolls whose pay period is from January 31, {{ site.time | date: '%Y' }} through June 30, {{ site.time | date: '%Y' }}
+
+### Get a specific Payroll for a Company
+
+**HTTP Method**: `GET`
+
+**Endpoint**: `/v1/companies/:company_id/payrolls/:id`
+
+**Returns**: Details of a specific payroll for a company
+
+#### Sample Response Body
+
+```json
+{
+  "version": "19289df18e6e20f797de4a585ea5a91535c7ddf7",
+  "payroll_deadline": "{{ site.time | date: '%Y' }}-02-18",
+  "processed": true,
+  "payroll_id": 7786400908986532,
+  "pay_period": {
+    "start_date": "{{ site.time | date: '%Y' }}-02-01",
+    "end_date": "{{ site.time | date: '%Y' }}-02-15",
+    "pay_schedule_id": 7757500908984137
+  },
+  "totals": {
+    "company_debit": "2791.25",
+    "reimbursements": "0.00",
+    "net_pay": "1953.31",
+    "correction": "0.00",
+    "employer_taxes": "191.25",
+    "employee_taxes": "646.69",
+    "benefits": "0.0"
+  },
+  "employee_compensations": [
+    {
+      "employee_id": 1123581321345589,
+      "gross_pay": "2791.25",
+      "net_pay": "1953.31",
+      "payment_method": "Direct Deposit",
+      "fixed_compensations": [
+        {
+          "name": "Bonus",
+          "amount": "100.00",
+          "job_id": 1
+        },
+        {
+          "name": "Reimbursement",
+          "amount": "100.00",
+          "job_id": 1
+        }
+      ],
+      "hourly_compensations": [
+        {
+          "name": "Regular Hours",
+          "hours": "40.000",
+          "job_id": 1,
+          "compensation_multiplier": 1
+        },
+        {
+          "name": "Overtime",
+          "hours": "15.000",
+          "job_id": 1,
+          "compensation_multiplier": 1.5
+        },
+        {
+          "name": "Double Overtime",
+          "hours": "0.000",
+          "job_id": 1,
+          "compensation_multiplier": 2
+        },
+        {
+          "name": "Regular Hours",
+          "hours": "40.000",
+          "job_id": 2,
+          "compensation_multiplier": 1
+        },
+        {
+          "name": "Overtime",
+          "hours": "5.000",
+          "job_id": 2,
+          "compensation_multiplier": 1.5
+        },
+        {
+          "name": "Double Overtime",
+          "hours": "0.000",
+          "job_id": 2,
+          "compensation_multiplier": 2
+        }
+      ],
+      "paid_time_off": [
+        {
+          "name": "Vacation Hours",
+          "hours": "20.000"
+        },
+        {
+          "name": "Sick Hours",
+          "hours": "0.000"
+        },
+        {
+          "name": "Holiday Hours",
+          "hours": "0.000"
+        }
+      ],
+      "benefits": [],
+      "taxes": [
+        {
+          "name": "Federal Income Tax",
+          "employer": false,
+          "amount": "646.69"
+        },
+        {
+          "name": "Social Security",
+          "employer": true,
+          "amount": "191.25"
+        }
+      ]
+    }
+  ]
+}
+```
+
+| Field                     | Description
+| :----------               |:-------------
+| `version`                 | version of the object in the Gusto system
+| `payroll_id`              | payroll id that can be used to query the specific payroll using get payroll endpoint.
+| `pay_period`              | the start and end date for the pay period corresponding with this payroll.
+| `payroll_deadline`        | deadline for the payroll to be run in order for employees to be paid on-time.
+| `processed`               | whether or not this payroll has been successfully run. If it has, you should consider it 'frozen', as any attempts to update its data will be rejected. Note that passing the `payroll_deadline` does not guarantee that the payroll has been processed; running late payrolls is not uncommon.  Similarly, Gusto users may choose to run payroll before the `payroll_deadline`.
+| `totals`                  | subtotals for this payroll
+| `company_debit`           | the total company debit for the payroll
+| `reimbursements`          | the total reimbursements for the payroll
+| `net_pay`                 | the net pay amount for the payroll
+| `correction`              | the amount of correction for the payroll
+| `employer_taxes`          | the amount of employer paid taxes for the payroll
+| `employee_taxes`          | the amount of employee paid taxes for the payroll
+| `benefits`                | the amount of company contributed benefits for the payroll
+| `employee_compensations`  | array of every employee eligible for this pay period. For a given employee, we return the current state of information related to this employee for this payroll.
+| `employee_id`             | the unique identifier for this employee in the Gusto system.
+| `fixed_compensations`     | array of fixed compensations. Examples of fixed compensations include tips, bonus, or one time reimbursements. If this payroll has been processed, returns only those which have values greater than 0.00. For unprocessed payrolls, returns all active compensations.
+| `name`                    | name of the compensation. This also serves as the unique, immutable identifier for this compensation.
+| `amount`                  | amount of compensation for this pay period.
+| `hourly_compensations`    | array of hourly compensations. Examples of hourly compensations include regular, overtime, and double overtime hours. If this payroll has been processed, returns only those which have values greater than 0.00. For unprocessed payrolls, returns all active compensations.
+| `name`                    | name of the compensation. This also serves as the unique, immutable identifier for this compensation.
+| `hours`                   | hours to be compensated for during this pay period.
+| `job_id`                  | unique identifier of the job worked for given number of `hours` this pay period.
+| `compensation_multiplier` | amount multiplied by the base rate to calculate total compensation per hour worked. So the total gross compensation for a single hourly compensation could be calculated by multiplying the the `hours` worked by the `rate` of the job worked, times the `compensation_multiplier`.
+| `paid_time_off`           | array of all paid time off (PTO) for which this employee is eligible
+| `name`                    | name of the PTO. This also serves as the unique, immutable identifier for this PTO.
+| `hours`                   | hours taken of this PTO during this pay period.
+| `gross_pay`               | employee's gross pay, only available for processed payrolls
+| `net_pay`                 | employee's net pay, only available for processed payrolls
+| `payment_method`          | compensation payment method ("Direct Deposit" or "Check"), only available for processed payrolls
+| `benefits`                | array of employee benefits, only available for processed payrolls when optional `include` parameter is used. Refer to Optional Parameters section for more details.
+| `deductions`              | array of employee deductions, only available for processed payrolls when optional `include` parameter is used. Refer to Optional Parameters section for more details.
+| `taxes`                   | array of employer and employee taxes, only available for processed payrolls when optional `include` parameter is used. Refer to Optional Parameters section for more details.
+
+Notes:
+
++ Hour and dollar amounts are returned as string representations of numeric decimals.
++ Hours are represented to the thousands place; dollar amounts are represented to the cent.
++ Every eligible compensation is returned for each employee. If no data has yet be inserted for a given field, it defaults to "0.00" (for fixed amounts) or "0.000" (for hours ).
+
+### Optional Parameters
+
+For each payroll you can pare down the results by passing in additional parameters:
+
+  Available options: include
+
+You may provide all, none, or any combination of them to scope the returned data. Here are some common use cases:
+
+    GET /v1/companies/3337/payrolls/:id?include=benefits,deductions,taxes
+      => returns payrolls and includes benefits, deductions, and taxes in employee_compensation. You can choose to include only what you need (/v1/companies/3337/payrolls/:id?include=benefits,taxes)
 
 ### Update Payroll
 
