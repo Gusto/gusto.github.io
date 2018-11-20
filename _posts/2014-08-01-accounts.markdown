@@ -36,7 +36,6 @@ account creation.
 | `company:mailing_address:state`       | String            |           |        X |         | Mailing address's city
 | `company:mailing_address:phone`       | String            |           |        X |         | Mailing address location's phone number
 | `partner`                             | Object            |           |        X |         | Partnership information. If this field is specified then `name`, `company_id`, and `user_id` must be present.
-| `partner:name`                        | String            |           |          |         | Name of your application as registered for Gusto API access
 | `partner:company_id`                  | String            |           |          |         | Company ID on your platform, for linking with equivalent Gusto entity
 | `partner:user_id`                     | String            |           |          |         | User ID on your platform, for linking with equivalent Gusto entity
 | `partner:accounting_firm_id`          | String            |           |        X |         | ID of Accounting Firm that manages the company on your platform.
@@ -59,7 +58,7 @@ account creation.
   "user": {
     "first_name": "Frank",
     "last_name": "Ocean",
-    "email": "bubbles@TusksRUs.biz",
+    "email": "frank@example.com",
     "phone": "2345558899"
   },
   "company": {
@@ -69,7 +68,6 @@ account creation.
     "states": ["CA", "WA", "TN"]
   },
   "partner": {
-    "name": "Xero",
     "company_id": "112233445566",
     "user_id": "abcdef1234",
     "accounting_firm_id": "wxyz123456"
