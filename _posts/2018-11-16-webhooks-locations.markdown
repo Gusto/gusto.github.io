@@ -9,14 +9,9 @@ layout: sidebar
 ## Get Location Webhook Notifications
 [Webhooks Overview](/v1/webhooks/about)
 
-**Endpoint**: `GET /v1/locations/:location_id`
-
-Use this endpoint to retrieve the information given in these webhook events using our public API. For more information about the endpoint, please refer to the endpoint's [documentation](/v1/locations).
-
-
 **Resource**: `Company`
 
-**Entity**: `Location`
+**Entity**: `Location` ([API Reference](/v1/locations))
 
 
 **Event Types**:

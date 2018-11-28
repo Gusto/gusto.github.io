@@ -9,14 +9,9 @@ layout: sidebar
 ## Get Payroll Webhook Notifications
 [Webhooks Overview](/v1/webhooks/about)
 
-**Endpoint**: `GET /v1/companies/:company_id/payrolls`
-
-Use this endpoint to retrieve the information given in these webhook events using our public API. For more information about the endpoint, please refer to the endpoint's [documentation](/v1/payrolls).
-
-
 **Resource**: `Company`
 
-**Entity**: `Payroll`
+**Entity**: `Payroll` ([API Reference](/v1/payrolls))
 
 
 **Event Types**:

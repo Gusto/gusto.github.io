@@ -9,14 +9,9 @@ layout: sidebar
 ## Get Employee Webhook Notifications
 [Webhooks Overview](/v1/webhooks/about)
 
-**Endpoint**: `GET /v1/employees/:employee_id`
-
-Use this endpoint to retrieve the information given in these webhook events using our public API. For more information about the endpoint, please refer to the endpoint's [documentation](/v1/employees).
-
-
 **Resource**: `Company`
 
-**Entity**: `Employee`
+**Entity**: `Employee` ([API Reference](/v1/employees))
 
 
 **Event Types**:

@@ -10,14 +10,9 @@ layout: sidebar
 
 [Webhooks Overview](/v1/webhooks/about)
 
-**Endpoint**: `GET /v1/companies/:company_id`
-
-Use this endpoint to retrieve the information given in these webhook events using our public API. For more information about the endpoint, please refer to the endpoint's [documentation](/v1/companies).
-
-
 **Resource**: `Company`
 
-**Entity**: `Company`
+**Entity**: `Company` ([API Reference](/v1/companies))
 
 
 **Event Types**:
