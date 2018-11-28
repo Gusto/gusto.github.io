@@ -17,6 +17,23 @@ An **event** can be an employee being created for one of your companies, or the 
 
 A **payload** is the body of the request that will be sent to your app when an event happens. The top-level attributes describe the resources and provide timestamps to compare to other payloads. Every payload has an `entity_attributes` value that is the serialized entity which matches what you would have gotten if you had used our public API to get information on that entity. This way you do not need to query our API every time an event occurs.
 
+The top-level attributes are webhook specific, and an example would look something like:
+
+```json
+{
+  "event_type": "employee.created",
+  "resource_type": "Company",
+  "resource_id": 7757616923531095,
+  "entity_type": "Employee",
+  "entity_id": 1123581321345589,
+  "timestamp": 1533606328,
+  "entity_attributes": { }
+}
+```
+
+In this example, `timestamp`, `event_type`, and `entity_attributes` are all standard keys to have in a webhooks payload. In Gusto's system permissions are based on an resource and it's entities. The parent reference is the `resource` while the `entity` is the reference to what actually triggered the event.
+
+
 ## Registering
 
 While we are working on adding an API endpoint and eventually a GUI for registering an endpoint with our webhooks system, the current method is to reach out to Gusto to get your webhooks setup with us.
