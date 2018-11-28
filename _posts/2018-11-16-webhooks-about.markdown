@@ -43,11 +43,11 @@ A webhook registration will require the following:
   - An endpoint URL that we will send events to via `HTTP POST` request
   - A list of the entities that you would like to receive event notifications for
     - Current list of supported entities
-      - Company
-      - Employee
-      - Location
-      - Pay Schedule
-      - Payroll
+      - [Company](/v1/companies)
+      - [Employee](/v1/employees)
+      - [Location](/v1/locations)
+      - [Pay Schedule](/v1/pay_schedules)
+      - [Payroll](/v1/payrolls)
 
 After we have setup your registration and subscribed to the desired entities, we will send you a secret token that can be used to verify subsequent notifications sent via the webhook system.
 
