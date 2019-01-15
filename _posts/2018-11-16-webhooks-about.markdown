@@ -62,9 +62,13 @@ The header signature will look something like this:
 ```
 
 The signature value is a hex digest of the hash-based message authentication code (HMAC-SHA256) computed from the
-stringified JSON payload and the secret key. As an example, a rails server consuming this webhook might use the
-following method:
+stringified JSON payload and the secret key.
 
+Put more simply, all webhook requests will have a 'signature' header with a hash of the request body. You can generate the
+same hash from the request body using the verification token we provide when setting up our integration. As long as that
+token remains secret, any request with a valid signature will have come from us.
+
+As an example, a rails server consuming this webhook might use the following method:
 ```
 before_action :verify_response_origin
 
@@ -81,7 +85,3 @@ def verify_response_origin
   end
 end
 ```
-
-Put more simply: all webhook requests will have a 'signature' header with a hash of the request body. You can generate the
-same hash from the request body using the verification token we provide when setting up our integration. As long as that
-token remains secret, any request with a valid signature will have come from us.
