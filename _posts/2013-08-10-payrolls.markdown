@@ -108,7 +108,26 @@ layout: sidebar
             "hours": "0.000"
           }
         ],
-        "benefits": [],
+        "benefits": [
+          {
+            "name": "Group Term Life",
+            "employee_deduction": "100.00",
+            "company_contribution": "50.00",
+            "imputed": true
+          },
+          {
+            "name": "401K",
+            "employee_deduction": "100.00",
+            "company_contribution": "50.00",
+            "imputed": false
+          }
+        ],
+        "deductions": [
+          {
+            "name": "Child Support",
+            "amount": "80.00"
+          }
+        ],
         "taxes": [
           {
             "name": "Federal Income Tax",
@@ -158,9 +177,9 @@ layout: sidebar
 | `gross_pay`               | employee's gross pay, only available for processed payrolls
 | `net_pay`                 | employee's net pay, only available for processed payrolls
 | `payment_method`          | compensation payment method ("Direct Deposit" or "Check"), only available for processed payrolls
-| `benefits`                | array of employee benefits, only available for processed payrolls when optional `include` parameter is used. Refer to Optional Parameters section for more details.
-| `deductions`              | array of employee deductions, only available for processed payrolls when optional `include` parameter is used. Refer to Optional Parameters section for more details.
-| `taxes`                   | array of employer and employee taxes, only available for processed payrolls when optional `include` parameter is used. Refer to Optional Parameters section for more details.
+| `benefits`                | array of employee benefits, only available for processed payrolls when optional `include` parameter is used. Each benefit includes the `name` of the benefit, the `employee_deduction` amount, the `company_contribution` amount, and whether or not the benefit is `imputed`. Refer to Optional Parameters section for more details.
+| `deductions`              | array of employee deductions, only available for processed payrolls when optional `include` parameter is used. Each deduction includes the `name` of the deduction and the deduction `amount`. Refer to Optional Parameters section for more details.
+| `taxes`                   | array of employer and employee taxes, only available for processed payrolls when optional `include` parameter is used. Each tax includes the `name` of the tax, the `amount` of the tax, and whether it is an `employer` tax. Refer to Optional Parameters section for more details.
 
 Notes:
 
@@ -291,7 +310,26 @@ You may provide all, none, or any combination of them to scope the returned data
           "hours": "0.000"
         }
       ],
-      "benefits": [],
+      "benefits": [
+        {
+          "name": "Group Term Life",
+          "employee_deduction": "100.00",
+          "company_contribution": "50.00",
+          "imputed": true
+        },
+        {
+          "name": "401K",
+          "employee_deduction": "100.00",
+          "company_contribution": "50.00",
+          "imputed": false
+        }
+      ],
+      "deductions": [
+        {
+          "name": "Child Support",
+          "amount": "80.00"
+        }
+      ],
       "taxes": [
         {
           "name": "Federal Income Tax",
@@ -340,9 +378,9 @@ You may provide all, none, or any combination of them to scope the returned data
 | `gross_pay`               | employee's gross pay, only available for processed payrolls
 | `net_pay`                 | employee's net pay, only available for processed payrolls
 | `payment_method`          | compensation payment method ("Direct Deposit" or "Check"), only available for processed payrolls
-| `benefits`                | array of employee benefits, only available for processed payrolls when optional `include` parameter is used. Refer to Optional Parameters section for more details.
-| `deductions`              | array of employee deductions, only available for processed payrolls when optional `include` parameter is used. Refer to Optional Parameters section for more details.
-| `taxes`                   | array of employer and employee taxes, only available for processed payrolls when optional `include` parameter is used. Refer to Optional Parameters section for more details.
+| `benefits`                | array of employee benefits, only available for processed payrolls when optional `include` parameter is used. Each benefit includes the `name` of the benefit, the `employee_deduction` amount, the `company_contribution` amount, and whether or not the benefit is `imputed`. Refer to Optional Parameters section for more details.
+| `deductions`              | array of employee deductions, only available for processed payrolls when optional `include` parameter is used. Each deduction includes the `name` of the deduction and the deduction `amount`. Refer to Optional Parameters section for more details.
+| `taxes`                   | array of employer and employee taxes, only available for processed payrolls when optional `include` parameter is used. Each tax includes the `name` of the tax, the `amount` of the tax, and whether it is an `employer` tax. Refer to Optional Parameters section for more details.
 
 Notes:
 
