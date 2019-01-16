@@ -61,4 +61,27 @@ The header signature will look something like this:
 “X-Gusto-Signature”: "687b8477b067ff52af7c72903254577534434c632b48bac2f1abff170f232f89"
 ```
 
-The signature value is a hex digest of hash-based message authentication code (HMAC-SHA256) computed from the stringified JSON payload and the secret key. As an example the above signature was generated in ruby using the following method.
+The signature value is a hex digest of the hash-based message authentication code (HMAC-SHA256) computed from the
+stringified JSON payload and the secret key.
+
+Put more simply, all webhook requests will have a 'signature' header with a hash of the request body. You can generate the
+same hash from the request body using the verification token we provide when setting up our integration. As long as that
+token remains secret, any request with a valid signature will have come from us.
+
+As an example, a rails server consuming this webhook might use the following method:
+```
+before_action :verify_response_origin
+
+def verify_response_origin
+  computed = OpenSSL::HMAC.hexdigest(
+    OpenSSL::Digest::SHA256.new,
+    GUSTO_VERIFICATION_TOKEN,
+    request.raw_post
+  )
+  actual = request.headers['X-Gusto-Signature']
+
+  if computed != actual
+    render("You're not who you say your are.", status: :bad_request)
+  end
+end
+```
