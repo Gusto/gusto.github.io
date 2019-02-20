@@ -19,6 +19,7 @@ Jobs are essentially the intersection of <a href="/v1/employees">an employee</a>
 | `location`                    | Object            |     X     |          |         | full representation of the location's address
 | `hire_date`                   | String            |           |          |         | when the employee was hired for this job
 | `title`                       | String            |           |    X     | null    | the title for this position
+| `primary`                     | Boolean           |     X     |          |         | whether this is the employee's primary job. The value will be set to true unless an existing job exists for this employee.
 | `rate`                        | String            |     X     |          |         | rate for the current compensation
 | `payment_unit`                | String            |     X     |          |         | payment unit for the current compensation
 | `current_compensation_id`     | Integer           |     X     |          |         | id for the currently active compensation
@@ -52,6 +53,7 @@ Jobs are essentially the intersection of <a href="/v1/employees">an employee</a>
     },
     "hire_date": "{{ site.time | date: '%Y' }}-12-11",
     "title": "Assistant to the Regional Manager",
+    "primary": true,
     "rate": "70.00",
     "payment_unit": "Hour",
     "current_compensation_id": 1363316536327003,
@@ -83,6 +85,7 @@ Jobs are essentially the intersection of <a href="/v1/employees">an employee</a>
     },
     "hire_date": "{{ site.time | date: '%Y' }}-12-11",
     "title": "Receptionist",
+    "primary": true,
     "rate": "18.00",
     "payment_unit": "Hour",
     "current_compensation_id": 1363316536327004,
@@ -129,6 +132,7 @@ Jobs are essentially the intersection of <a href="/v1/employees">an employee</a>
   },
   "hire_date": "{{ site.time | date: '%Y' }}-12-11",
   "title": "Assistant to the Regional Manager",
+  "primary": true,
   "rate": "70.00",
   "payment_unit": "Hour",
   "current_compensation_id": 1363316536327003,

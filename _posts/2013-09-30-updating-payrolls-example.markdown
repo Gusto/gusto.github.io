@@ -180,7 +180,7 @@ updated_payroll_data = json_response.map.with_index do |payroll_json, index|
   # Find the 'Regular Hours' hourly compensation
   regular_hours_compensation = churchland_compensation["hourly_compensations"].detect { |hourly_compensation| hourly_compensation["name"] == 'Regular Hours' }
 
-  # Update it to add our ours to the existing ones
+  # Update it to add our hours to the existing ones
   regular_hours_compensation["hours"] = regular_hours_compensation["hours"].to_d + hourly_totals[index]
 
   {

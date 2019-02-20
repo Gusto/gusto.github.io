@@ -33,11 +33,11 @@ title: Pay Periods
     },
     "eligible_employees": [
       {
-        "employee_id": 1123581321345589,
+        "id": 1123581321345589,
         "job_ids": [1]
       },
       {
-        "employee_id": 1442333776109871,
+        "id": 1442333776109871,
         "job_ids": [2]
       }
     ]

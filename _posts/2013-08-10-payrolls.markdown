@@ -22,6 +22,7 @@ layout: sidebar
   {
     "version": "19289df18e6e20f797de4a585ea5a91535c7ddf7",
     "payroll_deadline": "{{ site.time | date: '%Y' }}-02-18",
+    "check_date": "{{ site.time | date: '%Y' }}-02-22",
     "processed": true,
     "payroll_id": 7786400908986532,
     "pay_period": {
@@ -152,6 +153,7 @@ layout: sidebar
 | `payroll_id`              | payroll id that can be used to query the specific payroll using get payroll endpoint.
 | `pay_period`              | the start and end date for the pay period corresponding with this payroll.
 | `payroll_deadline`        | deadline for the payroll to be run in order for employees to be paid on-time.
+| `check_date`              | the date at which employees will be paid for this payroll.
 | `processed`               | whether or not this payroll has been successfully run. If it has, you should consider it 'frozen', as any attempts to update its data will be rejected. Note that passing the `payroll_deadline` does not guarantee that the payroll has been processed; running late payrolls is not uncommon.  Similarly, Gusto users may choose to run payroll before the `payroll_deadline`.
 | `totals`                  | subtotals for this payroll
 | `company_debit`           | the total company debit for the payroll
@@ -224,6 +226,7 @@ You may provide all, none, or any combination of them to scope the returned data
 {
   "version": "19289df18e6e20f797de4a585ea5a91535c7ddf7",
   "payroll_deadline": "{{ site.time | date: '%Y' }}-02-18",
+  "check_date": "{{ site.time | date: '%Y' }}-02-22",
   "processed": true,
   "payroll_id": 7786400908986532,
   "pay_period": {
@@ -353,6 +356,7 @@ You may provide all, none, or any combination of them to scope the returned data
 | `payroll_id`              | payroll id that can be used to query the specific payroll using get payroll endpoint.
 | `pay_period`              | the start and end date for the pay period corresponding with this payroll.
 | `payroll_deadline`        | deadline for the payroll to be run in order for employees to be paid on-time.
+| `check_date`              | the date at which employees will be paid for this payroll.
 | `processed`               | whether or not this payroll has been successfully run. If it has, you should consider it 'frozen', as any attempts to update its data will be rejected. Note that passing the `payroll_deadline` does not guarantee that the payroll has been processed; running late payrolls is not uncommon.  Similarly, Gusto users may choose to run payroll before the `payroll_deadline`.
 | `totals`                  | subtotals for this payroll
 | `company_debit`           | the total company debit for the payroll
