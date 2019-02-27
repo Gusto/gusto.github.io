@@ -9,13 +9,20 @@ layout: sidebar
 </h1>
 
 ## About
-Webhooks are a way to get notified when events happen in Gusto so that you do not need to come up with a polling strategy for refreshing data in your app.
+Webhooks are a way to get notified when events happen in Gusto so that you do not need to come up with a polling
+strategy for refreshing data in your app.
 
-Webhooks trigger on certain events and send an HTTP POST payload to the URL that is registered by you for that event. You can limit which events trigger a webhook for your registered URLs.
+Webhooks trigger on certain events and send an HTTP POST payload to the URL that is registered by you for that event.
+You can limit which events trigger a webhook for your registered URLs.
 
-An **event** can be an employee being created for one of your companies, or the company itself being provisioned where access to their events were granted to you. You can create alerts in your app for running payroll based on the pay schedule, and update it if anything changes.
+An **event** can be an employee being created for one of your companies, or the company itself being provisioned where
+access to their events were granted to you. You can create alerts in your app for running payroll based on the pay
+schedule, and update it if anything changes.
 
-A **payload** is the body of the request that will be sent to your app when an event happens. The top-level attributes describe the resources and provide timestamps to compare to other payloads. Every payload has an `entity_attributes` value that is the serialized entity which matches what you would have gotten if you had used our public API to get information on that entity. This way you do not need to query our API every time an event occurs.
+A **payload** is the body of the request that will be sent to your app when an event happens. The top-level attributes
+describe the resources and provide timestamps to compare to other payloads. Every payload has an `entity_attributes`
+value that is the serialized entity which matches what you would have gotten if you had used our public API to get
+information on that entity. This way you do not need to query our API every time an event occurs.
 
 The top-level attributes are webhook specific, and an example would look something like:
 
@@ -27,16 +34,24 @@ The top-level attributes are webhook specific, and an example would look somethi
   "entity_type": "Employee",
   "entity_id": 1123581321345589,
   "timestamp": 1533606328,
-  "entity_attributes": { }
+  "entity_attributes": { },
+  "partner_attributes": { }
 }
 ```
 
-In this example, `timestamp`, `event_type`, and `entity_attributes` are all standard keys to have in a webhooks payload. In Gusto's system permissions are based on an resource and it's entities. The parent reference is the `resource` while the `entity` is the reference to what actually triggered the event.
+In this example, `timestamp`, `event_type`, and `entity_attributes` are all standard keys to have in a webhooks payload.
+In Gusto's system permissions are based on an resource and it's entities. The parent reference is the `resource` while
+the `entity` is the reference to what actually triggered the event.
+
+Additionally, any events of type `*.provisioned` may have a `partner_attributes` key. If Gusto has a mapping of that
+entity to an entity in your application, those attributes will contain your identifier to that entity. See the 
+[Partner Attributes](/v1/partner_attributes) section for more information on its contents.
 
 
 ## Registering
 
-While we are working on adding an API endpoint and eventually a GUI for registering an endpoint with our webhooks system, the current method is to reach out to Gusto to get your webhooks setup with us.
+While we are working on adding an API endpoint and eventually a GUI for registering an endpoint with our webhooks
+system, the current method is to reach out to Gusto to get your webhooks setup with us.
 
 A webhook registration will require the following:
 
@@ -49,11 +64,13 @@ A webhook registration will require the following:
       - [Pay Schedule](/v1/pay_schedules)
       - [Payroll](/v1/payrolls)
 
-After we have setup your registration and subscribed to the desired entities, we will send you a secret token that can be used to verify subsequent notifications sent via the webhook system.
+After we have setup your registration and subscribed to the desired entities, we will send you a secret token that can
+be used to verify subsequent notifications sent via the webhook system.
 
 ## Verification
 
-Each webhook notification will have a header value that includes a signature you can use to verify the notification actually came from Gusto.
+Each webhook notification will have a header value that includes a signature you can use to verify the notification
+actually came from Gusto.
 
 The header signature will look something like this:
 
@@ -69,6 +86,7 @@ same hash from the request body using the verification token we provide when set
 token remains secret, any request with a valid signature will have come from us.
 
 As an example, a rails server consuming this webhook might use the following method:
+
 ```
 before_action :verify_response_origin
 

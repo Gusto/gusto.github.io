@@ -62,7 +62,7 @@ account creation.
     "states": ["CA", "WA", "TN"]
   },
   "partner": {
-    "name": "Xero",
+    "name": "Carnivora CPA",
     "company_id": "112233445566",
     "user_id": "abcdef1234",
     "accounting_firm_id": "wxyz123456"
