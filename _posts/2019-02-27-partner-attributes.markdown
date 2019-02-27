@@ -12,7 +12,7 @@ title: Partner Attributes
 | :----------                   |:-------------     |:---------:|:--------:|:-------------
 | `company_id`                  | String            |     X     |    X     | unique identifier of this company in your system. (Not to be confused with Gusto's company id)
 | `user_id`                     | String            |     X     |    X     | unique identifier of the company's primary payroll admin in your system.  
-| `grants_rev_share`            | Boolean           |     X     |    X     | 
+| `grants_rev_share`            | Boolean           |     X     |    X     | whether or not you receive revenue shares on behalf of this company
 
 ## Get partner attributes
 
@@ -35,7 +35,6 @@ title: Partner Attributes
 {
   "company_id": "food-truck-88913",
   "user_id": "person-815932",
-  "accounting_firm_id": "firm-3193",
   "grants_rev_share": false
 }
 ```
