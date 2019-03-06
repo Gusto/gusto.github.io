@@ -72,15 +72,13 @@ retrieving or updating an individual record should be done via the <a href="/v1/
 ### Sample Request Body
 
 ```json
-[
-  {
-    "phone_number": "8009360383",
-    "street_1": "425 2nd Street",
-    "street_2": "Suite 602",
-    "city": "San Francisco",
-    "state": "CA",
-    "zip": "94107",
-    "country": "USA"
-  }
-]
+{
+  "phone_number": "8009360383",
+  "street_1": "425 2nd Street",
+  "street_2": "Suite 602",
+  "city": "San Francisco",
+  "state": "CA",
+  "zip": "94107",
+  "country": "USA"
+}
 ```
