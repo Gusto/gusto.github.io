@@ -10,29 +10,23 @@ title: Partner Attributes
 
 | Attribute                     | Type              | Read-Only | Optional | Description
 | :----------                   |:-------------     |:---------:|:--------:|:-------------
-| `company_id`                  | String            |     X     |    X     | unique identifier of this company in your system. (Not to be confused with Gusto's company id)
-| `grants_rev_share`            | Boolean           |     X     |    X     | whether or not you receive revenue shares on behalf of this company
+| `grants_rev_share`            | Boolean           |     X     |    X     | true if you are receiving revenue sharing on behalf of this company
+| `mapping`                     | Object            |     X     |    X     | how the company relates to an entity in your system
+| `mapping:gusto:company_id`    | Integer           |     X     |    X     | unique identifier of this company in our system
+| `mapping:partner:company_id`  | String            |     X     |    X     | unique identifier of this company in your system (optional; partner-dependent)
 
-## Get partner attributes
-
-**HTTP Method**: `GET`
-
-**Endpoint**: `/v1/partner_attributes/:company_id`
-
-**Returns**: Partner-specific information about the company
-
-**Response Codes**:
-
-| Code        | Description
-| :---------- |:------------- 
-| `200`       | ok
-| `404`       | the company was not found or company had no partner details        
-
-#### Sample Response Body:
+#### Sample Body:
 
 ```json
 {
-  "company_id": "food-truck-88913",
-  "grants_rev_share": false
+  "grants_rev_share": false,
+  "mapping": {
+    "partner": {
+      "company_id": "a0c5e109-1a45-40e8-96c9-4fc83f8f08b6"
+    },
+    "gusto": {
+      "company_id": 7389117231658670
+    }
+  }
 }
 ```
