@@ -40,7 +40,7 @@ The top-level attributes are webhook specific, and an example would look somethi
 ```
 
 In this example, `timestamp`, `event_type`, and `entity_attributes` are all standard keys to have in a webhooks payload.
-Permissions are based on an resource and its entities. The parent reference is the `resource` while the `entity` is the
+Permissions are based on a resource and its entities. The parent reference is the `resource` while the `entity` is the
 reference to what actually triggered the event.
 
 Additionally, any events of type `*.provisioned` may have a `partner_attributes` key. If Gusto has a mapping of that
