@@ -50,7 +50,7 @@ information on that entity. This way you do not need to query our API every time
 | `resource_type`               | String            | The type of parent entity that caused you to receive the event. For instance, if you have access to a company that added an employee, their company would be the resource. Or, if you instead have permission to an accounting firm with permission to manage their company, that would be the resource.
 | `resource_id`                 | Integer           | The identifier of the parent entity.
 | `entity_attributes`           | Object            | The representation of the entity. Its structure matches the API exactly for the given `entity_type` (except for deprovisioned events, which will only contain an identifier).
-| `partner_attributes`          | Object            | Optional, partner-specific attributes that explain how the entity relates to a partner's system. Will only ever appear on `*.provisioned` events. See the [Partner Attributes](/v1/partner_attributes) section for more information.
+| `partner_attributes`          | Object            | See the [Partner Attributes](/v1/partner_attributes) section for structure. Contains optional, partner-specific attributes that explain how the entity relates to a partner's system. Will only ever appear on `*.provisioned` events.
 | `timestamp`                   | Integer           | The epoch time when the entity was updated. Webhooks are not guaranteed to be delivered in-order, so you should leverage this to ensure an older event doesn't overwrite a newer one.
 
 ## Event Types
