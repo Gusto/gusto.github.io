@@ -49,7 +49,7 @@ account creation.
 **Returns**: OAuth authorization code for new user or errors which prevented
              creation
 
-**Response Codes**: 200, 422
+**Response Codes**: 201, 409
 
 #### Sample Request Body:
 
@@ -84,3 +84,11 @@ account creation.
   "company_id": 7757616923697256
 }
 ```
+
+#### Collision Handling
+
+A collision happens when:
+a) A company with the same Federal EIN already exists in Gusto.
+b) A company with the same name and same payroll admin email address already exists in Gusto.
+
+If the partner provisioned both of the companies that are colliding, then a `409 (Conflict)` response will be returned.  If the partner did not provision the colliding company, then a new company will be created and a `201 (Created)` response will be returned.  If the collision is due to a duplicate EIN, the new company will be created with a blank EIN.  This will engage the small biz team at Gusto to resolve the colliding companies while allowing a normal provisioning flow to continue.
