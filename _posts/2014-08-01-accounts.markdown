@@ -87,7 +87,7 @@ account creation.
 
 #### Collision Handling
 
-A collision is defined as either:
+A collision happens when:
 a) A company with the same Federal EIN already exists in Gusto.
 b) A company with the same name and same payroll admin email address already exists in Gusto.
 
