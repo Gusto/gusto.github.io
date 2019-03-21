@@ -90,7 +90,7 @@ layout: sidebar
     "first_name": "Isaiah",
     "last_name"  : "Berlin",
     "phone": "8001234567",
-    "email": "crooked-timber@initech.biz",
+    "email": "crooked-timber@initech.biz"
   }
 }
 ```
