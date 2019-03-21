@@ -58,10 +58,19 @@ a:hover {
     -webkit-transition: all 125ms ease-in-out;
 }
 
+#title-link {
+  color: #25D6C9;
+}
+
 a:focus,
 a:visited {
     color: #1679C4;
 }
+
+h4 a:focus {
+  color: #25D6C9;
+}
+
 a:hover {
     color: #25D6C9;
 }
