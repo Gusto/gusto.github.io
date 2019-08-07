@@ -22,19 +22,19 @@ account creation.
 | `user:first_name`                     | String            |           |          |         | First name of the primary payroll administrator
 | `user:last_name`                      | String            |           |          |         | Last name of the primary payroll administrator
 | `user:email`                          | String            |           |          |         | Email address for primary payroll administrator. Will also be used as their login.
-| `user:phone`                          | String            |           |        X |         | Phone number for primary payroll administrator.
+| `user:phone`                          | String            |           |        X |         | Phone number for primary payroll administrator. Must be exactly ten digits.
 | `company`                             | Object            |           |          |         | Information for the new company
 | `company:name`                        | String            |           |          |         | Company name. Must be at least two characters long.
 | `company:trade_name`                  | String            |           |        X |         | Company legal name.
 | `company:ein`                         | String            |           |        X |         | Company's EIN (aka FEIN)
 | `company:states`                      | Array             |           |          |         | List of states (two letter abbreviations) in which the company operates.
 | `company:mailing_address`             | Object            |           |        X |         | Company's mailing address
-| `company:mailing_address:street_1`    | String            |           |        X |         | Mailing address's street 1 field
-| `company:mailing_address:street_2`    | String            |           |        X |         | Mailing address's street 2 field
-| `company:mailing_address:city`        | String            |           |        X |         | Mailing address's city
-| `company:mailing_address:zip`         | String            |           |        X |         | Mailing address's zip code
-| `company:mailing_address:state`       | String            |           |        X |         | Mailing address's city
-| `company:mailing_address:phone`       | String            |           |        X |         | Mailing address location's phone number
+| `company:mailing_address:street_1`    | String            |           |          |         | Mailing address's street 1 field. Required if mailing_address is provided.
+| `company:mailing_address:street_2`    | String            |           |        X |         | Mailing address's street 2 field.
+| `company:mailing_address:city`        | String            |           |          |         | Mailing address's city. Required if mailing_address is provided.
+| `company:mailing_address:zip`         | String            |           |          |         | Mailing address's zip code. Required if mailing_address is provided.
+| `company:mailing_address:state`       | String            |           |          |         | Mailing address's city. Required if mailing_address is provided.
+| `company:mailing_address:phone`       | String            |           |          |         | Mailing address location's phone number. Must be exactly ten digits. Required if mailing_address is provided.
 | `partner`                             | Object            |           |        X |         | Partnership information. If this field is specified then `name`, `company_id`, and `user_id` must be present.
 | `partner:company_id`                  | String            |           |          |         | Company ID on your platform, for linking with equivalent Gusto entity
 | `partner:user_id`                     | String            |           |          |         | User ID on your platform, for linking with equivalent Gusto entity
@@ -49,7 +49,7 @@ account creation.
 **Returns**: OAuth authorization code for new user or errors which prevented
              creation
 
-**Response Codes**: 201, 409
+**Response Codes**: 201, 409, 422
 
 #### Sample Request Body:
 
