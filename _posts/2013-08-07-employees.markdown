@@ -28,7 +28,7 @@ title: Employees
 | `onboarded`                   | Boolean           |     X     |          |         | whether the employee is fully onboarded.
 | `terminated`                  | Boolean           |     X     |          |         | whether the employee has been terminated from the company.
 | `terminations`                | Array             |     X     |          |         | array of terminations for this employee. See <a href="/v1/terminations">terminations documentation</a> for full documentation and endpoints.
-| `two_percent_shareholder`     | Boolean           |           |    X     |  false  | whether the employee is a two percent shareholder of an S-Corp for tax purposes.
+| `two_percent_shareholder`     | Boolean           |           |    X     |  false  | Whether the employee is a two percent shareholder of an S-Corp for tax purposes. This attribute should only be included if the employee's company is an S-Corp. Additionally, this attribute should not be included in POST requests.
 
 ## Get an employee
 
