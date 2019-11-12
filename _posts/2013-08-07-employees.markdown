@@ -28,7 +28,7 @@ title: Employees
 | `onboarded`                   | Boolean           |     X     |          |         | whether the employee is fully onboarded.
 | `terminated`                  | Boolean           |     X     |          |         | whether the employee has been terminated from the company.
 | `terminations`                | Array             |     X     |          |         | array of terminations for this employee. See <a href="/v1/terminations">terminations documentation</a> for full documentation and endpoints.
-| `two_percent_shareholder`     | Boolean           |           |    X     |  false  | Whether the employee is a two percent shareholder of an S-Corp for tax purposes. This attribute should only be included if the employee's company is an S-Corp. Additionally, this attribute should not be included in POST requests.
+| `two_percent_shareholder`     | Boolean           |           |    X     |  false  | Whether the employee is a two percent shareholder of an S-Corp for tax purposes. For `POST` requests, the API returns a 422 error if this attribute is in the request body. For `PUT` requests, the API returns a 422 error if the employee's company is not an S-Corp.
 
 ## Get an employee
 
@@ -180,7 +180,9 @@ You can pare down the results by passing in additional parameters:
 
 **Endpoint**: `/v1/employees/:employee_id`
 
-**Returns**: Updated employee or errors which prevented update
+**Returns**: Updated employee or errors which prevented update.
+
+**Note**: The `two_percent_shareholder` attribute is only used for employees of S-Corp companies. If the employee's company is not an S-Corp, the API returns a 422 error.
 
 #### Sample Request Body:
 
@@ -199,7 +201,9 @@ You can pare down the results by passing in additional parameters:
 
 **Endpoint**: `/v1/companies/:company_id/employees`
 
-**Returns**: Created employee or errors which prevented creation
+**Returns**: Created employee or errors which prevented creation.
+
+**Note**: The `two_percent_shareholder` attribute is not allowed in POST requests. If included, the API returns a 422 error.
 
 #### Sample Request Body:
 
