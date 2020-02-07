@@ -7,11 +7,7 @@ title: Locations
 
 # Locations
 
-Locations represent addresses inside Gusto. Locations may belong to a number
-of objects, from employees and contractors to companies, and return their
-respective association's id via an appropriately named attribute. For example, a
-<a href="/v1/company_locations">company location</a> will have a `"company_id"`
-property while an employee's home addres will instead have an `"employee_id"`.
+Locations represent company addresses inside Gusto.
 
 ## Attributes
 
@@ -19,8 +15,7 @@ property while an employee's home addres will instead have an `"employee_id"`.
 | :----------                   |:-------------     |:---------:|:--------:|:--------|:-------------
 | `id`                          | Integer           |     X     |          |         | the unique identifier of this company location
 | `version`                     | String            |     X     |          |         | version of this object. See <a href="/v1/considerations/versioning">the versioning documentation</a> for a more in depth explaination of versions
-| `company_id`                 | Integer            |     X     |     X    |         | id for the company to which this location belongs. Only included if address belongs to a company.
-| `employee_id`                 | Integer           |     X     |     X    |         | id for the employee to which this location belongs. Only included if address belongs to an employee.
+| `company_id`                 | Integer            |     X     |          |         | id for the company to which this location belongs. Only included if address belongs to a company.
 | `phone_number`                | String            |           |          |         | phone number for this location. Required for company locations, optional for employee locations
 | `street_1`                    | String            |           |          |         | first line of the address
 | `street_2`                    | String            |           |    X     | null    | second line of the address
