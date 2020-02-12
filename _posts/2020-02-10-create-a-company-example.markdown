@@ -8,11 +8,14 @@ layout: sidebar
 
 ## Overview
 
-Gusto’s company provisioning API provides a way for partners to offer seamless Gusto account creation to their users.
+The company provisioning API provides a way to create a Gusto company as part of your integration. When you successfully call the API, the API does the following:
 
-A successful request will create a new user and company in Gusto, will make the user the primary payroll administrator for the new company, and will send a welcome email to the new user.
+* Creates a new company in Gusto.
+* Creates a new user in Gusto.
+* Makes the new user the primary payroll administrator of the new company.
+* Sends a welcome email to the new user.
 
-A successful response will return an account claim URL that the partner should redirect the user to so that they may finish setting up their account.
+In the response, you will receive an account claim URL. Redirect the user to this URL to complete their account setup inside of Gusto.
 
 ## Authentication
 
@@ -35,17 +38,17 @@ Authorization: Token bbb286ff1a4fe6b84742b0d49b8d0d65bd0208d27d3d50333591df71
 | company                  | Object        | Y            | Information for the new company.
 | company:name             | String        | Y            | Legal name of the company.
 | company:trade_name       | String        | N            | Name of the company.
-| company:ein              | String        | N            | FEIN of the company.
+| company:ein              | String        | N            | The employer identification number (EIN) of the company.
 | company:number_employees | Integer       | N            | The number of employees in the company.
-| company:states           | Array         | N            | The states in which the company operates.
-| company:addresses        | Array         | N            | The locations for the company. This includes mailing, work, and filing addresses.
-| address:street_1         | Object        | Y            |
+| company:states           | Array[String] | N            | The states in which the company operates.
+| company:addresses        | Array[Object] | N            | The locations for the company. This includes mailing, work, and filing addresses.
+| address:street_1         | String        | Y            |
 | address:street_2         | String        | N            |
 | address:city             | String        | Y            |
 | address:state            | String        | Y            |
 | address:zip              | String        | Y            |
 | address:phone            | String        | Y            |
-| address:is_primary       | Boolean       | N            | Whether or not this is a primary address for the company. If set to true, the address will be used as the mailing and filing address for the company and will be added as a work location. If set to false or not included, the address will only be added as a work location for the company.  
+| address:is_primary       | Boolean       | N            | Whether or not this is a primary address for the company. If set to true, the address will be used as the mailing and filing address for the company and will be added as a work location. If set to false or not included, the address will only be added as a work location for the company. If multiple addresses are included, only one should be marked as primary.
 
 
 ## Example Requests
