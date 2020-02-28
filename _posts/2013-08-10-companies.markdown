@@ -21,6 +21,8 @@ layout: sidebar
   "trade_name": "Fezziwig's",
   "ein": "12-3456789",
   "entity_type": "LLC",
+  "is_suspended": false,
+  "is_approved": true,
   "locations": [
     {
       "id": 3141592653589793,
@@ -102,6 +104,8 @@ layout: sidebar
 | `trade_name`              | trade name of this company. This is an optional field.
 | `ein`                     | employer identification number for this company.
 | `entity_type`             | type of company.
+| `is_suspended`            | a boolean representing whether or not the company is suspended in Gusto. A company may be suspended because Gusto suspended the account, or because the company is no longer using Gusto.
+| `is_approved`             | a boolean representing whether or not the company has been approved to use Gusto.
 | `locations`               | array of addresses for all known locations of this company.
 | `id`                      | the unique identifier of this location in the Gusto system.
 | `street_1`                | first line of this address' street.
