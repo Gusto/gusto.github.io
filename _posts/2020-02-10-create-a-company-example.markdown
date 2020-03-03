@@ -28,6 +28,12 @@ Authorization: Token bbb286ff1a4fe6b84742b0d49b8d0d65bd0208d27d3d50333591df71
 
 ## Request Documentation
 
+**HTTP Method**: `POST`
+
+**Endpoint**: `/v1/provision`
+
+**Returns**: A URL to redirect the user to allowing them to confirm their email and claim their account
+
 | **Attribute**            | **Type**      | **Required** | **Description**
 | :----------              |:-------       |:-------      |:-------------
 | user                     | Object        | Y            | Information for the primary payroll administrator for the new company.
