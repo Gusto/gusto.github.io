@@ -21,6 +21,7 @@ layout: sidebar
   "trade_name": "Fezziwig's",
   "ein": "12-3456789",
   "entity_type": "LLC",
+  "company_status": "Approved",
   "locations": [
     {
       "id": 3141592653589793,
@@ -95,35 +96,38 @@ layout: sidebar
 }
 ```
 
-| Field                     | Description
-| :----------               |:-------------
-| `id`                      | the unique identifier of this company in the Gusto system.
-| `name`                    | name of this company.
-| `trade_name`              | trade name of this company. This is an optional field.
-| `ein`                     | employer identification number for this company.
-| `entity_type`             | type of company.
-| `locations`               | array of addresses for all known locations of this company.
-| `id`                      | the unique identifier of this location in the Gusto system.
-| `street_1`                | first line of this address' street.
-| `street_2`                | second line of this address' street.
-| `city`                    | name of address' city.
-| `state`                   | two letter state abbreviation.
-| `zip`                     | five digit zipcode. Returned as a string to maintain leading zeros.
-| `compensations`           | all available company-wide compensations. The above compensations are the default, built-in compensations.
-| `hourly`                  | available hourly compensations
-| `name`                    | name of the compensation
-| `multiple`                | amount multiplied by the base rate of a given job to calculate total compensation per hour worked. For example, if an employee at this company makes $17.00/hour as Kindergarten Cop and works 10 hours of Overtime (which has a multiple of 1.5), he would expect receive $150.
-| `fixed`                   | available fixed compensations
-| `name`                    | name of the compensation
-| `paid_time_off`           | available types of paid time off
-| `name`                    | name of the time off
-| `first_name`              | primary signatory's first name
-| `middle_initial`          | primary signatory's middle initial
-| `last_name`               | primary signatory's last name
-| `phone`                   | primary signatory's phone number
-| `email`                   | primary signatory's email
-| `home_address`            | primary signatory's home address
-| `first_name`              | primary payroll admin's first name
-| `last_name`               | primary payroll admin's last name
-| `phone`                   | primary payroll admin's phone number
-| `email`                   | primary payroll admin's email
+| Attribute                          | Type                           | Description
+| :----------                        |:-------------                  |:-------------
+| `id`                               | Integer                        | The unique identifier of this company in the Gusto system.
+| `name`                             | String                         | The name of this company.
+| `trade_name`                       | String                         | The trade name of this company. This is an optional field.
+| `ein`                              | String                         | The employer identification number for this company.
+| `entity_type`                      | String                         | The type of the company (e.g. "LLC").
+| `company_status`                   | String                         | The status of the company, one of: "Approved", "Not Approved", "Suspended".<br/><br/>"Approved": The company is approved to run payroll with Gusto.<br/><br/>"Not Approved": The company is not approved to run payroll with Gusto. In order to run payroll, the company must contact Gusto support.<br/><br/>"Suspended": The company's Gusto account is suspended and they cannot currently run payroll. In order to unsuspend their account, the company must contact Gusto support.
+| `locations`                        | Array[Address]                 | The locations for the company.
+| `address:id`                       | String                         | The identifier of this location in the Gusto system.
+| `address:street_1`                 | String                         | The first street of the address.
+| `address:street_2`                 | String                         | The second street of the address.
+| `address:city`                     | String                         | The city of the address.
+| `address:state`                    | String                         | The two letter state abbreviation of the address.
+| `address:zip`                      | String                         | The five digit zipcode of the address.
+| `compensations`                    | Object                         | An object containing all available company-wide compensations. The above compensations are the default, built-in compensations.
+| `compensations:hourly`             | Array[HourlyCompensation]      | An array of available hourly compensations.
+| `compensations:hourly:name`        | String                         | The name of the hourly compensation.
+| `compensations:hourly:multiple`    | Integer                        | The amount multiplied by the base rate of a given job to calculate total compensation per hour worked. For example, if an employee at this company makes $17.00/hour and works 10 hours of Overtime (which has a multiple of 1.5), they would expect to receive $150.
+| `compensations:fixed`              | Array[FixedCompensation]       | An array of available fixed compensations.
+| `compensations:fixed:name`         | String                         | The name of the fixed compensation.  
+| `compensations:paid_time_off`      | Array[PaidTimeOffCompensation] | An array of available types of paid time off.
+| `compensations:paid_time_off:name` | String                         | The name of the time off.
+| `primary_signatory`                | Object                         | An object representing the primary signatory of the company.  
+| `primary_signatory:first_name`     | String                         | The primary signatory's first name.
+| `primary_signatory:middle_initial` | String                         | The primary signatory's middle initial.
+| `primary_signatory:last_name`      | String                         | The primary signatory's last name.
+| `primary_signatory:phone`          | String                         | The primary signatory's phone number.
+| `primary_signatory:email`          | String                         | The primary signatory's email.
+| `primary_signatory:home_address`   | String                         | The primary signatory's home address.
+| `primary_payroll_admin`            | Object                         | An object representing the primary payroll administrator of the company.
+| `primary_payroll_admin:first_name` | String                         | The primary payroll admin's first name.
+| `primary_payroll_admin:last_name`  | String                         | The primary payroll admin's last name.
+| `primary_payroll_admin:phone`      | String                         | The primary payroll admin's phone number.
+| `primary_payroll_admin:email`      | String                         | The primary payroll admin's email.
