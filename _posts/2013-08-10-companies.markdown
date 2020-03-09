@@ -102,7 +102,7 @@ layout: sidebar
 | `name`                             | String                         | The name of this company.
 | `trade_name`                       | String                         | The trade name of this company. This is an optional field.
 | `ein`                              | String                         | The employer identification number for this company.
-| `entity_type`                      | String                         | The type of the company (e.g. "LLC").
+| `entity_type`                      | String                         | The tax payer type of the company ("LLC", "S-Corporation", "C-Corporation", "Sole proprietor", "Non-Profit", etc.).
 | `company_status`                   | String                         | The status of the company, one of: "Approved", "Not Approved", "Suspended".<br/><br/>"Approved": The company is approved to run payroll with Gusto.<br/><br/>"Not Approved": The company is not approved to run payroll with Gusto. In order to run payroll, the company needs to either complete onboarding or contact Gusto support.<br/><br/>"Suspended": The company's Gusto account is suspended and they cannot currently run payroll. In order to unsuspend their account, the company must contact Gusto support.
 | `locations`                        | Array[Address]                 | The locations for the company.
 | `address:id`                       | String                         | The identifier of this location in the Gusto system.
