@@ -19,8 +19,8 @@ title: Contractors
 | `first_name`                  | String            |           |          |         | The contractor's first name. This attribute is required for "Individual" contractors and will be ignored for "Business" contractors.
 | `middle_initial`              | String            |           |    X     | null    | The contractor's middle initial. This attribute is optional for "Individual" contractors and will be ignored for "Business" contractors.
 | `last_name`                   | String            |           |          |         | The contractor's last name. This attribute is required for "Individual" contractors and will be ignored for "Business" contractors.
-| `email`                       | String            |           |    X     | null    | The contractor's email address. This attribute is optional for "Individual" contractors and will be ignored for "Business" contractors. This attribute should only be included in POST requests.
-| `self_onboarding`             | Boolean           |           |    X     | false   | Whether the contractor will complete onboarding in Gusto themselves, or if the administrator should complete their onboarding. It is recommended for contractors to self-onboard so that Gusto accounts are immediately created for them. If `self_onboarding` is true, then `email` is required. This attribute should only be included in POST requests.
+| `email`                       | String            |           |    X     | null    | The contractor's email address. This attribute is optional for "Individual" contractors and will be ignored for "Business" contractors. This attribute should only be included in POST requests. If `email` is included in a PUT request, it will be ignored.
+| `self_onboarding`             | Boolean           |           |    X     | false   | Specifies whether the contractor or the administrator will complete onboarding in. Self-onboarding is recommended so that contractors receive Gusto accounts. If `self_onboarding` is true, then `email` is required. This attribute should only be included in POST requests. If `self_onboarding` is included in a PUT request, it will be ignored.
 | `business_name`               | String            |           |          |         | The name of the contractor business. This attribute is required for "Business" contractors and will be ignored for "Individual" contractors.
 | `ein`                         | String            |           |    X     | null    | The employer identification number of the contractor business. This attribute is optional for "Business" contractors and will be ignored for "Individual" contractors.
 | `wage_type`                   | String            |           |          |         | The contractor's wage type, either "Fixed" or "Hourly".
@@ -57,14 +57,12 @@ title: Contractors
     "ein": null,
     "email": "keira.west@mckenzie.org",
     "address": {
-        "id": 7757869449984763,
         "street_1": "621 Jast Row",
         "street_2": "Apt. 281",
         "city": "Coral Springs",
         "state": "FL",
         "zip": "33065",
-        "country": "USA",
-        "active": true
+        "country": "USA"
     },
     "hourly_rate": "0.00"
 }
@@ -96,14 +94,12 @@ title: Contractors
     "ein": null,
     "email": "keira.west@mckenzie.org",
     "address": {
-        "id": 7757869449984763,
         "street_1": "621 Jast Row",
         "street_2": "Apt. 281",
         "city": "Coral Springs",
         "state": "FL",
         "zip": "33065",
-        "country": "USA",
-        "active": true
+        "country": "USA"
     },
     "hourly_rate": "0.00"
 },
@@ -121,14 +117,12 @@ title: Contractors
     "ein": "XX-XXX0001",
     "email": "jonatan@kerluke.info",
     "address": {
-        "id": 7757869450215176,
         "street_1": "1625 Bednar Center",
         "street_2": "Apt. 480",
         "city": "Port Charlotte",
         "state": "FL",
         "zip": "33954",
-        "country": "USA",
-        "active": true
+        "country": "USA"
     },
     "hourly_rate": "0.00"
 },
@@ -146,14 +140,12 @@ title: Contractors
     "ein": null,
     "email": "loyal@hettinger.biz",
     "address": {
-        "id": 7757869450331498,
         "street_1": "35913 Darrick Run",
         "street_2": "Apt. 913",
         "city": "Cypress",
         "state": "TX",
         "zip": "77433",
-        "country": "USA",
-        "active": true
+        "country": "USA"
     },
     "hourly_rate": "0.00"
 }]
@@ -165,7 +157,7 @@ title: Contractors
 
 **Endpoint**: `/v1/companies/:company_id/contractors`
 
-**Returns**: The representation of the created contractor, or errors which prevented the creation.
+**Returns**: The representation of the created contractor or errors which prevented the creation.
 
 ```json
 {
@@ -185,7 +177,7 @@ title: Contractors
 
 **Endpoint**: `/v1/companies/:company_id/contractors`
 
-**Returns**: The representation of the create contractor, or errors which prevented the creation.
+**Returns**: The representation of the create contractor or errors which prevented the creation.
 
 ```json
 {
@@ -202,7 +194,7 @@ title: Contractors
 
 **Endpoint**: `/v1/contractors/:contractor_id`
 
-**Returns**: The representation of the updated contractor, or errors which prevented the update.
+**Returns**: The representation of the updated contractor or errors which prevented the update.
 
 ```json
 {
