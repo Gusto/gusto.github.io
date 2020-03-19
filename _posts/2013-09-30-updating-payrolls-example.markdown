@@ -14,7 +14,7 @@ Here we'll walk through updating the payroll information for one employee and ho
 
 We'll be using Ruby, with inefficient code, but the purpose of this example is to outline the flow rather than provide a production-ready implementation.
 
-These examples will assume an <a href="/v1/examples/authentication">authenticated</a> application and will also assume the bearer token is being specified via the `Authorization` HTTP header.
+These examples will assume an <a href="/v1/basics/authentication">authenticated</a> application and will also assume the bearer token is being specified via the `Authorization` HTTP header.
 
 ### Get Unprocessed Payroll
 

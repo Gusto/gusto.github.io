@@ -11,7 +11,7 @@ The accounts API is for creating accounts for new customers on Gusto. With
 a minimum amount of information, partners may create a user, company, and the
 related permissions to go from setup onboarding information.
 
-**Note** This endpoint requires authorization via [Token Authentication](/v1/examples/authentication#api-token-authentication) with an API token. Normal OAuth credentials will _not_ allow
+**Note** This endpoint requires authorization via [Token Authentication](/v1/basics/authentication#api-token-authentication) with an API token. Normal OAuth credentials will _not_ allow
 account creation.
 
 ## Attributes
