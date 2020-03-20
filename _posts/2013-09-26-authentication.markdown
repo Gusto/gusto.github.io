@@ -1,5 +1,5 @@
 ---
-permalink: v1/examples/authentication
+permalink: v1/basics/authentication
 layout: sidebar
 title: Authentication Example
 ---

@@ -8,7 +8,7 @@ title: Syncing Employees Example
 
 ## Are We Talking About The Same People?
 
-You have successfully <a href="/v1/examples/authentication">integrated with OAuth</a>, gotten back the authenticated
+You have successfully <a href="/v1/basics/authentication">integrated with OAuth</a>, gotten back the authenticated
 companies for the <a href="/v1/current_user">current user</a>, and fetched the
 <a href="/v1/companies">company information</a>.
 
