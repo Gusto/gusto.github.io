@@ -45,7 +45,6 @@ layout: sidebar
       "company_debit": "2791.25",
       "reimbursements": "0.00",
       "net_pay": "1953.31",
-      "correction": "0.00",
       "employer_taxes": "191.25",
       "employee_taxes": "646.69",
       "benefits": "0.0"
