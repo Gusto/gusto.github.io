@@ -19,7 +19,7 @@ title: Employees
 | `company_id`                  | Integer           |     X     |          |         | employee's company ID
 | `manager_id`                  | Integer           |     X     |          | null    | employee's manager ID
 | `department`                  | String            |     X     |          | null    | employee's department.
-| `ssn`                         | String            |           |    X     | null    | Updates only (reads have been deprecated - this returns an empty string since July 2020). When updating this attribute, format should be a string of nine numbers (no dashes.)
+| `ssn`                         | String            |           |    X     | ""      | Updates only (reads have been deprecated - this returns an empty string since July 2020). When updating this attribute, format should be a string of nine numbers (no dashes.)
 | `date_of_birth`               | String            |           |    X     | null    | employee's birthday!
 | `jobs`                        | Array             |     X     |          |         | array of job information. See <a href="/v1/jobs">jobs documentation</a> for full documentation and endpoints.
 | `home_address`                | Object            |     X     |          |         | employee's home address. See <a href="/v1/employee_home_address">employee home address documentation</a> for full documentation and endpoints.
@@ -51,7 +51,7 @@ title: Employees
   "manager_id": 7757869431804236,
   "department": "Marketing",
   "email": "knight0faith@initech.biz",
-  "ssn": "XXX-XX-2940",
+  "ssn": "",
   "date_of_birth": "1990-05-05",
   "jobs": [
     {
@@ -119,7 +119,7 @@ title: Employees
     "manager_id": 7757869431804236,
     "department": "Marketing",
     "email": "knight0faith@initech.biz",
-    "ssn": "XXX-XX-2940",
+    "ssn": "",
     "date_of_birth": "1990-05-05",
     "jobs": [
       {
