@@ -40,7 +40,7 @@ layout: sidebar
     "manager_id": 7757869431804236,
     "department": "Marketing",
     "email": "knight0faith@initech.biz",
-    "ssn": "XXX-XX-2940",
+    "ssn": "",
     "date_of_birth": "1990-05-05",
     "jobs": [
       {
