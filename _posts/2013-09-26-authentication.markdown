@@ -10,6 +10,10 @@ title: Authentication Example
 
 Due to the sensitive nature of payroll, all potential integrations must be vetted and approved by Gusto.
 
+When developing an integration, all API calls should be made to `api.gusto-demo.com`. Once the integration is reviewed by Gusto, we’ll request a callback URI for your production system. After you receive production API keys, all calls should be made to `api.gusto.com`.
+
+If you'd like to be considered for a future integration partnership, please complete this short [application](https://forms.gle/dPj9KymfaxpT4RPH9). 
+
 ## OAuth
 
 ### Getting Started
@@ -32,8 +36,10 @@ Here is the sample application information we'll use throughout:
 ```
   id:           bbb286ff1a4fe6b84742b0d49b8d0d65bd0208d27d3d50333591df71c45da519
   secret:       cb06cb755b868a819ead51671f0f7e9c35c7c4cbbae0e38bef167e0e4ba64ee6
-  redirect_url: https://example.com/callback
+  redirect_uri: https://example.com/callback
 ```
+
+The `redirect_uri` is sometimes referred to as a `callback URI` and the id can also be called a `client_id`. The id and secret will be generated when you supply a `redirect_uri` to Gusto. (Note: when you receive your API keys for Gusto, we will include an API Token. This API token is only used when creating a company through the API.)
 
 ### Authorization Code
 
