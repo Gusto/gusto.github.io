@@ -36,8 +36,8 @@ layout: sidebar
       "net_pay": "1953.31",
       "employer_taxes": "191.25",
       "employee_taxes": "646.69",
-      "benefits": "0.0",
-      "employee_benefits_deductions": "0.0"
+      "benefits": "0.00",
+      "employee_benefits_deductions": "0.00"
     },
     "employee_compensations": [
       {
@@ -241,8 +241,8 @@ You may provide all, none, or any combination of them to scope the returned data
     "net_pay": "1953.31",
     "employer_taxes": "191.25",
     "employee_taxes": "646.69",
-    "benefits": "0.0",
-    "employee_benefits_deductions": "0.0"
+    "benefits": "0.00",
+    "employee_benefits_deductions": "0.00"
   },
   "employee_compensations": [
     {
