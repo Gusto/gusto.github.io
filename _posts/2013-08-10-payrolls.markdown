@@ -37,7 +37,8 @@ layout: sidebar
       "employer_taxes": "191.25",
       "employee_taxes": "646.69",
       "benefits": "0.00",
-      "employee_benefits_deductions": "0.00"
+      "employee_benefits_deductions": "0.00",
+      "deferred_payroll_taxes": "0.00"
     },
     "employee_compensations": [
       {
@@ -242,7 +243,8 @@ You may provide all, none, or any combination of them to scope the returned data
     "employer_taxes": "191.25",
     "employee_taxes": "646.69",
     "benefits": "0.00",
-    "employee_benefits_deductions": "0.00"
+    "employee_benefits_deductions": "0.00",
+    "deferred_payroll_taxes": "0.00"
   },
   "employee_compensations": [
     {
