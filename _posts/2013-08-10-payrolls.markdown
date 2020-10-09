@@ -362,13 +362,14 @@ You may provide all, none, or any combination of them to scope the returned data
 | `check_date`              | the date at which employees will be paid for this payroll.
 | `processed`               | whether or not this payroll has been successfully run. If it has, you should consider it 'frozen', as any attempts to update its data will be rejected. Note that passing the `payroll_deadline` does not guarantee that the payroll has been processed; running late payrolls is not uncommon.  Similarly, Gusto users may choose to run payroll before the `payroll_deadline`.
 | `totals`                  | subtotals for this payroll
-| `company_debit`           | the total company debit for the payroll
-| `reimbursements`          | the total reimbursements for the payroll
-| `net_pay`                 | the net pay amount for the payroll
-| `employer_taxes`          | the amount of employer paid taxes for the payroll
-| `employee_taxes`          | the amount of employee paid taxes for the payroll
-| `benefits`                | the amount of company contributed benefits for the payroll
-| `employee_benefits_deductions` | the amount of employee deducted benefits for the payroll
+| `totals:company_debit`    | the total company debit for the payroll
+| `totals:reimbursements`   | the total reimbursements for the payroll
+| `totals:net_pay`          | the net pay amount for the payroll
+| `totals:employer_taxes`   | the amount of employer paid taxes for the payroll
+| `totals:employee_taxes`   | the amount of employee paid taxes for the payroll
+| `totals:benefits`         | the amount of company contributed benefits for the payroll
+| `totals:employee_benefits_deductions` | the amount of employee deducted benefits for the payroll
+| `totals:deferred_payroll_taxes`       | the amount of payroll taxes deferred for the payroll, such as that allowed by the CARES act
 | `employee_compensations`  | array of every employee eligible for this pay period. For a given employee, we return the current state of information related to this employee for this payroll.
 | `employee_id`             | the unique identifier for this employee in the Gusto system.
 | `fixed_compensations`     | array of fixed compensations. Examples of fixed compensations include tips, bonus, or one time reimbursements. If this payroll has been processed, returns only those which have values greater than 0.00. For unprocessed payrolls, returns all active compensations.
