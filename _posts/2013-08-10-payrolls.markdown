@@ -32,12 +32,22 @@ layout: sidebar
     },
     "totals": {
       "company_debit": "2791.25",
+      "net_pay_debit": "1953.31",
+      "reimbursement_debit": "0.00",
+      "child_support_debit": "0.00",
       "reimbursements": "0.00",
       "net_pay": "1953.31",
+      "gross_pay": "2781.00",
+      "employee_bonuses": "0.00",
+      "employee_commissions": "0.00",
+      "employee_cash_tips": "0.00",
+      "employee_paycheck_tips": "0.00",
+      "additional_earnings": "0.00",
       "employer_taxes": "191.25",
       "employee_taxes": "646.69",
-      "benefits": "0.0",
-      "employee_benefits_deductions": "0.0"
+      "benefits": "0.00",
+      "employee_benefits_deductions": "0.00",
+      "deferred_payroll_taxes": "0.00"
     },
     "employee_compensations": [
       {
@@ -157,29 +167,38 @@ layout: sidebar
 | `processed`               | whether or not this payroll has been successfully run. If it has, you should consider it 'frozen', as any attempts to update its data will be rejected. Note that passing the `payroll_deadline` does not guarantee that the payroll has been processed; running late payrolls is not uncommon.  Similarly, Gusto users may choose to run payroll before the `payroll_deadline`.
 | `totals`                  | subtotals for this payroll
 | `totals:company_debit`    | the total company debit for the payroll
+| `totals:net_pay_debit`    | the total company net pay for the payroll
+| `totals:reimbursement_debit` | the total reimbursement debit for the payroll
+| `totals:child_support_debit` | the total child support debit for the payroll
 | `totals:reimbursements`   | the total reimbursements for the payroll
 | `totals:net_pay`          | the net pay amount for the payroll
+| `totals:gross_pay`        | the gross pay amount for the payroll
+| `totals:employee_bonuses` | the employee bonuses for the payroll
+| `totals:employee_commissions`   | the employee commissions for the payrol
+| `totals:employee_cash_tips`     | the employee cash tips for the payroll
+| `totals:employee_paycheck_tips` | the employee paycheck tips for the payroll
+| `totals:additional_earnings`    | the additional earnings for the payroll
 | `totals:employer_taxes`   | the amount of employer paid taxes for the payroll
 | `totals:employee_taxes`   | the amount of employee paid taxes for the payroll
 | `totals:benefits`         | the amount of company contributed benefits for the payroll
 | `totals:employee_benefits_deductions` | the amount of employee deducted benefits for the payroll
 | `totals:deferred_payroll_taxes`       | the amount of payroll taxes deferred for the payroll, such as that allowed by the CARES act
 | `employee_compensations`  | array of every employee eligible for this pay period. For a given employee, we return the current state of information related to this employee for this payroll.
-| `employee_id`             | the unique identifier for this employee in the Gusto system.
-| `fixed_compensations`     | array of fixed compensations. Examples of fixed compensations include tips, bonus, or one time reimbursements. If this payroll has been processed, returns only those which have values greater than 0.00. For unprocessed payrolls, returns all active compensations.
-| `name`                    | name of the compensation. This also serves as the unique, immutable identifier for this compensation.
-| `amount`                  | amount of compensation for this pay period.
+| `employee_compensations:employee_id`                | the unique identifier for this employee in the Gusto system.
+| `employee_compensations:gross_pay`                  | employee's gross pay, only available for processed payrolls
+| `employee_compensations:net_pay`                    | employee's net pay, only available for processed payrolls
+| `employee_compensations:payment_method`             | compensation payment method ("Direct Deposit" or "Check"), only available for processed payrolls
+| `employee_compensations:fixed_compensations`        | array of fixed compensations. Examples of fixed compensations include tips, bonus, or one time reimbursements. If this payroll has been processed, returns only those which have values greater than 0.00. For unprocessed payrolls, returns all active compensations.
+| `employee_compensations:fixed_compensations:name`   | name of the compensation. This also serves as the unique, immutable identifier for this compensation.
+| `employee_compensations:fixed_compensations:amount` | amount of compensation for this pay period.
 | `hourly_compensations`    | array of hourly compensations. Examples of hourly compensations include regular, overtime, and double overtime hours. If this payroll has been processed, returns only those which have values greater than 0.00. For unprocessed payrolls, returns all active compensations.
-| `name`                    | name of the compensation. This also serves as the unique, immutable identifier for this compensation.
-| `hours`                   | hours to be compensated for during this pay period.
-| `job_id`                  | unique identifier of the job worked for given number of `hours` this pay period.
-| `compensation_multiplier` | amount multiplied by the base rate to calculate total compensation per hour worked. So the total gross compensation for a single hourly compensation could be calculated by multiplying the the `hours` worked by the `rate` of the job worked, times the `compensation_multiplier`.
+| `hourly_compensations:name`                    | name of the compensation. This also serves as the unique, immutable identifier for this compensation.
+| `hourly_compensations:hours`                   | hours to be compensated for during this pay period.
+| `hourly_compensations:job_id`                  | unique identifier of the job worked for given number of `hours` this pay period.
+| `hourly_compensations:compensation_multiplier` | amount multiplied by the base rate to calculate total compensation per hour worked. So the total gross compensation for a single hourly compensation could be calculated by multiplying the the `hours` worked by the `rate` of the job worked, times the `compensation_multiplier`.
 | `paid_time_off`           | array of all paid time off (PTO) for which this employee is eligible
-| `name`                    | name of the PTO. This also serves as the unique, immutable identifier for this PTO.
-| `hours`                   | hours taken of this PTO during this pay period.
-| `gross_pay`               | employee's gross pay, only available for processed payrolls
-| `net_pay`                 | employee's net pay, only available for processed payrolls
-| `payment_method`          | compensation payment method ("Direct Deposit" or "Check"), only available for processed payrolls
+| `paid_time_off:name`      | name of the PTO. This also serves as the unique, immutable identifier for this PTO.
+| `paid_time_off:hours`     | hours taken of this PTO during this pay period.
 | `benefits`                | array of employee benefits, only available for processed payrolls when optional `include` parameter is used. Each benefit includes the `name` of the benefit, the `employee_deduction` amount, the `company_contribution` amount, and whether or not the benefit is `imputed`. Refer to Optional Parameters section for more details.
 | `deductions`              | array of employee deductions, only available for processed payrolls when optional `include` parameter is used. Each deduction includes the `name` of the deduction and the deduction `amount`. Refer to Optional Parameters section for more details.
 | `taxes`                   | array of employer and employee taxes, only available for processed payrolls when optional `include` parameter is used. Each tax includes the `name` of the tax, the `amount` of the tax, and whether it is an `employer` tax. Refer to Optional Parameters section for more details.
@@ -237,12 +256,22 @@ You may provide all, none, or any combination of them to scope the returned data
   },
   "totals": {
     "company_debit": "2791.25",
+    "net_pay_debit": "1953.31",
+    "reimbursement_debit": "0.00",
+    "child_support_debit": "0.00",
     "reimbursements": "0.00",
     "net_pay": "1953.31",
+    "gross_pay": "2781.00",
+    "employee_bonuses": "0.00",
+    "employee_commissions": "0.00",
+    "employee_cash_tips": "0.00",
+    "employee_paycheck_tips": "0.00",
+    "additional_earnings": "0.00",
     "employer_taxes": "191.25",
     "employee_taxes": "646.69",
-    "benefits": "0.0",
-    "employee_benefits_deductions": "0.0"
+    "benefits": "0.00",
+    "employee_benefits_deductions": "0.00",
+    "deferred_payroll_taxes": "0.00"
   },
   "employee_compensations": [
     {
@@ -360,29 +389,39 @@ You may provide all, none, or any combination of them to scope the returned data
 | `check_date`              | the date at which employees will be paid for this payroll.
 | `processed`               | whether or not this payroll has been successfully run. If it has, you should consider it 'frozen', as any attempts to update its data will be rejected. Note that passing the `payroll_deadline` does not guarantee that the payroll has been processed; running late payrolls is not uncommon.  Similarly, Gusto users may choose to run payroll before the `payroll_deadline`.
 | `totals`                  | subtotals for this payroll
-| `company_debit`           | the total company debit for the payroll
-| `reimbursements`          | the total reimbursements for the payroll
-| `net_pay`                 | the net pay amount for the payroll
-| `employer_taxes`          | the amount of employer paid taxes for the payroll
-| `employee_taxes`          | the amount of employee paid taxes for the payroll
-| `benefits`                | the amount of company contributed benefits for the payroll
-| `employee_benefits_deductions` | the amount of employee deducted benefits for the payroll
+| `totals:company_debit`    | the total company debit for the payroll
+| `totals:net_pay_debit`    | the total company net pay for the payroll
+| `totals:reimbursement_debit` | the total reimbursement debit for the payroll
+| `totals:child_support_debit` | the total child support debit for the payroll
+| `totals:reimbursements`   | the total reimbursements for the payroll
+| `totals:net_pay`          | the net pay amount for the payroll
+| `totals:gross_pay`        | the gross pay amount for the payroll
+| `totals:employee_bonuses` | the employee bonuses for the payroll
+| `totals:employee_commissions`   | the employee commissions for the payrol
+| `totals:employee_cash_tips`     | the employee cash tips for the payroll
+| `totals:employee_paycheck_tips` | the employee paycheck tips for the payroll
+| `totals:additional_earnings`    | the additional earnings for the payroll
+| `totals:employer_taxes`   | the amount of employer paid taxes for the payroll
+| `totals:employee_taxes`   | the amount of employee paid taxes for the payroll
+| `totals:benefits`         | the amount of company contributed benefits for the payroll
+| `totals:employee_benefits_deductions` | the amount of employee deducted benefits for the payroll
+| `totals:deferred_payroll_taxes`       | the amount of payroll taxes deferred for the payroll, such as that allowed by the CARES act
 | `employee_compensations`  | array of every employee eligible for this pay period. For a given employee, we return the current state of information related to this employee for this payroll.
-| `employee_id`             | the unique identifier for this employee in the Gusto system.
-| `fixed_compensations`     | array of fixed compensations. Examples of fixed compensations include tips, bonus, or one time reimbursements. If this payroll has been processed, returns only those which have values greater than 0.00. For unprocessed payrolls, returns all active compensations.
-| `name`                    | name of the compensation. This also serves as the unique, immutable identifier for this compensation.
-| `amount`                  | amount of compensation for this pay period.
+| `employee_compensations:employee_id`                | the unique identifier for this employee in the Gusto system.
+| `employee_compensations:gross_pay`                  | employee's gross pay, only available for processed payrolls
+| `employee_compensations:net_pay`                    | employee's net pay, only available for processed payrolls
+| `employee_compensations:payment_method`             | compensation payment method ("Direct Deposit" or "Check"), only available for processed payrolls
+| `employee_compensations:fixed_compensations`        | array of fixed compensations. Examples of fixed compensations include tips, bonus, or one time reimbursements. If this payroll has been processed, returns only those which have values greater than 0.00. For unprocessed payrolls, returns all active compensations.
+| `employee_compensations:fixed_compensations:name`   | name of the compensation. This also serves as the unique, immutable identifier for this compensation.
+| `employee_compensations:fixed_compensations:amount` | amount of compensation for this pay period.
 | `hourly_compensations`    | array of hourly compensations. Examples of hourly compensations include regular, overtime, and double overtime hours. If this payroll has been processed, returns only those which have values greater than 0.00. For unprocessed payrolls, returns all active compensations.
-| `name`                    | name of the compensation. This also serves as the unique, immutable identifier for this compensation.
-| `hours`                   | hours to be compensated for during this pay period.
-| `job_id`                  | unique identifier of the job worked for given number of `hours` this pay period.
-| `compensation_multiplier` | amount multiplied by the base rate to calculate total compensation per hour worked. So the total gross compensation for a single hourly compensation could be calculated by multiplying the the `hours` worked by the `rate` of the job worked, times the `compensation_multiplier`.
+| `hourly_compensations:name`                    | name of the compensation. This also serves as the unique, immutable identifier for this compensation.
+| `hourly_compensations:hours`                   | hours to be compensated for during this pay period.
+| `hourly_compensations:job_id`                  | unique identifier of the job worked for given number of `hours` this pay period.
+| `hourly_compensations:compensation_multiplier` | amount multiplied by the base rate to calculate total compensation per hour worked. So the total gross compensation for a single hourly compensation could be calculated by multiplying the the `hours` worked by the `rate` of the job worked, times the `compensation_multiplier`.
 | `paid_time_off`           | array of all paid time off (PTO) for which this employee is eligible
-| `name`                    | name of the PTO. This also serves as the unique, immutable identifier for this PTO.
-| `hours`                   | hours taken of this PTO during this pay period.
-| `gross_pay`               | employee's gross pay, only available for processed payrolls
-| `net_pay`                 | employee's net pay, only available for processed payrolls
-| `payment_method`          | compensation payment method ("Direct Deposit" or "Check"), only available for processed payrolls
+| `paid_time_off:name`      | name of the PTO. This also serves as the unique, immutable identifier for this PTO.
+| `paid_time_off:hours`     | hours taken of this PTO during this pay period.
 | `benefits`                | array of employee benefits, only available for processed payrolls when optional `include` parameter is used. Each benefit includes the `name` of the benefit, the `employee_deduction` amount, the `company_contribution` amount, and whether or not the benefit is `imputed`. Refer to Optional Parameters section for more details.
 | `deductions`              | array of employee deductions, only available for processed payrolls when optional `include` parameter is used. Each deduction includes the `name` of the deduction and the deduction `amount`. Refer to Optional Parameters section for more details.
 | `taxes`                   | array of employer and employee taxes, only available for processed payrolls when optional `include` parameter is used. Each tax includes the `name` of the tax, the `amount` of the tax, and whether it is an `employer` tax. Refer to Optional Parameters section for more details.
