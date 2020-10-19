@@ -22,6 +22,8 @@ Authentication is done using [OAuth2](http://oauth.net/2/). Numerous libraries i
 
 Should you choose to implement your own flow, or if you just want to know more about what goes on behind the scenes, we'll walk through the basics of authenticating with Gusto via OAuth. It can be a bit tricky - even with a library - so if you have questions at any point, please send us an email.
 
+Only primary admins or full access admins on the Gusto account can enable and authenticate a new application’s access (the “user” in the outline below).
+
 Outline:
 
 - Direct user to authorize
