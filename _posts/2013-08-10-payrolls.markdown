@@ -33,6 +33,7 @@ layout: sidebar
     "totals": {
       "company_debit": "2791.25",
       "net_pay_debit": "1953.31",
+      "tax_debit": "157.00",
       "reimbursement_debit": "0.00",
       "child_support_debit": "0.00",
       "reimbursements": "0.00",
@@ -168,6 +169,7 @@ layout: sidebar
 | `totals`                  | subtotals for this payroll
 | `totals:company_debit`    | the total company debit for the payroll
 | `totals:net_pay_debit`    | the total company net pay for the payroll
+| `totals:tax_debit`        | the total tax debit for the payroll
 | `totals:reimbursement_debit` | the total reimbursement debit for the payroll
 | `totals:child_support_debit` | the total child support debit for the payroll
 | `totals:reimbursements`   | the total reimbursements for the payroll
@@ -257,6 +259,7 @@ You may provide all, none, or any combination of them to scope the returned data
   "totals": {
     "company_debit": "2791.25",
     "net_pay_debit": "1953.31",
+    "tax_debit": "157.00",
     "reimbursement_debit": "0.00",
     "child_support_debit": "0.00",
     "reimbursements": "0.00",
@@ -391,6 +394,7 @@ You may provide all, none, or any combination of them to scope the returned data
 | `totals`                  | subtotals for this payroll
 | `totals:company_debit`    | the total company debit for the payroll
 | `totals:net_pay_debit`    | the total company net pay for the payroll
+| `totals:tax_debit`        | the total tax debit for the payroll
 | `totals:reimbursement_debit` | the total reimbursement debit for the payroll
 | `totals:child_support_debit` | the total child support debit for the payroll
 | `totals:reimbursements`   | the total reimbursements for the payroll
