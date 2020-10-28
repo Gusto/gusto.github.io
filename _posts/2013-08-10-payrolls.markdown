@@ -45,6 +45,7 @@ layout: sidebar
       "employee_paycheck_tips": "0.00",
       "additional_earnings": "0.00",
       "owners_draw": "0.00",
+      "check_amount": "1953.31",
       "employer_taxes": "191.25",
       "employee_taxes": "646.69",
       "benefits": "0.00",
@@ -182,6 +183,7 @@ layout: sidebar
 | `totals:employee_paycheck_tips` | the employee paycheck tips for the payroll
 | `totals:additional_earnings`    | the additional earnings for the payroll
 | `totals:owners_draw`      | the owner's draw for the payroll
+| `totals:check_amount`     | the check amount for the payroll
 | `totals:employer_taxes`   | the amount of employer paid taxes for the payroll
 | `totals:employee_taxes`   | the amount of employee paid taxes for the payroll
 | `totals:benefits`         | the amount of company contributed benefits for the payroll
@@ -273,6 +275,7 @@ You may provide all, none, or any combination of them to scope the returned data
     "employee_paycheck_tips": "0.00",
     "additional_earnings": "0.00",
     "owners_draw": "0.00",
+    "check_amount": "1953.31",
     "employer_taxes": "191.25",
     "employee_taxes": "646.69",
     "benefits": "0.00",
@@ -409,6 +412,7 @@ You may provide all, none, or any combination of them to scope the returned data
 | `totals:employee_paycheck_tips` | the employee paycheck tips for the payroll
 | `totals:additional_earnings`    | the additional earnings for the payroll
 | `totals:owners_draw`      | the owner's draw for the payroll
+| `totals:check_amount`     | the check amount for the payroll
 | `totals:employer_taxes`   | the amount of employer paid taxes for the payroll
 | `totals:employee_taxes`   | the amount of employee paid taxes for the payroll
 | `totals:benefits`         | the amount of company contributed benefits for the payroll
