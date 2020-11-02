@@ -18,7 +18,7 @@ when they should be paid. A company can have multiple pay schedules.
 | `anchor_pay_date`                 | String           |     X     |          |         | The first date that employees on this pay schedule are paid with Gusto
 | `day_1`                      | Integer           |     X     |     X    |         | An integer between 1 and 31 indicating the first day of the month that employees are paid. This field is only relevant for pay schedules with the "Twice per month" and "Monthly" frequencies. It will be null for pay schedules with other frequencies.
 | `day_2`                      | Integer           |     X     |     X    |         | An integer between 1 and 31 indicating the second day of the month that employees are paid. This field is the second pay date for pay schedules with the "Twice per month" frequency. It will be null for pay schedules with other frequencies.
-| `name`                      | String           |     X     |     X     |         | 'Hourly' when the pay schedule is for hourly employees. 'Salaried' when the pay schedule is for salaried employees. It will be null when the pay schedule is for all employees.
+| `name`                      | String           |     X     |     X     |         | A name describing the pay group, for example, "Hourly" when all hourly employees are assigned to it, or the name of the department if the pay schedule is for an entire department. The name of the schedule is dependent on how a company decides to group employees into pay schedules and should not be used programmatically to make any assumptions.
 
 ## Get a pay schedule
 
@@ -55,19 +55,27 @@ when they should be paid. A company can have multiple pay schedules.
 [
   {
     "id": 1,
-    "frequency": "Twice per week",
-    "anchor_pay_date": "2018-01-12",
-    "day_1": null,
-    "day_2": null,
-    "name": "Hourly"
+    "frequency": "Twice per month",
+    "anchor_pay_date": "2020-05-15",
+    "day_1": 15,
+    "day_2": 31,
+    "name": "Engineering"
   },
   {
     "id": 2,
-    "frequency": "Twice per month",
-    "anchor_pay_date": "2018-09-01",
-    "day_1": 1,
-    "day_2": 15,
-    "name": "Salaried"
+    "frequency": "Monthly",
+    "anchor_pay_date": "2020-05-31",
+    "day_1": 31,
+    "day_2": null,
+    "name": "Sales"
+  },
+  {
+    "id": 3,
+    "frequency": "Monthly",
+    "anchor_pay_date": "2020-05-31",
+    "day_1": 31,
+    "day_2": null,
+    "name": "Staff"
   }
 ]
 ```
