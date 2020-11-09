@@ -249,4 +249,4 @@ This means that you will need to refetch the payroll data for that pay period an
   GET https://api.gusto.com/v1/companies/94158/payrolls?processed=false&start_date={{ site.time | date: '%Y' }}-01-16&end_date={{ site.time | date: '%Y' }}-01-31
 ```
 
-This should only return that one payroll and we can recompute the data specifically for that pay period. Do not simply copy over the new `version` and resubmit, as you'll likely be overwriting information that the user, an internal Gusto process, or another 3rd party application. This can lead to incorrect pay, miscalculated taxes, and upset users 
+This should only return that one payroll and we can recompute the data specifically for that pay period. Do not simply copy over the new `version` and resubmit, as you'll likely be overwriting information that the user, an internal Gusto process, or another 3rd party application. This can lead to incorrect pay, miscalculated taxes, and upset users.
