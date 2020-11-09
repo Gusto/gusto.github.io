@@ -18,7 +18,7 @@ when they should be paid. A company can have multiple pay schedules.
 | `anchor_pay_date`                 | String           |     X     |          |         | The first date that employees on this pay schedule are paid with Gusto
 | `day_1`                      | Integer           |     X     |     X    |         | An integer between 1 and 31 indicating the first day of the month that employees are paid. This field is only relevant for pay schedules with the "Twice per month" and "Monthly" frequencies. It will be null for pay schedules with other frequencies.
 | `day_2`                      | Integer           |     X     |     X    |         | An integer between 1 and 31 indicating the second day of the month that employees are paid. This field is the second pay date for pay schedules with the "Twice per month" frequency. It will be null for pay schedules with other frequencies.
-| `name`                      | String           |     X     |     X     |         | A name describing the pay group, for example, "Hourly" when all hourly employees are assigned to it, or the name of the department if the pay schedule is for an entire department. The name of the schedule is dependent on how a company decides to group employees into pay schedules and should not be used programmatically to make any assumptions.
+| `name`                      | String           |     X     |     X     |         | A name describing the pay schedule group. The name of the schedule is dependent on how a company groups their employees into pay schedules. For example, Hourly for all hourly employees or a department name if the pay schedule is for an entire department. This name should not be used programmatically to make any assumptions.
 
 ## Get a pay schedule
 
