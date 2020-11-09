@@ -33,11 +33,11 @@ when they should be paid. A company can have multiple pay schedules.
 ```json
 {
   "id": 1,
-  "frequency": "Every other week",
-  "anchor_pay_date": "2018-01-12",
-  "day_1": null,
-  "day_2": null,
-  "name": "Hourly"
+  "frequency": "Twice per month",
+  "anchor_pay_date": "2020-05-15",
+  "day_1": 15,
+  "day_2": 31,
+  "name": "Engineering"
 }
 ```
 

@@ -90,47 +90,6 @@ json_response = [
     ]
   },
   {
-    "version" => "19289df18e6e20f797de4a585ea5a91535c7ddf7",
-    "payroll_deadline" => "{{ site.time | date: '%Y' }}-01-18",
-    "processed" => false,
-    "pay_period" => {
-      "start_date" => "{{ site.time | date: '%Y' }}-01-01",
-      "end_date" => "{{ site.time | date: '%Y' }}-01-15",
-      "pay_schedule_id" => 7757500542932121
-    },
-    "employee_compensations" => [
-      {
-        "employee_id" => 1323581379452363,
-        "fixed_compensations" => [
-          {
-            "name" => "Bonus",
-            "amount" => "0.00",
-            "job_id" => 1
-          },
-          {
-            "name" => "Commission",
-            "amount" => "0.00",
-            "job_id" => 1
-          },
-          {
-            "name" => "Reimbursement",
-            "amount" => "0.00",
-            "job_id" => 1
-          }
-        ],
-        "hourly_compensations" => [
-          {
-            "name" => "Regular Hours",
-            "hours" => "0.000",
-            "job_id" => 1,
-            "compensation_multiplier" => 1
-          }
-        ],
-        "paid_time_off" => []
-      }
-    ]
-  },
-  {
     "version" => "fb38ac6fdebea9646c4ac2e50ad27a21",
     "payroll_deadline" => "{{ site.time | date: '%Y' }}-02-03",
     "processed" => false,
@@ -170,65 +129,22 @@ json_response = [
         "paid_time_off" => []
       }
     ]
-  },
-  {
-    "version" => "19289df18e6e20f797de4a585ea5a91535c7fff2",
-    "payroll_deadline" => "{{ site.time | date: '%Y' }}-02-03",
-    "processed" => false,
-    "pay_period" => {
-      "start_date" => "{{ site.time | date: '%Y' }}-01-16",
-      "end_date" => "{{ site.time | date: '%Y' }}-01-31",
-      "pay_schedule_id" => 7757500542932121
-    },
-    "employee_compensations" => [
-      {
-        "employee_id" => 1323581379452363,
-        "fixed_compensations" => [
-          {
-            "name" => "Bonus",
-            "amount" => "0.00",
-            "job_id" => 1
-          },
-          {
-            "name" => "Commission",
-            "amount" => "0.00",
-            "job_id" => 1
-          },
-          {
-            "name" => "Reimbursement",
-            "amount" => "0.00",
-            "job_id" => 1
-          }
-        ],
-        "hourly_compensations" => [
-          {
-            "name" => "Regular Hours",
-            "hours" => "0.000",
-            "job_id" => 1,
-            "compensation_multiplier" => 1
-          }
-        ],
-        "paid_time_off" => []
-      }
-    ]
   }
 ]
 
 ```
 
-This company seems to have two semi-monthly pay schedules, both paying their employees on the 15th and end of the month. 
-
-We've already <a href="/v1/examples/syncing-employees">sync'd employees</a> and know that we are looking for `employee_id` 1123581321345589.
+This company seems to be on a semi-monthly pay schedule, paying their employees on the 15th and end of the month. We've already <a href="/v1/examples/syncing-employees">sync'd employees</a> and know that we are looking for `employee_id` 1123581321345589.
 
 Looks like she is eligible for two types of fixed compensations, one type of hourly compensation, and no PTO.
 
-Now we need to match up the totals from our data with the pay period and version it fits in. Because all of our dates are formatted according to [RFC-3339](http://tools.ietf.org/html/rfc3339#section-5.1), we can take advantage of simple string comparisions.
+Now we need to match up the totals from our data with the pay period it fits in. Because all of our dates are formatted according to [RFC-3339](http://tools.ietf.org/html/rfc3339#section-5.1), we can take advantage of simple string comparisions.
 
 
 ```ruby
 
 # For each of the returned payrolls,
-# group all work data that occurred during
+# group all work data that occured during
 # that pay period
 
 hourly_data_grouped_by_pay_period = json_response.reduce([]) do |grouped_data, payroll_json|
@@ -256,16 +172,10 @@ end
 
 Now we need to build up the information to send to the Update Payrolls endpoint. All that is required is the version and the compensation information.
 
-It's possible for a company to have multiple pay schedules, that's why we don't assume an employee 
-
 ```ruby
 updated_payroll_data = json_response.map.with_index do |payroll_json, index|
   # Find the compensation for Patricia Churchland
   churchland_compensation = payroll_json["employee_compensations"].detect { |compensation_json| compensation_json["employee_id"] == employee_id }
-  
-  # Patricia Churchland isn't part of this payroll, this could happen if the company has multiple pay schedules.
-  # We'll want to iterate until we find the appropriate payroll 
-  next unless churchland_compensation
 
   # Find the 'Regular Hours' hourly compensation
   regular_hours_compensation = churchland_compensation["hourly_compensations"].detect { |hourly_compensation| hourly_compensation["name"] == 'Regular Hours' }
@@ -282,7 +192,7 @@ updated_payroll_data = json_response.map.with_index do |payroll_json, index|
       }
     ]
   }
-end.compact
+end
 ```
 
 Obviously our implementation would have to adapt if we were updating multiple employees simultaneously, or wanted to include multiple types of compensation, but that is the basic flow.
@@ -339,4 +249,4 @@ This means that you will need to refetch the payroll data for that pay period an
   GET https://api.gusto.com/v1/companies/94158/payrolls?processed=false&start_date={{ site.time | date: '%Y' }}-01-16&end_date={{ site.time | date: '%Y' }}-01-31
 ```
 
-This should only return that one payroll and we can recompute the data specifically for that pay period. Do not simply copy over the new `version` and resubmit, as you'll likely be overwriting information that the user, an internal Gusto process, or another 3rd party application. This can lead to incorrect pay, miscalculated taxes, and upset users.
+This should only return that one payroll and we can recompute the data specifically for that pay period. Do not simply copy over the new `version` and resubmit, as you'll likely be overwriting information that the user, an internal Gusto process, or another 3rd party application. This can lead to incorrect pay, miscalculated taxes, and upset users 
