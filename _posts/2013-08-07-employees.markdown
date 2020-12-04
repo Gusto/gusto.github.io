@@ -15,7 +15,9 @@ title: Employees
 | `first_name`                  | String            |           |          |         | employee's first name.
 | `middle_initial`              | String            |           |    X     | null    | employee's middle initial. Not guaranteed to exist.
 | `last_name`                   | String            |           |          |         | employee's last name.
+| `preferred_first_name`        | String            |     X     |          |         | employee's preferred first name.
 | `email`                       | String            |           |    X     | null    | employee's email address. This is provided specifically to sync users between our system and yours. You may not use this address for any other purpose (e.g. marketing.) Not guaranteed to exist.
+| `phone`                       | String            |     X     |          |         | employee's phone number.
 | `company_id`                  | Integer           |     X     |          |         | employee's company ID
 | `manager_id`                  | Integer           |     X     |          | null    | employee's manager ID
 | `department`                  | String            |     X     |          | null    | employee's department.
@@ -92,7 +94,9 @@ title: Employees
   "eligible_paid_time_off": [],
   "onboarded": true,
   "terminated": false,
-  "terminations": []
+  "terminations": [],
+  "phone": "2345678901",
+  "preferred_first_name": "Alex"
 }
 ```
 
@@ -160,7 +164,9 @@ title: Employees
     "eligible_paid_time_off": [],
     "onboarded": true,
     "terminated": false,
-    "terminations": []
+    "terminations": [],
+    "phone": "2345678901",
+    "preferred_first_name": "Alex"
   }
 ]
 ```
