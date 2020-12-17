@@ -17,6 +17,7 @@ title: Employees
 | `last_name`                   | String            |           |          |         | employee's last name.
 | `preferred_first_name`        | String            |     X     |          |         | employee's preferred first name.
 | `email`                       | String            |           |    X     | null    | employee's email address. This is provided specifically to sync users between our system and yours. You may not use this address for any other purpose (e.g. marketing.) Not guaranteed to exist.
+| `work_email`                  | String            |     X     |    X     | null    | employee's work email address.
 | `phone`                       | String            |     X     |          |         | employee's phone number.
 | `company_id`                  | Integer           |     X     |          |         | employee's company ID
 | `manager_id`                  | Integer           |     X     |          | null    | employee's manager ID
@@ -52,7 +53,7 @@ title: Employees
   "company_id": 7757616923531095,
   "manager_id": 7757869431804236,
   "department": "Marketing",
-  "email": "knight0faith@initech.biz",
+  "email": "knight0faith@example.com",
   "ssn": "",
   "date_of_birth": "1990-05-05",
   "jobs": [
@@ -96,7 +97,8 @@ title: Employees
   "terminated": false,
   "terminations": [],
   "phone": "2345678901",
-  "preferred_first_name": "Alex"
+  "preferred_first_name": "Alex",
+  "work_email": "knight0faith@initech.biz"
 }
 ```
 
@@ -122,7 +124,7 @@ title: Employees
     "company_id": 7757616923531095,
     "manager_id": 7757869431804236,
     "department": "Marketing",
-    "email": "knight0faith@initech.biz",
+    "email": "knight0faith@example.com",
     "ssn": "",
     "date_of_birth": "1990-05-05",
     "jobs": [
@@ -166,7 +168,8 @@ title: Employees
     "terminated": false,
     "terminations": [],
     "phone": "2345678901",
-    "preferred_first_name": "Alex"
+    "preferred_first_name": "Alex",
+    "work email": "knight0faith@initech.biz"
   }
 ]
 ```
@@ -196,7 +199,7 @@ You can pare down the results by passing in additional parameters:
 {
   "version": "db0edd04aaac4506f7edab03ac855d56",
   "middle_initial": "Q",
-  "email": "knight0faith@initech.biz",
+  "email": "knight0faith@example.com",
   "ssn": "1234562940"
 }
 ```
@@ -217,6 +220,6 @@ You can pare down the results by passing in additional parameters:
 {
   "first_name": "Isaiah",
   "last_name"  : "Berlin",
-  "email": "crooked-timber@initech.biz"
+  "email": "crooked-timber@example.com"
 }
 ```
