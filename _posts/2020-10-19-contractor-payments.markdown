@@ -23,6 +23,7 @@ title: Contractor Payments
 | `contractor_payments:payments:hours`          | String            |     X     |          |         | The number of hours worked.
 | `contractor_payments:payments:payment_method` | String            |     X     |          |         | The payment method.
 | `contractor_payments:payments:reimbursement`  | String            |     X     |          |         | The payment reimbursement.
+| `contractor_payments:payments:hourly_rate`    | String            |     X     |          |         | The rate per hour worked.
 | `contractor_payments:payments:wage`           | String            |     X     |          |         | The payment wage.
 | `contractor_payments:payments:wage_type`      | String            |     X     |          |         | The wage type.
 
@@ -55,6 +56,7 @@ title: Contractor Payments
           "hours": "40.0",
           "payment_method": "Historical Payment",
           "reimbursement": "100.0",
+          "hourly_rate": "18.0",
           "wage": "0.0",
           "wage_type": "Hourly"
         },
@@ -64,6 +66,7 @@ title: Contractor Payments
           "hours": "0.00",
           "payment_method": "Historical Payment",
           "reimbursement": "10.0",
+          "hourly_rate": "0.0",
           "wage": "1000.0",
           "wage_type": "Fixed"
         }
