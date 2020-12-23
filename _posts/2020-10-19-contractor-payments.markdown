@@ -26,6 +26,7 @@ title: Contractor Payments
 | `contractor_payments:payments:hourly_rate`    | String            |     X     |          |         | The rate per hour worked.
 | `contractor_payments:payments:wage`           | String            |     X     |          |         | The payment wage.
 | `contractor_payments:payments:wage_type`      | String            |     X     |          |         | The wage type.
+| `contractor_payments:payments:wage_total`     | String            |     X     |          |         | The sum of the hours worked × hourly rate, wage and bonus
 
 
 ## Get contractor payments for a given company
@@ -58,7 +59,8 @@ title: Contractor Payments
           "reimbursement": "100.0",
           "hourly_rate": "18.0",
           "wage": "0.0",
-          "wage_type": "Hourly"
+          "wage_type": "Hourly",
+          "wage_total": "740.00"
         },
         {
           "bonus": "100.0",
@@ -68,7 +70,8 @@ title: Contractor Payments
           "reimbursement": "10.0",
           "hourly_rate": "0.0",
           "wage": "1000.0",
-          "wage_type": "Fixed"
+          "wage_type": "Fixed",
+          "wage_total": "1100.0"
         }
       ]
     }
