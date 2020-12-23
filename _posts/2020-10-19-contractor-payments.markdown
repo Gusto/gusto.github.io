@@ -21,11 +21,11 @@ title: Contractor Payments
 | `contractor_payments:payments:bonus`          | String            |     X     |          |         | The payment bonus.
 | `contractor_payments:payments:date`           | String            |     X     |          |         | The payment date.
 | `contractor_payments:payments:hours`          | String            |     X     |          |         | The number of hours worked.
-| `contractor_payments:payments:payment_method` | String            |     X     |          |         | The payment method.
+| `contractor_payments:payments:payment_method` | String            |     X     |          |         | The payment method ("Direct Deposit", "Check", "Historical Payment", "Correction Payment")
 | `contractor_payments:payments:reimbursement`  | String            |     X     |          |         | The payment reimbursement.
 | `contractor_payments:payments:hourly_rate`    | String            |     X     |          |         | The rate per hour worked.
-| `contractor_payments:payments:wage`           | String            |     X     |          |         | The payment wage.
-| `contractor_payments:payments:wage_type`      | String            |     X     |          |         | The wage type.
+| `contractor_payments:payments:wage`           | String            |     X     |          |         | The payment fixed wage, regardles of hours worked.
+| `contractor_payments:payments:wage_type`      | String            |     X     |          |         | The wage type ("Hourly", "Fixed")
 | `contractor_payments:payments:wage_total`     | String            |     X     |          |         | The sum of the hours worked × hourly rate, wage and bonus
 
 
