@@ -40,14 +40,14 @@ title: Contractor Payments
 ```json
 {
   "total": {
-    "reimbursements": "100.0",
-    "wages": "740.0"
+    "reimbursements": "110.0",
+    "wages": "1840.0"
   },
   "contractor_payments": [
     {
       "contractor_id": 1234,
-      "reimbursement_total": "100.0",
-      "wage_total": "740.0",
+      "reimbursement_total": "110.0",
+      "wage_total": "1840.0",
       "payments": [
         {
           "bonus": "20.0",
@@ -57,6 +57,15 @@ title: Contractor Payments
           "reimbursement": "100.0",
           "wage": "0.0",
           "wage_type": "Hourly"
+        },
+        {
+          "bonus": "100.0",
+          "date": "2020-10-19",
+          "hours": "0.00",
+          "payment_method": "Historical Payment",
+          "reimbursement": "10.0",
+          "wage": "1000.0",
+          "wage_type": "Fixed"
         }
       ]
     }
