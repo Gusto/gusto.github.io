@@ -41,21 +41,21 @@ title: Contractor Payments
 {
   "total": {
     "reimbursements": "100.0",
-    "wages": "3200.00"
+    "wages": "740.0"
   },
   "contractor_payments": [
     {
       "contractor_id": 1234,
       "reimbursement_total": "100.0",
-      "wage_total": "3200.0",
+      "wage_total": "740.0",
       "payments": [
         {
-          "bonus": "0.0",
+          "bonus": "20.0",
           "date": "2020-10-19",
           "hours": "40.0",
           "payment_method": "Historical Payment",
           "reimbursement": "100.0",
-          "wage": "3200.0",
+          "wage": "0.0",
           "wage_type": "Hourly"
         }
       ]
