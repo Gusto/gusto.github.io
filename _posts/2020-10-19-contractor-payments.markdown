@@ -18,13 +18,13 @@ title: Contractor Payments
 | `contractor_payments:wage_total`              | String            |     X     |          |         | The total wages for a contractor within the given time period.
 | `contractor_payments:reimbursement_total`     | String            |     X     |          |         | The total reimbursements for a contractor within the given time period.
 | `contractor_payments:payments`                | Array             |     X     |          |         | The contractor's payments within the given time period.
-| `contractor_payments:payments:wage_type`      | String            |     X     |          |         | The wage type.
+| `contractor_payments:payments:bonus`          | String            |     X     |          |         | The payment bonus.
+| `contractor_payments:payments:date`           | String            |     X     |          |         | The payment date.
 | `contractor_payments:payments:hours`          | String            |     X     |          |         | The number of hours worked.
 | `contractor_payments:payments:payment_method` | String            |     X     |          |         | The payment method.
-| `contractor_payments:payments:wage`           | String            |     X     |          |         | The payment wage.
-| `contractor_payments:payments:bonus`          | String            |     X     |          |         | The payment bonus.
 | `contractor_payments:payments:reimbursement`  | String            |     X     |          |         | The payment reimbursement.
-| `contractor_payments:payments:date`           | String            |     X     |          |         | The payment date.
+| `contractor_payments:payments:wage`           | String            |     X     |          |         | The payment wage.
+| `contractor_payments:payments:wage_type`      | String            |     X     |          |         | The wage type.
 
 
 ## Get contractor payments for a given company
